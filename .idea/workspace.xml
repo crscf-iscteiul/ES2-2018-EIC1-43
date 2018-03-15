@@ -30,13 +30,13 @@
         <entry file="file://$PROJECT_DIR$/src/gui/StartScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1139">
-              <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+              <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
               <folding>
-                <element signature="e#1844#1845#0" expanded="true" />
-                <element signature="e#1904#1905#0" expanded="true" />
-                <element signature="e#6943#7023#0" expanded="true" />
-                <element signature="e#8231#8232#0" expanded="true" />
-                <element signature="e#8279#8280#0" expanded="true" />
+                <element signature="e#1637#1638#0" expanded="true" />
+                <element signature="e#1697#1698#0" expanded="true" />
+                <element signature="e#4769#4849#0" expanded="true" />
+                <element signature="e#6057#6058#0" expanded="true" />
+                <element signature="e#6105#6106#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,6 +45,11 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hzrdr1@iscte-iul.pt" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -266,7 +271,7 @@
       <workItem from="1521040160962" duration="64000" />
       <workItem from="1521040721643" duration="1570000" />
       <workItem from="1521059273960" duration="1449000" />
-      <workItem from="1521139038581" duration="5642000" />
+      <workItem from="1521139038581" duration="6996000" />
     </task>
     <task id="LOCAL-00001" summary="Created Start Screen, almost done on this frame. Need to add listeners to buttons and save user input information.">
       <created>1521142687172</created>
@@ -282,11 +287,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521145480983</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed some of the start screen look">
+      <created>1521148178170</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1521148178170</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8725000" />
+    <option name="totallyTimeSpent" value="10079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -330,7 +342,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Start Screen, almost done on this frame. Need to add listeners to buttons and save user input information." />
     <MESSAGE value="Changed the way that the Start Screen starts running, and add some functions for easy initialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the way that the Start Screen starts running, and add some functions for easy initialization" />
+    <MESSAGE value="Changed some of the start screen look" />
+    <MESSAGE value="Changed some of the start screen look drastically" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed some of the start screen look drastically" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -369,13 +383,13 @@
     <entry file="file://$PROJECT_DIR$/src/gui/StartScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
-          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding>
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#6943#7023#0" expanded="true" />
-            <element signature="e#8231#8232#0" expanded="true" />
-            <element signature="e#8279#8280#0" expanded="true" />
+            <element signature="e#1637#1638#0" expanded="true" />
+            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#4769#4849#0" expanded="true" />
+            <element signature="e#6057#6058#0" expanded="true" />
+            <element signature="e#6105#6106#0" expanded="true" />
           </folding>
         </state>
       </provider>
