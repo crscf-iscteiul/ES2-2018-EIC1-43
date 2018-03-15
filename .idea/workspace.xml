@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/gui/StartScreen.form" afterPath="$PROJECT_DIR$/src/gui/StartScreen.form" />
       <change beforePath="$PROJECT_DIR$/src/gui/StartScreen.java" afterPath="$PROJECT_DIR$/src/gui/StartScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,12 +29,14 @@
       <file leaf-file-name="StartScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/StartScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="165" column="4" lean-forward="false" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
+            <state relative-caret-position="1139">
+              <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
               <folding>
-                <element signature="e#6215#6295#0" expanded="true" />
-                <element signature="e#7503#7504#0" expanded="true" />
-                <element signature="e#7551#7552#0" expanded="true" />
+                <element signature="e#1844#1845#0" expanded="true" />
+                <element signature="e#1904#1905#0" expanded="true" />
+                <element signature="e#6943#7023#0" expanded="true" />
+                <element signature="e#8231#8232#0" expanded="true" />
+                <element signature="e#8279#8280#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -265,7 +266,7 @@
       <workItem from="1521040160962" duration="64000" />
       <workItem from="1521040721643" duration="1570000" />
       <workItem from="1521059273960" duration="1449000" />
-      <workItem from="1521139038581" duration="4966000" />
+      <workItem from="1521139038581" duration="5642000" />
     </task>
     <task id="LOCAL-00001" summary="Created Start Screen, almost done on this frame. Need to add listeners to buttons and save user input information.">
       <created>1521142687172</created>
@@ -274,11 +275,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521142687172</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed the way that the Start Screen starts running, and add some functions for easy initialization">
+      <created>1521145480983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1521145480983</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8049000" />
+    <option name="totallyTimeSpent" value="8725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -321,7 +329,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Start Screen, almost done on this frame. Need to add listeners to buttons and save user input information." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Start Screen, almost done on this frame. Need to add listeners to buttons and save user input information." />
+    <MESSAGE value="Changed the way that the Start Screen starts running, and add some functions for easy initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the way that the Start Screen starts running, and add some functions for easy initialization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -359,12 +368,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/StartScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="165" column="4" lean-forward="false" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
+        <state relative-caret-position="1139">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding>
-            <element signature="e#6215#6295#0" expanded="true" />
-            <element signature="e#7503#7504#0" expanded="true" />
-            <element signature="e#7551#7552#0" expanded="true" />
+            <element signature="e#1844#1845#0" expanded="true" />
+            <element signature="e#1904#1905#0" expanded="true" />
+            <element signature="e#6943#7023#0" expanded="true" />
+            <element signature="e#8231#8232#0" expanded="true" />
+            <element signature="e#8279#8280#0" expanded="true" />
           </folding>
         </state>
       </provider>

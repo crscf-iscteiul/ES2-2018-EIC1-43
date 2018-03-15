@@ -36,8 +36,8 @@ public class StartScreen extends javax.swing.JFrame {
         UserName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         Mail = new javax.swing.JTextField();
-        ButtonNew = new javax.swing.JButton();
-        ButtonLoad = new javax.swing.JButton();
+        Remember = new javax.swing.JCheckBox();
+        Continue = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         UserHistory = new javax.swing.JList<>();
 
@@ -52,20 +52,28 @@ public class StartScreen extends javax.swing.JFrame {
 
         jLabel2.setText("E-mail");
 
+        Remember.setText("Remember me");
+        Remember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RememberActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelUserDataLayout = new javax.swing.GroupLayout(PanelUserData);
         PanelUserData.setLayout(PanelUserDataLayout);
         PanelUserDataLayout.setHorizontalGroup(
             PanelUserDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelUserDataLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelUserDataLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(PanelUserDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Mail)
-                    .addGroup(PanelUserDataLayout.createSequentialGroup()
-                        .addGroup(PanelUserDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addGap(0, 176, Short.MAX_VALUE))
-                    .addComponent(UserName))
+                .addGroup(PanelUserDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Mail, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(UserName, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelUserDataLayout.createSequentialGroup()
+                        .addGroup(PanelUserDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Remember, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(0, 131, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         PanelUserDataLayout.setVerticalGroup(
@@ -79,12 +87,12 @@ public class StartScreen extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Mail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Remember)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        ButtonNew.setText("New Problem");
-
-        ButtonLoad.setText("Load Problem");
+        Continue.setText("Continue");
 
         jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("User History"));
 
@@ -100,15 +108,14 @@ public class StartScreen extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(PanelUserData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(ButtonLoad)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ButtonNew))
-                    .addComponent(jScrollPane1))
+                        .addGap(0, 88, Short.MAX_VALUE)
+                        .addComponent(Continue, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -119,14 +126,16 @@ public class StartScreen extends javax.swing.JFrame {
                     .addComponent(PanelUserData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonNew)
-                    .addComponent(ButtonLoad))
+                .addComponent(Continue)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RememberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RememberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RememberActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,10 +174,10 @@ public class StartScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonLoad;
-    private javax.swing.JButton ButtonNew;
+    private javax.swing.JButton Continue;
     private javax.swing.JTextField Mail;
     private javax.swing.JPanel PanelUserData;
+    private javax.swing.JCheckBox Remember;
     private javax.swing.JList<String> UserHistory;
     private javax.swing.JTextField UserName;
     private javax.swing.JLabel jLabel1;
