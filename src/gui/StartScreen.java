@@ -109,16 +109,25 @@ public class StartScreen extends javax.swing.JFrame{
     }// </editor-fold>//GEN-END:initComponents
 
     private void ContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueActionPerformed
-        //TODO Save input info
-        GUI.getInstance().nextscreen(GUI.ProjectScreen);
+        if(Mail.getText()!="" && !Mail.getText().contains("@")) {
+            JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
+            Mail.requestFocus();
+        }
+        else {
+            //TODO Save input info
+            GUI.getInstance().nextscreen(GUI.ProjectScreen);
+        }
     }//GEN-LAST:event_ContinueActionPerformed
 
     private void UserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserNameActionPerformed
-        // TODO add your handling code here:
+        Mail.requestFocus();
     }//GEN-LAST:event_UserNameActionPerformed
 
     private void MailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MailActionPerformed
-        // TODO add your handling code here:
+        if(Mail.getText()!="" && !Mail.getText().contains("@"))
+            JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
+        else
+            Continue.requestFocus();
     }//GEN-LAST:event_MailActionPerformed
 
     public void open(){

@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be6d3341-3e73-4513-987e-2665f4d6d60d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/gui/GUI.java" afterPath="$PROJECT_DIR$/src/gui/GUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProblemScreen.java" afterPath="$PROJECT_DIR$/src/gui/ProblemScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProjectScreen.form" afterPath="$PROJECT_DIR$/src/gui/ProjectScreen.form" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProjectScreen.java" afterPath="$PROJECT_DIR$/src/gui/ProjectScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/StartScreen.form" afterPath="$PROJECT_DIR$/src/gui/StartScreen.form" />
       <change beforePath="$PROJECT_DIR$/src/gui/StartScreen.java" afterPath="$PROJECT_DIR$/src/gui/StartScreen.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -37,18 +32,18 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="73" column="47" lean-forward="true" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
+            <state relative-caret-position="443">
+              <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartScreen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StartScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/StartScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+            <state relative-caret-position="205">
+              <caret line="113" column="32" lean-forward="true" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
               <folding>
                 <element signature="e#1498#1499#0" expanded="true" />
                 <element signature="e#1558#1559#0" expanded="true" />
@@ -56,8 +51,8 @@
                 <element signature="e#1778#1779#0" expanded="true" />
                 <element signature="e#1934#1935#0" expanded="true" />
                 <element signature="e#1990#1991#0" expanded="true" />
-                <element signature="e#5635#5636#0" expanded="true" />
-                <element signature="e#5683#5684#0" expanded="true" />
+                <element signature="e#6068#6069#0" expanded="true" />
+                <element signature="e#6116#6117#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProblemScreen.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProblemScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/ProblemScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
+            <state relative-caret-position="317">
               <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
                 <element signature="e#716#805#0" expanded="true" />
@@ -122,10 +117,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/gui/StartScreen.java" />
         <option value="$PROJECT_DIR$/src/gui/ProblemScreen.java" />
         <option value="$PROJECT_DIR$/src/gui/ProjectScreen.java" />
         <option value="$PROJECT_DIR$/src/gui/GUI.java" />
+        <option value="$PROJECT_DIR$/src/gui/StartScreen.java" />
       </list>
     </option>
   </component>
@@ -361,7 +356,7 @@
       <workItem from="1521059273960" duration="1449000" />
       <workItem from="1521139038581" duration="7654000" />
       <workItem from="1521150562451" duration="43000" />
-      <workItem from="1521196043431" duration="8902000" />
+      <workItem from="1521196043431" duration="11827000" />
     </task>
     <task id="LOCAL-00001" summary="Created Start Screen, almost done on this frame. Need to add listeners to buttons and save user input information.">
       <created>1521142687172</created>
@@ -412,11 +407,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521200965618</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Started working on the gui transitions">
+      <created>1521208093365</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1521208093365</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19682000" />
+    <option name="totallyTimeSpent" value="22607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -431,7 +433,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33510074" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33510074" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -494,7 +496,8 @@
     <MESSAGE value="Added Problem Edit Screen, still to do add listeners and info grabbers" />
     <MESSAGE value="Added new Single class to control ui, changed the way that the Screens classes start and show" />
     <MESSAGE value="Added new Screen for project creation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new Screen for project creation." />
+    <MESSAGE value="Started working on the gui transitions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started working on the gui transitions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -526,8 +529,8 @@
             <element signature="e#1778#1779#0" expanded="true" />
             <element signature="e#1934#1935#0" expanded="true" />
             <element signature="e#1990#1991#0" expanded="true" />
-            <element signature="e#5635#5636#0" expanded="true" />
-            <element signature="e#5683#5684#0" expanded="true" />
+            <element signature="e#6068#6069#0" expanded="true" />
+            <element signature="e#6116#6117#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -565,8 +568,8 @@
             <element signature="e#1778#1779#0" expanded="true" />
             <element signature="e#1934#1935#0" expanded="true" />
             <element signature="e#1990#1991#0" expanded="true" />
-            <element signature="e#5635#5636#0" expanded="true" />
-            <element signature="e#5683#5684#0" expanded="true" />
+            <element signature="e#6068#6069#0" expanded="true" />
+            <element signature="e#6116#6117#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -597,28 +600,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/StartScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/ProblemScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="317">
+          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding>
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1558#1559#0" expanded="true" />
-            <element signature="e#1718#1719#0" expanded="true" />
-            <element signature="e#1778#1779#0" expanded="true" />
-            <element signature="e#1934#1935#0" expanded="true" />
-            <element signature="e#1990#1991#0" expanded="true" />
-            <element signature="e#5635#5636#0" expanded="true" />
-            <element signature="e#5683#5684#0" expanded="true" />
+            <element signature="e#716#805#0" expanded="true" />
+            <element signature="method#initComponents#0;class#ProblemScreen#0" expanded="false" />
+            <element signature="e#6403#6404#0" expanded="true" />
+            <element signature="e#6451#6452#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="73" column="47" lean-forward="true" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,15 +626,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/ProblemScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="443">
+          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/StartScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="113" column="32" lean-forward="true" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
           <folding>
-            <element signature="e#716#805#0" expanded="true" />
-            <element signature="method#initComponents#0;class#ProblemScreen#0" expanded="false" />
-            <element signature="e#6403#6404#0" expanded="true" />
-            <element signature="e#6451#6452#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1558#1559#0" expanded="true" />
+            <element signature="e#1718#1719#0" expanded="true" />
+            <element signature="e#1778#1779#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#1990#1991#0" expanded="true" />
+            <element signature="e#6068#6069#0" expanded="true" />
+            <element signature="e#6116#6117#0" expanded="true" />
           </folding>
         </state>
       </provider>
