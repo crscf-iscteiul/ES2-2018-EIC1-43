@@ -46,6 +46,11 @@ public class ProblemScreen extends javax.swing.JFrame {
         setTitle("Problem Solver and Optimizer");
 
         ButtonSave.setText("Save");
+        ButtonSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSaveActionPerformed(evt);
+            }
+        });
 
         ScrollPane.setBorder(javax.swing.BorderFactory.createTitledBorder("Problem Description"));
 
@@ -156,6 +161,15 @@ public class ProblemScreen extends javax.swing.JFrame {
         if(MaxTime.getText().equals(""))
             MaxTime.setText("HH:mm:ss");
     }//GEN-LAST:event_MaxTimeFocusLost
+
+    private void ButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSaveActionPerformed
+        if(!ProblemName.getText().equals("")) {
+            GUI.getInstance().nextscreen(GUI.MainScreen);
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Please insert a valid Problem name", "Missing Data", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_ButtonSaveActionPerformed
 
     public void open(){
         //Show Screen (Thread Safe)
