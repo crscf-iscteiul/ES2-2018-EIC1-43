@@ -15,6 +15,7 @@ public class ProjectScreen extends javax.swing.JFrame {
      * Creates new form ProjectScreen
      */
     public ProjectScreen() {
+        //TODO Load old known problems and display them
         initComponents();
         setLocationRelativeTo(null);
     }

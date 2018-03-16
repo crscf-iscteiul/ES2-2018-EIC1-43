@@ -1,7 +1,6 @@
 package main;
 
 import gui.GUI;
-import gui.StartScreen;
 
 public class Main{
 
