@@ -11,7 +11,7 @@ import javax.swing.*;
  *
  * @author Rafael
  */
-public class StartScreen extends javax.swing.JFrame {
+public class StartScreen extends javax.swing.JFrame{
 
     /**
      * Creates new form StartFrame
@@ -43,17 +43,29 @@ public class StartScreen extends javax.swing.JFrame {
         setResizable(false);
 
         Continue.setText("Continue");
+        Continue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContinueActionPerformed(evt);
+            }
+        });
+
+        UserName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UserNameActionPerformed(evt);
+            }
+        });
+
+        Mail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MailActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("E-mail");
 
         jLabel1.setText("Name");
 
         Remember.setText("Remember me");
-        Remember.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RememberActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,13 +108,18 @@ public class StartScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RememberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RememberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RememberActionPerformed
+    private void ContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueActionPerformed
+        //TODO Save input info
+        GUI.getInstance().nextscreen(GUI.ProjectScreen);
+    }//GEN-LAST:event_ContinueActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void UserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UserNameActionPerformed
+
+    private void MailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MailActionPerformed
 
     public void open(){
         //Show Screen (Thread Safe)

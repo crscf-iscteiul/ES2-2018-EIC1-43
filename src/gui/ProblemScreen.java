@@ -16,15 +16,9 @@ public class ProblemScreen extends javax.swing.JFrame {
     /**
      * Creates new form NewProblemScreen
      */
-    public ProblemScreen(JFrame parent, boolean editmode) {
+    public ProblemScreen(){
         initComponents();
         setLocationRelativeTo(null);
-        if(editmode==true){
-            setTitle("Problem Solver and Optimizer - Edit Problem");
-        }
-        else{
-            setTitle("Problem Solver and Optimizer - New Problem");
-        }
     }
 
     /**
@@ -127,9 +121,14 @@ public class ProblemScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    public void open(){
+        //Show Screen (Thread Safe)
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
