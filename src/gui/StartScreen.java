@@ -109,7 +109,7 @@ public class StartScreen extends javax.swing.JFrame{
     }// </editor-fold>//GEN-END:initComponents
 
     private void ContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueActionPerformed
-        if(Mail.getText()!="" && !Mail.getText().contains("@")) {
+        if(!Mail.getText().equals("") && !Mail.getText().contains("@")){
             JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
             Mail.requestFocus();
         }
@@ -125,7 +125,7 @@ public class StartScreen extends javax.swing.JFrame{
     }//GEN-LAST:event_UserNameActionPerformed
 
     private void MailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MailActionPerformed
-        if(Mail.getText()!="" && !Mail.getText().contains("@"))
+        if(!Mail.getText().equals("") && !Mail.getText().contains("@"))
             JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
         else
             Continue.requestFocus();

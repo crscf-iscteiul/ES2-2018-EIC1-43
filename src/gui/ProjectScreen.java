@@ -5,6 +5,9 @@
  */
 package gui;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 /**
  *
  * @author Rafael
@@ -50,6 +53,11 @@ public class ProjectScreen extends javax.swing.JFrame {
         });
 
         ButtonLoad.setText("Load Problem");
+        ButtonLoad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonLoadActionPerformed(evt);
+            }
+        });
 
         ButtonFAQ.setText("FAQ");
 
@@ -88,9 +96,26 @@ public class ProjectScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNewActionPerformed
-        // TODO add your handling code here:
         GUI.getInstance().nextscreen(GUI.ProblemScreen);
     }//GEN-LAST:event_ButtonNewActionPerformed
+
+    private void ButtonLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoadActionPerformed
+        if(History.getSelectedIndex()!=-1){
+            //TODO Read and load file to a class format
+            GUI.getInstance().nextscreen(GUI.MainScreen);
+        }
+        else {
+            JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("XML File", "xml");
+            path_chooser.setFileFilter(filter);
+            path_chooser.setDialogTitle("Choose File Problem");
+            int returnVal = path_chooser.showOpenDialog(this);
+            if(returnVal == JFileChooser.APPROVE_OPTION) {
+                //TODO Read and load file to a class format
+                GUI.getInstance().nextscreen(GUI.MainScreen);
+            }
+        }
+    }//GEN-LAST:event_ButtonLoadActionPerformed
 
 
     public void open(){

@@ -6,6 +6,8 @@
 package gui;
 
 import javax.swing.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -35,10 +37,10 @@ public class ProblemScreen extends javax.swing.JFrame {
         Description = new javax.swing.JTextArea();
         LabelTime = new javax.swing.JLabel();
         LabelVars = new javax.swing.JLabel();
-        MaxTime = new javax.swing.JFormattedTextField();
         Panel = new javax.swing.JPanel();
         ProblemName = new javax.swing.JTextField();
         MaxVars = new javax.swing.JFormattedTextField();
+        MaxTime = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Problem Solver and Optimizer");
@@ -54,9 +56,6 @@ public class ProblemScreen extends javax.swing.JFrame {
         LabelTime.setText("Max Wait Time");
 
         LabelVars.setText("Max Vars");
-
-        MaxTime.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.MEDIUM))));
-        MaxTime.setText("HH:mm:ss");
 
         Panel.setBorder(javax.swing.BorderFactory.createTitledBorder("Problem Name"));
 
@@ -79,6 +78,16 @@ public class ProblemScreen extends javax.swing.JFrame {
 
         MaxVars.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
         MaxVars.setText("10");
+
+        MaxTime.setText("HH:mm:ss");
+        MaxTime.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                MaxTimeFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                MaxTimeFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,14 +121,41 @@ public class ProblemScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelTime)
                     .addComponent(LabelVars)
-                    .addComponent(MaxTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MaxVars, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ButtonSave))
+                    .addComponent(ButtonSave)
+                    .addComponent(MaxTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MaxTimeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MaxTimeFocusGained
+        if(MaxTime.getText().equals("HH:mm:ss"))
+            MaxTime.setText("");
+    }//GEN-LAST:event_MaxTimeFocusGained
+
+    private void MaxTimeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MaxTimeFocusLost
+        try{
+            int time = Integer.parseInt(MaxTime.getText());
+            int h = time/10000;
+            int m = (time-(h*10000))/100;
+            int s = (time-(h*10000)-(m*100));
+
+            MaxTime.setText(String.format("%02d:%02d:%02d",h,m,s));
+        } catch (NumberFormatException e1){
+
+        }
+        try{
+            SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+            MaxTime.setText(format.format(format.parse(MaxTime.getText())));
+        } catch (ParseException e) {
+            MaxTime.setText("");
+        }
+
+        if(MaxTime.getText().equals(""))
+            MaxTime.setText("HH:mm:ss");
+    }//GEN-LAST:event_MaxTimeFocusLost
 
     public void open(){
         //Show Screen (Thread Safe)
@@ -135,7 +171,7 @@ public class ProblemScreen extends javax.swing.JFrame {
     private javax.swing.JTextArea Description;
     private javax.swing.JLabel LabelTime;
     private javax.swing.JLabel LabelVars;
-    private javax.swing.JFormattedTextField MaxTime;
+    private javax.swing.JTextField MaxTime;
     private javax.swing.JFormattedTextField MaxVars;
     private javax.swing.JPanel Panel;
     private javax.swing.JTextField ProblemName;
