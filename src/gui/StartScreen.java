@@ -115,7 +115,7 @@ public class StartScreen extends javax.swing.JFrame{
         }
         else {
             //TODO Save input info
-            //TODO remmenber option
+            //TODO remember option
             GUI.getInstance().nextscreen(GUI.ProjectScreen);
         }
     }//GEN-LAST:event_ContinueActionPerformed

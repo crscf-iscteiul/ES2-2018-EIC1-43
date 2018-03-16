@@ -78,6 +78,13 @@ public class GUI {
                 child.setTitle("Problem Solver and Optimizer - Edit Problem");
                 child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 ((ProblemScreen) child).open();
+                break;
+            case (4):
+                child = new MainScreen();
+                child.setTitle("Send Email");
+                child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                ((MainScreen) child).open();
+                break;
         }
     }
 }
