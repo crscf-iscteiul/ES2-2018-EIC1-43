@@ -33,8 +33,8 @@ public class StartScreen extends javax.swing.JFrame{
         Continue = new javax.swing.JButton();
         UserName = new javax.swing.JTextField();
         Mail = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        LabelMail = new javax.swing.JLabel();
+        LabelName = new javax.swing.JLabel();
         Remember = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,9 +61,9 @@ public class StartScreen extends javax.swing.JFrame{
             }
         });
 
-        jLabel2.setText("E-mail");
+        LabelMail.setText("E-mail");
 
-        jLabel1.setText("Name");
+        LabelName.setText("Name");
 
         Remember.setText("Remember me");
 
@@ -82,8 +82,8 @@ public class StartScreen extends javax.swing.JFrame{
                     .addComponent(UserName)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(LabelName, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LabelMail, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -91,11 +91,11 @@ public class StartScreen extends javax.swing.JFrame{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(LabelName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(LabelMail)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Mail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
@@ -142,10 +142,10 @@ public class StartScreen extends javax.swing.JFrame{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Continue;
+    private javax.swing.JLabel LabelMail;
+    private javax.swing.JLabel LabelName;
     private javax.swing.JTextField Mail;
     private javax.swing.JCheckBox Remember;
     private javax.swing.JTextField UserName;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

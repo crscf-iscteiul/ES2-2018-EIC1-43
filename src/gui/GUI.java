@@ -5,8 +5,9 @@ import javax.swing.*;
 public class GUI {
 
     private static GUI instance;
-    public static GUI getInstance(){
-        if(instance==null)
+
+    public static GUI getInstance() {
+        if (instance == null)
             instance = new GUI();
         return instance;
     }
@@ -21,13 +22,13 @@ public class GUI {
     private JFrame parent;
     private JFrame child;
 
-    private GUI(){
+    private GUI() {
         setLookAndFeel("Windows");
         parent = new StartScreen();
-        ((StartScreen)parent).open();
+        ((StartScreen) parent).open();
     }
 
-    private void setLookAndFeel(String LookName){
+    private void setLookAndFeel(String LookName) {
         //TODO Make Better
         //<editor-fold defaultstate="collapsed" desc="Swing look and feel setting code">
         try {
@@ -49,18 +50,23 @@ public class GUI {
         //</editor-fold>
     }
 
-    public void nextscreen(int screen){
-        switch (screen){
-            case(1):
-                    parent.dispose();
-                    parent = new ProjectScreen();
-                    ((ProjectScreen)parent).open();
+    public void nextscreen(int screen) {
+        switch (screen) {
+            case (1):
+                parent.dispose();
+                parent = new ProjectScreen();
+                ((ProjectScreen) parent).open();
                 break;
             case (2):
-                    parent.dispose();
-                    parent = new ProblemScreen();
-                    parent.setTitle("Problem Solver and Optimizer - New Problem");
-                    ((ProblemScreen)parent).open();
+                parent.dispose();
+                parent = new ProblemScreen();
+                parent.setTitle("Problem Solver and Optimizer - New Problem");
+                ((ProblemScreen) parent).open();
+                break;
+            case (3):
+                parent.dispose();
+                parent = new MainScreen();
+                ((gui.MainScreen)parent).open();
                 break;
         }
     }
