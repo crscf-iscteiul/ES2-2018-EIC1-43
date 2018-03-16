@@ -13,8 +13,10 @@ public class GUI {
 
     private GUI(){
         setLookAndFeel("Windows");
-        StartScreen startscreen = new StartScreen();
-        startscreen.open();
+//        StartScreen startscreen = new StartScreen();
+//        startscreen.open();
+        ProjectScreen projectscreen = new ProjectScreen();
+        projectscreen.open();
     }
 
     private void setLookAndFeel(String LookName){
