@@ -1,7 +1,6 @@
 package main;
 
 import org.w3c.dom.*;
-import solver.SolverandOptimizer;
 import utils.Problem;
 import utils.Variable;
 
@@ -14,12 +13,8 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathFactory;
 import java.io.File;
-import java.io.FileOutputStream;
+
 
 
 public class Main{
@@ -31,6 +26,11 @@ public class Main{
         Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
         Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml", vars);
 
+
+
+    }
+
+    public void saveProblemXML(String filename, Problem p) {
         try {
 
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -67,7 +67,7 @@ public class Main{
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File(System.getProperty("user.dir") + "\\test.xml"));
+            StreamResult result = new StreamResult(new File(System.getProperty("user.dir") + filename));
 
             // Output to console for testing
             // StreamResult result = new StreamResult(System.out);
@@ -81,6 +81,5 @@ public class Main{
         } catch (TransformerException tfe) {
             tfe.printStackTrace();
         }
-
     }
 }
