@@ -5,7 +5,6 @@ import javax.swing.*;
 public class GUI {
 
     private static GUI instance;
-
     public static GUI getInstance() {
         if (instance == null)
             instance = new GUI();

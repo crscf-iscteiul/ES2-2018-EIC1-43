@@ -5,6 +5,8 @@
  */
 package gui;
 
+import javax.swing.*;
+
 /**
  *
  * @author Rafael
@@ -60,6 +62,11 @@ public class MailScreen extends javax.swing.JFrame {
         ScrollPane.setViewportView(Text);
 
         ButtonSend.setText("Send");
+        ButtonSend.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSendActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,6 +121,17 @@ public class MailScreen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSendActionPerformed
+        if(Email.getText().contains("@")){
+            // TODO Send the email to admins
+            JOptionPane.showMessageDialog(this, "Your email has been sent", "Email Sent", JOptionPane.INFORMATION_MESSAGE);
+            GUI.getInstance().closescreen(this);
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_ButtonSendActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().closescreen(this);

@@ -5,6 +5,8 @@
  */
 package gui;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Rafael
@@ -35,7 +37,7 @@ public class MainScreen extends javax.swing.JFrame {
         ButtonRemove = new javax.swing.JButton();
         Start = new javax.swing.JButton();
         ProgressBar = new javax.swing.JProgressBar();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        ProblemSolver = new javax.swing.JComboBox<>();
         Menu = new javax.swing.JMenuBar();
         MenuFile = new javax.swing.JMenu();
         MenuOpSave = new javax.swing.JMenuItem();
@@ -48,7 +50,7 @@ public class MainScreen extends javax.swing.JFrame {
         MenuOpFAQ = new javax.swing.JMenuItem();
         MenuOpAbout = new javax.swing.JMenuItem();
 
-        ComboBoxTypes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Integer", "Double", "Float", "Long", "Binary" }));
+        ComboBoxTypes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Integer", "Double", "Binary" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Problem Solver and Optimizer");
@@ -97,24 +99,49 @@ public class MainScreen extends javax.swing.JFrame {
         }
 
         ButtonAdd.setText("Add Row");
+        ButtonAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAddActionPerformed(evt);
+            }
+        });
 
         ButtonRemove.setText("Remove Row");
+        ButtonRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonRemoveActionPerformed(evt);
+            }
+        });
 
         Start.setText("Start");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AbYSS", "CellDE", "dMPOSO", "GDE3", "FastPGA", "IBEA", "MOCHC", "MOCell", "MOEA/D-DE", "pMOEA/D-DE", "MOEA/D-DRA", "NSGA-II", "ssNSGA-II", "NSGAIIr", "NSGAIIa", "pNSGA-II", "OMOPSO", "PAES", "SMPSO", "pSMPSO", "SMPSOhv", "SPEA2" }));
+        ProblemSolver.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AbYSS", "CellDE", "dMPOSO", "GDE3", "FastPGA", "IBEA", "MOCHC", "MOCell", "MOEA/D-DE", "pMOEA/D-DE", "MOEA/D-DRA", "NSGA-II", "ssNSGA-II", "NSGAIIr", "NSGAIIa", "pNSGA-II", "OMOPSO", "PAES", "SMPSO", "pSMPSO", "SMPSOhv", "SPEA2" }));
 
         MenuFile.setText("File");
 
         MenuOpSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         MenuOpSave.setText("Save");
+        MenuOpSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuOpSaveActionPerformed(evt);
+            }
+        });
         MenuFile.add(MenuOpSave);
 
         MenuOpLoad.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
         MenuOpLoad.setText("Load");
+        MenuOpLoad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuOpLoadActionPerformed(evt);
+            }
+        });
         MenuFile.add(MenuOpLoad);
 
         MenuOpLogout.setText("Switch User");
+        MenuOpLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuOpLogoutActionPerformed(evt);
+            }
+        });
         MenuFile.add(MenuOpLogout);
 
         Menu.add(MenuFile);
@@ -122,6 +149,11 @@ public class MainScreen extends javax.swing.JFrame {
         MenuEdit.setText("Edit");
 
         MenuOpEditProblem.setText("Problem");
+        MenuOpEditProblem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuOpEditProblemActionPerformed(evt);
+            }
+        });
         MenuEdit.add(MenuOpEditProblem);
 
         Menu.add(MenuEdit);
@@ -137,6 +169,11 @@ public class MainScreen extends javax.swing.JFrame {
         MenuHelp.add(MenuOpSendMail);
 
         MenuOpFAQ.setText("FAQ");
+        MenuOpFAQ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuOpFAQActionPerformed(evt);
+            }
+        });
         MenuHelp.add(MenuOpFAQ);
 
         MenuOpAbout.setText("About");
@@ -160,7 +197,7 @@ public class MainScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 816, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ProblemSolver, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Start)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -183,7 +220,7 @@ public class MainScreen extends javax.swing.JFrame {
                         .addComponent(ButtonAdd))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Start)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ProblemSolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(ProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -198,6 +235,38 @@ public class MainScreen extends javax.swing.JFrame {
     private void MenuOpAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpAboutActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MenuOpAboutActionPerformed
+
+    private void ButtonRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRemoveActionPerformed
+        if(TableVars.getSelectedRow()>-1) {
+            ((DefaultTableModel)TableVars.getModel()).removeRow(TableVars.getSelectedRow());
+            //TODO change var numbers
+        }
+    }//GEN-LAST:event_ButtonRemoveActionPerformed
+
+    private void ButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddActionPerformed
+        ((DefaultTableModel)TableVars.getModel()).addRow(new Object[]{"","","","",false,""});
+        //TODO change var numbers
+    }//GEN-LAST:event_ButtonAddActionPerformed
+
+    private void MenuOpEditProblemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpEditProblemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuOpEditProblemActionPerformed
+
+    private void MenuOpSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpSaveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuOpSaveActionPerformed
+
+    private void MenuOpLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLoadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuOpLoadActionPerformed
+
+    private void MenuOpLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLogoutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuOpLogoutActionPerformed
+
+    private void MenuOpFAQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpFAQActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuOpFAQActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().closescreen(this);
@@ -227,10 +296,10 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuOpLogout;
     private javax.swing.JMenuItem MenuOpSave;
     private javax.swing.JMenuItem MenuOpSendMail;
+    private javax.swing.JComboBox<String> ProblemSolver;
     private javax.swing.JProgressBar ProgressBar;
     private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JButton Start;
     private javax.swing.JTable TableVars;
-    private javax.swing.JComboBox<String> jComboBox1;
     // End of variables declaration//GEN-END:variables
 }

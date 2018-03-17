@@ -5,12 +5,10 @@
     <Component class="javax.swing.JComboBox" name="ComboBoxTypes">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="5">
+          <StringArray count="3">
             <StringItem index="0" value="Integer"/>
             <StringItem index="1" value="Double"/>
-            <StringItem index="2" value="Float"/>
-            <StringItem index="3" value="Long"/>
-            <StringItem index="4" value="Binary"/>
+            <StringItem index="2" value="Binary"/>
           </StringArray>
         </Property>
       </Properties>
@@ -32,6 +30,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Save"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuOpSaveActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="MenuOpLoad">
               <Properties>
@@ -40,11 +41,17 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Load"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuOpLoadActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="MenuOpLogout">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Switch User"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuOpLogoutActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -57,6 +64,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Problem"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuOpEditProblemActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -77,6 +87,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="FAQ"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuOpFAQActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="MenuOpAbout">
               <Properties>
@@ -124,7 +137,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="ScrollPane" pref="816" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="jComboBox1" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="ProblemSolver" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="Start" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -152,7 +165,7 @@
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Start" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ProblemSolver" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="ProgressBar" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
@@ -225,11 +238,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Add Row"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonAddActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="ButtonRemove">
       <Properties>
         <Property name="text" type="java.lang.String" value="Remove Row"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonRemoveActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Start">
       <Properties>
@@ -238,7 +257,7 @@
     </Component>
     <Component class="javax.swing.JProgressBar" name="ProgressBar">
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="ProblemSolver">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="22">
