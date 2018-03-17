@@ -42,8 +42,14 @@ public class ProblemScreen extends javax.swing.JFrame {
         MaxVars = new javax.swing.JFormattedTextField();
         MaxTime = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Problem Solver and Optimizer");
+        setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         ButtonSave.setText("Save");
         ButtonSave.addActionListener(new java.awt.event.ActionListener() {
@@ -170,6 +176,10 @@ public class ProblemScreen extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Please insert a valid Problem name", "Missing Data", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_ButtonSaveActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        GUI.getInstance().closescreen(this);
+    }//GEN-LAST:event_formWindowClosing
 
     public void open(){
         //Show Screen (Thread Safe)

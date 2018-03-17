@@ -66,7 +66,12 @@ public class GUI {
             case (3):
                 parent.dispose();
                 parent = new MainScreen();
-                ((gui.MainScreen)parent).open();
+                ((MainScreen)parent).open();
+                break;
+            case (4):
+                parent.dispose();
+                parent = new MailScreen();
+                ((MailScreen)parent).open();
                 break;
         }
     }
@@ -74,17 +79,31 @@ public class GUI {
     public void childscreen(int screen) {
         switch (screen) {
             case (2):
+                parent.setEnabled(false);
                 child = new ProjectScreen();
                 child.setTitle("Problem Solver and Optimizer - Edit Problem");
                 child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                ((ProblemScreen) child).open();
+                ((ProblemScreen)child).open();
                 break;
             case (4):
-                child = new MainScreen();
-                child.setTitle("Send Email");
+                parent.setEnabled(false);
+                child = new MailScreen();
                 child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                ((MainScreen) child).open();
+                ((MailScreen)child).open();
                 break;
+        }
+    }
+
+    public void closescreen(JFrame frame){
+        if(frame==parent){
+            parent.dispose();
+            //If need do something more
+            System.exit(0);
+        }
+        if(frame==child){
+            child.dispose();
+            parent.setEnabled(true);
+            parent.toFront();
         }
     }
 }

@@ -40,6 +40,7 @@ public class MainScreen extends javax.swing.JFrame {
         MenuFile = new javax.swing.JMenu();
         MenuOpSave = new javax.swing.JMenuItem();
         MenuOpLoad = new javax.swing.JMenuItem();
+        MenuOpLogout = new javax.swing.JMenuItem();
         MenuEdit = new javax.swing.JMenu();
         MenuOpEditProblem = new javax.swing.JMenuItem();
         MenuHelp = new javax.swing.JMenu();
@@ -49,8 +50,14 @@ public class MainScreen extends javax.swing.JFrame {
 
         ComboBoxTypes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Integer", "Double", "Float", "Long", "Binary" }));
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Problem Solver and Optimizer");
+        setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         TableVars.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -106,6 +113,9 @@ public class MainScreen extends javax.swing.JFrame {
         MenuOpLoad.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
         MenuOpLoad.setText("Load");
         MenuFile.add(MenuOpLoad);
+
+        MenuOpLogout.setText("Switch User");
+        MenuFile.add(MenuOpLogout);
 
         Menu.add(MenuFile);
 
@@ -182,12 +192,16 @@ public class MainScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MenuOpSendMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpSendMailActionPerformed
-        // TODO add your handling code here:
+        GUI.getInstance().childscreen(GUI.MailScreen);
     }//GEN-LAST:event_MenuOpSendMailActionPerformed
 
     private void MenuOpAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpAboutActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MenuOpAboutActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        GUI.getInstance().closescreen(this);
+    }//GEN-LAST:event_formWindowClosing
 
     public void open(){
         //Show Screen (Thread Safe)
@@ -210,6 +224,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuOpEditProblem;
     private javax.swing.JMenuItem MenuOpFAQ;
     private javax.swing.JMenuItem MenuOpLoad;
+    private javax.swing.JMenuItem MenuOpLogout;
     private javax.swing.JMenuItem MenuOpSave;
     private javax.swing.JMenuItem MenuOpSendMail;
     private javax.swing.JProgressBar ProgressBar;
