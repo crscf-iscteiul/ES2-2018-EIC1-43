@@ -37,10 +37,15 @@ public class StartScreen extends javax.swing.JFrame{
         LabelName = new javax.swing.JLabel();
         Remember = new javax.swing.JCheckBox();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle(" Problem Solver and Optimizer");
         setLocation(new java.awt.Point(0, 0));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         Continue.setText("Continue");
         Continue.addActionListener(new java.awt.event.ActionListener() {
@@ -130,6 +135,10 @@ public class StartScreen extends javax.swing.JFrame{
         else
             Continue.requestFocus();
     }//GEN-LAST:event_MailActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        GUI.getInstance().closescreen(this);
+    }//GEN-LAST:event_formWindowClosing
 
     public void open(){
         //Show Screen (Thread Safe)
