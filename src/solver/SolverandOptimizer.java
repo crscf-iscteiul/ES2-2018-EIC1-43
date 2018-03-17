@@ -24,12 +24,14 @@ public class SolverandOptimizer {
         return instance;
     }
 
+
+
     private SolverandOptimizer(){
         GUI.getInstance();
     }
 
     private void load_config(){
-        HashMap<String, String> adminInfo = new HashMap<>();
+        HashMap<String, String> adminInfo = new HashMap();
         System.out.println(System.getProperty("user.dir")+"\\config.xml");
         try {
             File config = new File(System.getProperty("user.dir") + "\\config.xml");
