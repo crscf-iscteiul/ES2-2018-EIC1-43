@@ -6,16 +6,13 @@ public class Problem {
     private String problemName;
     private String problemDescription;
     private int numVars;
-    private ProblemArray variables;
-    private String type;
+    private Variable[] variables;
 
-    public Problem(String problemName, String problemDescription, int numVars, String type, ArrayList<?> variables ) {
+    public Problem(String problemName, String problemDescription, Variable[] variables ) {
         this.problemName = problemName;
-        this.type = type;
         this.problemDescription = problemDescription;
-        this.numVars = numVars;
-        this.variables = new ProblemArray(type);
-        this.variables.addElements(variables);
+        this.numVars = variables.length;
+        this.variables = variables;
     }
 
     public String getProblemName() {
@@ -38,25 +35,12 @@ public class Problem {
         return numVars;
     }
 
-    public void setNumVars(int numVars) {
-        this.numVars = numVars;
+    public Variable[] getVariables() {
+        return variables;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public ArrayList<?> getVariables() {
-        return variables.getArray();
-    }
-
-    public void setVariables(ArrayList<?> variables, String type) {
-        if(this.type.equals(type)) {
-            this.variables.clearArray();
-            this.variables.addElements(variables);
-        } else {
-            this.variables = new ProblemArray(type);
-            this.variables.addElements(variables);
-        }
+    public void setVariables(Variable[] variables) {
+        this.numVars = variables.length;
+        this.variables = variables;
     }
 }
