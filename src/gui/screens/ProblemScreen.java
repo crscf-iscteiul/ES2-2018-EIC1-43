@@ -34,7 +34,7 @@ public class ProblemScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ButtonSave = new javax.swing.JButton();
+        ButtonDone = new javax.swing.JButton();
         ScrollPane = new javax.swing.JScrollPane();
         Description = new javax.swing.JTextArea();
         LabelTime = new javax.swing.JLabel();
@@ -53,10 +53,10 @@ public class ProblemScreen extends javax.swing.JFrame {
             }
         });
 
-        ButtonSave.setText("Save");
-        ButtonSave.addActionListener(new java.awt.event.ActionListener() {
+        ButtonDone.setText("Done");
+        ButtonDone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonSaveActionPerformed(evt);
+                ButtonDoneActionPerformed(evt);
             }
         });
 
@@ -120,7 +120,7 @@ public class ProblemScreen extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(MaxVars, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ButtonSave)))
+                        .addComponent(ButtonDone)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -135,7 +135,7 @@ public class ProblemScreen extends javax.swing.JFrame {
                     .addComponent(LabelTime)
                     .addComponent(LabelVars)
                     .addComponent(MaxVars, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ButtonSave)
+                    .addComponent(ButtonDone)
                     .addComponent(MaxTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -170,14 +170,14 @@ public class ProblemScreen extends javax.swing.JFrame {
             MaxTime.setText("HH:mm:ss");
     }//GEN-LAST:event_MaxTimeFocusLost
 
-    private void ButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSaveActionPerformed
+    private void ButtonDoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDoneActionPerformed
         if(!ProblemName.getText().equals("")) {
             GUI.getInstance().next_screen(GUI.MainScreen);
         }
         else{
             JOptionPane.showMessageDialog(this, "Please insert a valid Problem name", "Missing Data", JOptionPane.INFORMATION_MESSAGE);
         }
-    }//GEN-LAST:event_ButtonSaveActionPerformed
+    }//GEN-LAST:event_ButtonDoneActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().close_screen(this);
@@ -193,7 +193,7 @@ public class ProblemScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonSave;
+    private javax.swing.JButton ButtonDone;
     private javax.swing.JTextArea Description;
     private javax.swing.JLabel LabelTime;
     private javax.swing.JLabel LabelVars;

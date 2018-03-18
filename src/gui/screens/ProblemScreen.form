@@ -42,7 +42,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="MaxVars" min="-2" pref="120" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="ButtonSave" min="-2" max="-2" attributes="0"/>
+                      <Component id="ButtonDone" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -61,7 +61,7 @@
                   <Component id="LabelTime" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LabelVars" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="MaxVars" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ButtonSave" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ButtonDone" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="MaxTime" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -70,12 +70,12 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="ButtonSave">
+    <Component class="javax.swing.JButton" name="ButtonDone">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Save"/>
+        <Property name="text" type="java.lang.String" value="Done"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonSaveActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonDoneActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="ScrollPane">
