@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be6d3341-3e73-4513-987e-2665f4d6d60d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FAQScreen.form" afterPath="$PROJECT_DIR$/src/gui/screens/FAQScreen.form" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FAQScreen.java" afterPath="$PROJECT_DIR$/src/gui/screens/FAQScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/GUI.java" afterPath="$PROJECT_DIR$/src/gui/GUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MailScreen.form" afterPath="$PROJECT_DIR$/src/gui/screens/MailScreen.form" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MailScreen.java" afterPath="$PROJECT_DIR$/src/gui/screens/MailScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MainScreen.form" afterPath="$PROJECT_DIR$/src/gui/screens/MainScreen.form" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MainScreen.java" afterPath="$PROJECT_DIR$/src/gui/screens/MainScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProblemScreen.form" afterPath="$PROJECT_DIR$/src/gui/screens/ProblemScreen.form" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProblemScreen.java" afterPath="$PROJECT_DIR$/src/gui/screens/ProblemScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProjectScreen.form" afterPath="$PROJECT_DIR$/src/gui/screens/ProjectScreen.form" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProjectScreen.java" afterPath="$PROJECT_DIR$/src/gui/screens/ProjectScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/StartScreen.form" afterPath="$PROJECT_DIR$/src/gui/screens/StartScreen.form" />
-      <change beforePath="$PROJECT_DIR$/src/gui/StartScreen.java" afterPath="$PROJECT_DIR$/src/gui/screens/StartScreen.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,7 +74,7 @@
       <file leaf-file-name="MainScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
+            <state relative-caret-position="782">
               <caret line="272" column="55" lean-forward="false" selection-start-line="272" selection-start-column="55" selection-end-line="272" selection-end-column="55" />
               <folding />
             </state>
@@ -97,7 +84,7 @@
       <file leaf-file-name="Mail.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils/Mail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="234">
               <caret line="74" column="81" lean-forward="false" selection-start-line="74" selection-start-column="81" selection-end-line="74" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -119,8 +106,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Humaira Rachid &lt;hzrdr1@iscte-iul.pt&gt;" />
         <option value="Bruno Gama &lt;bmosg@iscte-iul-pt&gt;" />
+        <option value="Humaira Rachid &lt;hzrdr1@iscte-iul.pt&gt;" />
         <option value="hzrdr1-iscteiul" />
         <option value="hzrdr1@iscte-iul.pt" />
       </list>
@@ -408,7 +395,7 @@
       <workItem from="1521218547152" duration="5595000" />
       <workItem from="1521324022188" duration="1032000" />
       <workItem from="1521329617403" duration="1052000" />
-      <workItem from="1521373878626" duration="7940000" />
+      <workItem from="1521373878626" duration="8022000" />
     </task>
     <task id="LOCAL-00001" summary="Created Start Screen, almost done on this frame. Need to add listeners to buttons and save user input information.">
       <created>1521142687172</created>
@@ -620,11 +607,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521393454599</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Reordered Project Structure">
+      <created>1521393541620</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1521393541620</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63383000" />
+    <option name="totallyTimeSpent" value="63465000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -704,7 +698,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed some of the start screen look" />
     <MESSAGE value="Changed some of the start screen look drastically" />
     <MESSAGE value="Added Problem Edit Screen, still to do add listeners and info grabbers" />
     <MESSAGE value="Added new Single class to control ui, changed the way that the Screens classes start and show" />
@@ -729,7 +722,8 @@
     <MESSAGE value="Started working on FAQ Screen" />
     <MESSAGE value="Changed Mail format to html" />
     <MESSAGE value="Added tittle to mail format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tittle to mail format" />
+    <MESSAGE value="Reordered Project Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reordered Project Structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1114,14 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="272" column="55" lean-forward="false" selection-start-line="272" selection-start-column="55" selection-end-line="272" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/solver/SolverandOptimizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1144,9 +1130,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="272" column="55" lean-forward="false" selection-start-line="272" selection-start-column="55" selection-end-line="272" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Mail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="234">
           <caret line="74" column="81" lean-forward="false" selection-start-line="74" selection-start-column="81" selection-end-line="74" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
