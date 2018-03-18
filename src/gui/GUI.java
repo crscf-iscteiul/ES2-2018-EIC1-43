@@ -51,6 +51,11 @@ public class GUI {
 
     public void nextscreen(int screen) {
         switch (screen) {
+            case (0):
+                parent.dispose();
+                parent = new StartScreen();
+                ((StartScreen) parent).open();
+                break;
             case (1):
                 parent.dispose();
                 parent = new ProjectScreen();

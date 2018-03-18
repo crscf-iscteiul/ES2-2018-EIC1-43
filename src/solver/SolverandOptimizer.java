@@ -3,6 +3,7 @@ package solver;
 import gui.GUI;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+import utils.UserSession;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -24,10 +25,18 @@ public class SolverandOptimizer {
         return instance;
     }
 
-
+    private UserSession user;
 
     private SolverandOptimizer(){
         GUI.getInstance();
+    }
+
+    public void setUser(UserSession user){
+        this.user = user;
+    }
+
+    public UserSession getUser() {
+        return user;
     }
 
     private void load_config(){

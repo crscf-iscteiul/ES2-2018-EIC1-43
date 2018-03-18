@@ -1,6 +1,7 @@
 package main;
 
 import org.w3c.dom.*;
+import solver.SolverandOptimizer;
 import utils.Problem;
 import utils.Variable;
 
@@ -24,14 +25,14 @@ import java.io.FileNotFoundException;
 public class Main {
 
     public static void main(String[] args) {
-        //SolverandOptimizer.getInstance();
+        SolverandOptimizer.getInstance();
 
 
-        Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
-        Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml", vars);
-
-        saveProblemXML("test", p);
-        Problem p_r = readXMLProblem("test");
+//        Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
+//        Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml", vars);
+//
+//        saveProblemXML("test", p);
+//        Problem p_r = readXMLProblem("test");
 
     }
 

@@ -5,6 +5,10 @@
  */
 package gui;
 
+import main.Main;
+import solver.SolverandOptimizer;
+import utils.UserSession;
+
 import javax.swing.*;
 
 /**
@@ -113,28 +117,32 @@ public class StartScreen extends javax.swing.JFrame{
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueActionPerformed
-        if(!Mail.getText().equals("") && !Mail.getText().contains("@")){
-            JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
-            Mail.requestFocus();
-        }
-        else {
-            //TODO Save input info
-            //TODO remember option
-            GUI.getInstance().nextscreen(GUI.ProjectScreen);
-        }
-    }//GEN-LAST:event_ContinueActionPerformed
-
     private void UserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserNameActionPerformed
         Mail.requestFocus();
     }//GEN-LAST:event_UserNameActionPerformed
 
     private void MailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MailActionPerformed
-        if(!Mail.getText().equals("") && !Mail.getText().contains("@"))
+        if((!Mail.getText().equals("") && !Mail.getText().contains("@")) || (!UserName.getText().equals("") && !Mail.getText().contains("@")))
             JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
         else
             Continue.requestFocus();
     }//GEN-LAST:event_MailActionPerformed
+
+    private void ContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueActionPerformed
+        if((!Mail.getText().equals("") && !Mail.getText().contains("@")) || (!UserName.getText().equals("") && !Mail.getText().contains("@"))){
+            JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
+            Mail.requestFocus();
+        }
+        else {
+            if(Mail.getText().equals(""))
+                SolverandOptimizer.getInstance().setUser(null);
+            else
+                SolverandOptimizer.getInstance().setUser(new UserSession(UserName.getText(), Mail.getText()));
+
+            //TODO remember option save user on xml
+            GUI.getInstance().nextscreen(GUI.ProjectScreen);
+        }
+    }//GEN-LAST:event_ContinueActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().closescreen(this);

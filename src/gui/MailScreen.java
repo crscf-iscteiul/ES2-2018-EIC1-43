@@ -5,6 +5,9 @@
  */
 package gui;
 
+import solver.SolverandOptimizer;
+import utils.UserSession;
+
 import javax.swing.*;
 import java.util.Properties;
 
@@ -20,6 +23,9 @@ public class MailScreen extends javax.swing.JFrame {
     public MailScreen() {
         initComponents();
         setLocationRelativeTo(null);
+        UserSession user = SolverandOptimizer.getInstance().getUser();
+        if(user!=null)
+            Email.setText(user.getMail());
     }
 
     /**

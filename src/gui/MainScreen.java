@@ -5,6 +5,8 @@
  */
 package gui;
 
+import solver.SolverandOptimizer;
+
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -19,6 +21,8 @@ public class MainScreen extends javax.swing.JFrame {
     public MainScreen() {
         initComponents();
         setLocationRelativeTo(null);
+        if(SolverandOptimizer.getInstance().getUser()!=null)
+            SendInfo.setSelected(true);
     }
 
     /**
@@ -36,8 +40,8 @@ public class MainScreen extends javax.swing.JFrame {
         ButtonAdd = new javax.swing.JButton();
         ButtonRemove = new javax.swing.JButton();
         Start = new javax.swing.JButton();
-        ProgressBar = new javax.swing.JProgressBar();
         ProblemSolver = new javax.swing.JComboBox<>();
+        SendInfo = new javax.swing.JCheckBox();
         Menu = new javax.swing.JMenuBar();
         MenuFile = new javax.swing.JMenu();
         MenuOpSave = new javax.swing.JMenuItem();
@@ -115,6 +119,8 @@ public class MainScreen extends javax.swing.JFrame {
         Start.setText("Start");
 
         ProblemSolver.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AbYSS", "CellDE", "dMPOSO", "GDE3", "FastPGA", "IBEA", "MOCHC", "MOCell", "MOEA/D-DE", "pMOEA/D-DE", "MOEA/D-DRA", "NSGA-II", "ssNSGA-II", "NSGAIIr", "NSGAIIa", "pNSGA-II", "OMOPSO", "PAES", "SMPSO", "pSMPSO", "SMPSOhv", "SPEA2" }));
+
+        SendInfo.setText("Send Info");
 
         MenuFile.setText("File");
 
@@ -200,9 +206,9 @@ public class MainScreen extends javax.swing.JFrame {
                         .addComponent(ProblemSolver, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Start)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ProgressBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(SendInfo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ButtonRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -220,8 +226,8 @@ public class MainScreen extends javax.swing.JFrame {
                         .addComponent(ButtonAdd))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Start)
-                        .addComponent(ProblemSolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(ProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ProblemSolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SendInfo)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -249,23 +255,25 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonAddActionPerformed
 
     private void MenuOpEditProblemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpEditProblemActionPerformed
-        // TODO add your handling code here:
+        GUI.getInstance().childscreen(GUI.ProblemScreen);
+        //TODO Load current problem info
     }//GEN-LAST:event_MenuOpEditProblemActionPerformed
 
     private void MenuOpSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpSaveActionPerformed
-        // TODO add your handling code here:
+        // TODO Save Current Problem
     }//GEN-LAST:event_MenuOpSaveActionPerformed
 
     private void MenuOpLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLoadActionPerformed
-        // TODO add your handling code here:
+        // TODO Load Problem
     }//GEN-LAST:event_MenuOpLoadActionPerformed
 
     private void MenuOpLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLogoutActionPerformed
-        // TODO add your handling code here:
+        SolverandOptimizer.getInstance().setUser(null);
+        GUI.getInstance().nextscreen(GUI.StartScreen);
     }//GEN-LAST:event_MenuOpLogoutActionPerformed
 
     private void MenuOpFAQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpFAQActionPerformed
-        // TODO add your handling code here:
+        // TODO Show FAQ Screen
     }//GEN-LAST:event_MenuOpFAQActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -297,8 +305,8 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuOpSave;
     private javax.swing.JMenuItem MenuOpSendMail;
     private javax.swing.JComboBox<String> ProblemSolver;
-    private javax.swing.JProgressBar ProgressBar;
     private javax.swing.JScrollPane ScrollPane;
+    private javax.swing.JCheckBox SendInfo;
     private javax.swing.JButton Start;
     private javax.swing.JTable TableVars;
     // End of variables declaration//GEN-END:variables
