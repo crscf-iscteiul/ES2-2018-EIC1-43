@@ -25,14 +25,13 @@ import java.io.FileNotFoundException;
 public class Main {
 
     public static void main(String[] args) {
-        //SolverandOptimizer.getInstance();
+        SolverandOptimizer.getInstance();
 
-        Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
+/*        Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
         Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml",4,"00:05:00"  ,vars);
 
-        //saveProblemXML("test", p);
-        Problem p_r = readXMLProblem("test");
-        System.out.println(p_r.getNumVars());
+        saveProblemXML("test", p);
+        Problem p_r = readXMLProblem("test");*/
 
     }
 

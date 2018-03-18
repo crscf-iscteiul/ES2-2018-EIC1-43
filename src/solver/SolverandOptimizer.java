@@ -47,7 +47,7 @@ public class SolverandOptimizer {
         return user;
     }
 
-    private void load_config(){
+    public HashMap<String, String> load_config(){
         HashMap<String, String> adminInfo = new HashMap();
         System.out.println(System.getProperty("user.dir")+"\\config.xml");
         try {
@@ -74,6 +74,7 @@ public class SolverandOptimizer {
         } catch(Exception e) {
 
         }
+        return adminInfo;
     }
 
 }

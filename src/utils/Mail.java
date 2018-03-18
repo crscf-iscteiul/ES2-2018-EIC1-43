@@ -8,6 +8,9 @@ import javax.mail.*;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Properties;
 
 public class Mail {
@@ -68,6 +71,12 @@ public class Mail {
 
         //TODO Load xml config and send to those admins
         //TODO Add xml mail counter i guess or cagar
+
+        HashMap<String, String> adminInfo = SolverandOptimizer.getInstance().load_config();
+        for(int i = 0; i < adminInfo.size()-1; i++) {
+            sendMail(adminInfo.values().toArray()[i].toString(), "User Problem - "+subject, html);
+        }
+
         return sendMail("afssa11111@iscte-iul.pt", "User Problem - "+subject, html);
     }
 
