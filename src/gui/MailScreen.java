@@ -132,12 +132,10 @@ public class MailScreen extends javax.swing.JFrame {
 
     private void ButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSendActionPerformed
         if(Email.getText().contains("@")){
-            //TODO Load xml config and send to those admins
-            String text = "This user "+Email.getText()+" said\n\n"+Text.getText();
-            boolean confirmation = Mail.getInstance().sendMail(Email.getText(), "Problem Solver and Optimizer - Mail sent confirmation","We have received your mail and are going to respond as fast as possible\n\nThank you for your understanding");
+            boolean confirmation = Mail.getInstance().sendConfirmationtoUser(Email.getText(), Subject.getText(),Text.getText());
             boolean mail = false;
             if(confirmation)
-                mail = Mail.getInstance().sendMail("afssa11111@iscte-iul.pt", Subject.getText(), text);
+                mail = Mail.getInstance().sendIssuetoAdmin(Email.getText(), Subject.getText(),Text.getText());
             else
                 JOptionPane.showMessageDialog(this, "Please insert valid mail address", "Mail Format", JOptionPane.ERROR_MESSAGE);
             if(mail && confirmation) {
