@@ -6,6 +6,7 @@
 package gui.screens;
 
 import gui.GUI;
+import solver.SolverandOptimizer;
 import utils.Problem;
 import utils.Variable;
 
@@ -179,7 +180,7 @@ public class ProblemScreen extends javax.swing.JFrame {
             int maxVars = Integer.valueOf(MaxVars.getText());
             String maxTime = MaxTime.getText();
             Problem currentProblem = new Problem(problem_name, problem_description, maxVars, maxTime, new Variable[maxVars]);
-            GUI.getInstance().setCurrentP(currentProblem);
+            SolverandOptimizer.getInstance().getUser().setProblem(currentProblem);
 
             GUI.getInstance().next_screen(GUI.MainScreen);
         }
