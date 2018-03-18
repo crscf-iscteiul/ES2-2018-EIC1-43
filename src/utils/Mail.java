@@ -60,7 +60,7 @@ public class Mail {
         text = text.replaceAll("\n","<br>");
 
         String html ="<body>"
-                    +"<title>Problem Solver and Optimizer</title>"
+                    +"<p><font size=\"6\">Problem Solver and Optimizer</font></p>"
                     +"<p>This user <b>"+from+"</b> said:</p>"
                     +"<p><i>"+text+"</i></p>"
                     +"<p>Please respond to user as soon as possible</p>"
@@ -76,7 +76,7 @@ public class Mail {
         text = text.replaceAll("\n","<br>");
 
         String html ="<body>"
-                    +"<title>Problem Solver and Optimizer</title>"
+                    +"<p><font size=\"6\">Problem Solver and Optimizer</font></p>"
                     +"<p>Your message:</p>"
                     +"<p><i><b>"+user_subject+"</b><br>"+text+"</i></p>"
                     +"<p>We have received your mail and are going to respond as fast as possible<br>Thank you for your understanding</p>"
