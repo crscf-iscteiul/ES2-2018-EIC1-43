@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be6d3341-3e73-4513-987e-2665f4d6d60d" name="Default" comment="">
+    <list default="true" id="be6d3341-3e73-4513-987e-2665f4d6d60d" name="Default" comment="Secured Email related errors">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/gui/FAQScreen.form" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/gui/FAQScreen.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
-      <change beforePath="$PROJECT_DIR$/src/gui/GUI.java" afterPath="$PROJECT_DIR$/src/gui/GUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MailScreen.java" afterPath="$PROJECT_DIR$/src/gui/MailScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MainScreen.java" afterPath="$PROJECT_DIR$/src/gui/MainScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProblemScreen.java" afterPath="$PROJECT_DIR$/src/gui/ProblemScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProjectScreen.java" afterPath="$PROJECT_DIR$/src/gui/ProjectScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/gui/StartScreen.java" afterPath="$PROJECT_DIR$/src/gui/StartScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Mail.java" afterPath="$PROJECT_DIR$/src/utils/Mail.java" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Variable.java" afterPath="$PROJECT_DIR$/src/utils/Variable.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,8 +36,8 @@
       <file leaf-file-name="MainScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/MainScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="241" column="11" lean-forward="false" selection-start-line="241" selection-start-column="11" selection-end-line="241" selection-end-column="11" />
+            <state relative-caret-position="255">
+              <caret line="270" column="30" lean-forward="false" selection-start-line="270" selection-start-column="30" selection-end-line="270" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -402,7 +395,7 @@
       <workItem from="1521218547152" duration="5595000" />
       <workItem from="1521324022188" duration="1032000" />
       <workItem from="1521329617403" duration="1052000" />
-      <workItem from="1521373878626" duration="2244000" />
+      <workItem from="1521373878626" duration="2918000" />
     </task>
     <task id="LOCAL-00001" summary="Created Start Screen, almost done on this frame. Need to add listeners to buttons and save user input information.">
       <created>1521142687172</created>
@@ -586,11 +579,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521339913356</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Secured Email related errors">
+      <created>1521376676465</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1521376676465</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57687000" />
+    <option name="totallyTimeSpent" value="58361000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -603,9 +603,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3423913" sideWeight="0.3272921" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3423913" sideWeight="0.3272921" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767764" sideWeight="0.61247337" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -692,7 +693,8 @@
     <MESSAGE value="Mail tested, some changes are due" />
     <MESSAGE value="Changed the way sending and email works" />
     <MESSAGE value="Added user confirmation after sending and email" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added user confirmation after sending and email" />
+    <MESSAGE value="Secured Email related errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Secured Email related errors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1111,8 +1113,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/MainScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="241" column="11" lean-forward="false" selection-start-line="241" selection-start-column="11" selection-end-line="241" selection-end-column="11" />
+        <state relative-caret-position="255">
+          <caret line="270" column="30" lean-forward="false" selection-start-line="270" selection-start-column="30" selection-end-line="270" selection-end-column="30" />
           <folding />
         </state>
       </provider>
