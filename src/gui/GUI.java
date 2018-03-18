@@ -1,5 +1,7 @@
 package gui;
 
+import gui.screens.*;
+
 import javax.swing.*;
 
 public class GUI {
