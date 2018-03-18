@@ -102,13 +102,13 @@ public class ProjectScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNewActionPerformed
-        GUI.getInstance().nextscreen(GUI.ProblemScreen);
+        GUI.getInstance().next_screen(GUI.ProblemScreen);
     }//GEN-LAST:event_ButtonNewActionPerformed
 
     private void ButtonLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoadActionPerformed
         if(History.getSelectedIndex()!=-1){
             //TODO Read and load file to a class format
-            GUI.getInstance().nextscreen(GUI.MainScreen);
+            GUI.getInstance().next_screen(GUI.MainScreen);
         }
         else {
             JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
@@ -118,13 +118,13 @@ public class ProjectScreen extends javax.swing.JFrame {
             int returnVal = path_chooser.showOpenDialog(this);
             if(returnVal == JFileChooser.APPROVE_OPTION) {
                 //TODO Read and load file to a class format
-                GUI.getInstance().nextscreen(GUI.MainScreen);
+                GUI.getInstance().next_screen(GUI.MainScreen);
             }
         }
     }//GEN-LAST:event_ButtonLoadActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        GUI.getInstance().closescreen(this);
+        GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
 
 

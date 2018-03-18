@@ -130,7 +130,7 @@ public class StartScreen extends javax.swing.JFrame{
 
     private void ContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueActionPerformed
         if((!Mail.getText().equals("") && !Mail.getText().contains("@")) || (!UserName.getText().equals("") && !Mail.getText().contains("@"))){
-            JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Please insert valid mail address", "Mail Format", JOptionPane.ERROR_MESSAGE);
             Mail.requestFocus();
         }
         else {
@@ -140,12 +140,12 @@ public class StartScreen extends javax.swing.JFrame{
                 SolverandOptimizer.getInstance().setUser(new UserSession(UserName.getText(), Mail.getText()));
 
             //TODO remember option save user on xml
-            GUI.getInstance().nextscreen(GUI.ProjectScreen);
+            GUI.getInstance().next_screen(GUI.ProjectScreen);
         }
     }//GEN-LAST:event_ContinueActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        GUI.getInstance().closescreen(this);
+        GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
 
     public void open(){

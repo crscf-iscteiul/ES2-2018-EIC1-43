@@ -132,20 +132,26 @@ public class MailScreen extends javax.swing.JFrame {
 
     private void ButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSendActionPerformed
         if(Email.getText().contains("@")){
-            //TODO Send the email to admins
+            //TODO Load xml config and send to those admins
             String text = "This user "+Email.getText()+" said\n\n"+Text.getText();
-            Mail.getInstance().sendMail("afssa11111@iscte-iul.pt", Subject.getText(), text);
-            Mail.getInstance().sendMail(Email.getText(), "Problem Solver and Optimizer - Mail sent confirmation","We have received your mail and are going to respond as fast as possible\n\nThank you for your understanding");
-            JOptionPane.showMessageDialog(this, "Your email has been sent", "Email Sent", JOptionPane.INFORMATION_MESSAGE);
-            GUI.getInstance().closescreen(this);
+            boolean confirmation = Mail.getInstance().sendMail(Email.getText(), "Problem Solver and Optimizer - Mail sent confirmation","We have received your mail and are going to respond as fast as possible\n\nThank you for your understanding");
+            boolean mail = false;
+            if(confirmation)
+                mail = Mail.getInstance().sendMail("afssa11111@iscte-iul.pt", Subject.getText(), text);
+            else
+                JOptionPane.showMessageDialog(this, "Please insert valid mail address", "Mail Format", JOptionPane.ERROR_MESSAGE);
+            if(mail && confirmation) {
+                JOptionPane.showMessageDialog(this, "Your email has been sent", "Email Sent", JOptionPane.INFORMATION_MESSAGE);
+                GUI.getInstance().close_screen(this);
+            }
         }
         else{
-            JOptionPane.showMessageDialog(this, "Please insert valid mail", "Mail Format", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Please insert valid mail address", "Mail Format", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_ButtonSendActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        GUI.getInstance().closescreen(this);
+        GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
 
     public void open(){

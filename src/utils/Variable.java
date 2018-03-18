@@ -1,7 +1,9 @@
 package utils;
 
 public class Variable {
+
     String variableName;
+
     Integer integerVar;
     Double doubleVar;
     Boolean booleanVar;

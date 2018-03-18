@@ -1,5 +1,6 @@
 package utils;
 
+import gui.GUI;
 import main.Main;
 import solver.SolverandOptimizer;
 
@@ -36,7 +37,7 @@ public class Mail {
         });
     }
 
-    public void sendMail(String to, String subject, String text){
+    public boolean sendMail(String to, String subject, String text){
         try{
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(username));
@@ -46,9 +47,12 @@ public class Mail {
 
             Transport.send(message);
         } catch (AddressException e) {
-            e.printStackTrace();
+            GUI.getInstance().show_error("Could not send to this address");
+            return false;
         } catch (MessagingException e) {
-            e.printStackTrace();
+            GUI.getInstance().show_error("Could not send this mail");
+            return false;
         }
+        return true;
     }
 }

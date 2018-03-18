@@ -170,7 +170,7 @@ public class ProblemScreen extends javax.swing.JFrame {
 
     private void ButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSaveActionPerformed
         if(!ProblemName.getText().equals("")) {
-            GUI.getInstance().nextscreen(GUI.MainScreen);
+            GUI.getInstance().next_screen(GUI.MainScreen);
         }
         else{
             JOptionPane.showMessageDialog(this, "Please insert a valid Problem name", "Missing Data", JOptionPane.INFORMATION_MESSAGE);
@@ -178,7 +178,7 @@ public class ProblemScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonSaveActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        GUI.getInstance().closescreen(this);
+        GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
 
     public void open(){

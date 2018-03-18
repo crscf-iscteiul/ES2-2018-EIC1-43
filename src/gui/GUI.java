@@ -49,7 +49,7 @@ public class GUI {
         //</editor-fold>
     }
 
-    public void nextscreen(int screen) {
+    public void next_screen(int screen) {
         switch (screen) {
             case (0):
                 parent.dispose();
@@ -80,7 +80,7 @@ public class GUI {
         }
     }
 
-    public void childscreen(int screen) {
+    public void child_screen(int screen) {
         switch (screen) {
             case (2):
                 parent.setEnabled(false);
@@ -98,7 +98,7 @@ public class GUI {
         }
     }
 
-    public void closescreen(JFrame frame){
+    public void close_screen(JFrame frame){
         if(frame==parent){
             parent.dispose();
             //If need do something more
@@ -109,5 +109,12 @@ public class GUI {
             parent.setEnabled(true);
             parent.toFront();
         }
+    }
+
+    public void show_error(String error){
+        if(child!=null)
+            JOptionPane.showMessageDialog(child, error, "Error", JOptionPane.ERROR_MESSAGE);
+        else
+            JOptionPane.showMessageDialog(parent, error, "Error", JOptionPane.ERROR_MESSAGE);
     }
 }

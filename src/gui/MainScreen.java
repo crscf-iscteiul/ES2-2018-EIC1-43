@@ -235,7 +235,7 @@ public class MainScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MenuOpSendMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpSendMailActionPerformed
-        GUI.getInstance().childscreen(GUI.MailScreen);
+        GUI.getInstance().child_screen(GUI.MailScreen);
     }//GEN-LAST:event_MenuOpSendMailActionPerformed
 
     private void MenuOpAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpAboutActionPerformed
@@ -255,7 +255,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonAddActionPerformed
 
     private void MenuOpEditProblemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpEditProblemActionPerformed
-        GUI.getInstance().childscreen(GUI.ProblemScreen);
+        GUI.getInstance().child_screen(GUI.ProblemScreen);
         //TODO Load current problem info
     }//GEN-LAST:event_MenuOpEditProblemActionPerformed
 
@@ -269,7 +269,7 @@ public class MainScreen extends javax.swing.JFrame {
 
     private void MenuOpLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLogoutActionPerformed
         SolverandOptimizer.getInstance().setUser(null);
-        GUI.getInstance().nextscreen(GUI.StartScreen);
+        GUI.getInstance().next_screen(GUI.StartScreen);
     }//GEN-LAST:event_MenuOpLogoutActionPerformed
 
     private void MenuOpFAQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpFAQActionPerformed
@@ -277,7 +277,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuOpFAQActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        GUI.getInstance().closescreen(this);
+        GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
 
     public void open(){
