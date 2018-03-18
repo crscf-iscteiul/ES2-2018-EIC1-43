@@ -133,7 +133,9 @@ public class MailScreen extends javax.swing.JFrame {
     private void ButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSendActionPerformed
         if(Email.getText().contains("@")){
             //TODO Send the email to admins
-            Mail.sendMail("afssa11111@iscte-iul.pt", Subject.getText(), Text.getText());
+            String text = "This user "+Email.getText()+" said\n\n"+Text.getText();
+            Mail.getInstance().sendMail("afssa11111@iscte-iul.pt", Subject.getText(), text);
+            Mail.getInstance().sendMail(Email.getText(), "Problem Solver and Optimizer - Mail sent confirmation","We have received your mail and are going to respond as fast as possible\n\nThank you for your understanding");
             JOptionPane.showMessageDialog(this, "Your email has been sent", "Email Sent", JOptionPane.INFORMATION_MESSAGE);
             GUI.getInstance().closescreen(this);
         }

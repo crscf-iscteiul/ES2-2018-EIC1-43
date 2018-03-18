@@ -1,8 +1,10 @@
 package solver;
 
 import gui.GUI;
+import main.Main;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+import utils.Mail;
 import utils.UserSession;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -28,6 +30,12 @@ public class SolverandOptimizer {
     private UserSession user;
 
     private SolverandOptimizer(){
+        new Thread(){
+            @Override
+            public void run() {
+                Mail.getInstance();
+            }
+        }.run();
         GUI.getInstance();
     }
 

@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be6d3341-3e73-4513-987e-2665f4d6d60d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MailScreen.java" afterPath="$PROJECT_DIR$/src/gui/MailScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/solver/SolverandOptimizer.java" afterPath="$PROJECT_DIR$/src/solver/SolverandOptimizer.java" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Mail.java" afterPath="$PROJECT_DIR$/src/utils/Mail.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -645,11 +641,25 @@
       <option name="project" value="LOCAL" />
       <updated>1521338996958</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Changed the way sending and email works">
+      <created>1521339856868</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1521339856868</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added user confirmation after sending and email">
+      <created>1521339892830</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1521339892830</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55255000" />
+    <option name="totallyTimeSpent" value="55347000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -770,7 +780,9 @@
     <MESSAGE value="Added some more Screen transitions and some popups for user error." />
     <MESSAGE value="Mail sender created" />
     <MESSAGE value="Mail tested, some changes are due" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mail tested, some changes are due" />
+    <MESSAGE value="Changed the way sending and email works" />
+    <MESSAGE value="Added user confirmation after sending and email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added user confirmation after sending and email" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
