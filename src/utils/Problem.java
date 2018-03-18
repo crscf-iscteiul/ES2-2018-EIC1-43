@@ -47,6 +47,18 @@ public class Problem {
         return variables;
     }
 
+    public boolean addNewVariable(Variable var) {
+        if(variables.length + 1 <= numVars) {
+            Variable[] newVars = new Variable[variables.length + 1];
+            for (int i = 0; i < variables.length; i++)
+                newVars[i] = variables[i];
+            newVars[variables.length + 1] = var;
+            variables = newVars;
+            return true;
+        }
+        return false;
+    }
+
     public void setVariables(Variable[] variables) {
         this.numVars = variables.length;
         this.variables = variables;
