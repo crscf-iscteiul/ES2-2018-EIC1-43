@@ -3,6 +3,7 @@
 	<Administrator Name="André Sousa" email="afssa11111@iscte-iul.pt"/>
 	<Administrator Name="Bruno Gama" email="bmosg@iscte-iul.pt"/>
 	<Administrator Name="Carlos Rafael" email="crscf@iscte-iul.pt"/>
+	<Administrator Name="Humaira Rachid" email="hzrdr1@iscte-iul.pt"/>
 	<Paths>
 		<jMetalPath>/users/abc/def</jMetalPath>
 		<jarsPath>/users/xyz/kyw</jarsPath>
