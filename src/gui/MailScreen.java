@@ -6,6 +6,7 @@
 package gui;
 
 import solver.SolverandOptimizer;
+import utils.Mail;
 import utils.UserSession;
 
 import javax.swing.*;
@@ -132,6 +133,7 @@ public class MailScreen extends javax.swing.JFrame {
     private void ButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSendActionPerformed
         if(Email.getText().contains("@")){
             //TODO Send the email to admins
+            Mail.sendMail("afssa11111@iscte-iul.pt", Subject.getText(), Text.getText());
             JOptionPane.showMessageDialog(this, "Your email has been sent", "Email Sent", JOptionPane.INFORMATION_MESSAGE);
             GUI.getInstance().closescreen(this);
         }

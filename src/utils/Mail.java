@@ -33,9 +33,9 @@ public class Mail {
 
             Transport.send(message);
         } catch (AddressException e) {
-
+            e.printStackTrace();
         } catch (MessagingException e) {
-
+            e.printStackTrace();
         }
     }
 }
