@@ -6,17 +6,25 @@ public class Problem {
     private String problemName;
     private String problemDescription;
     private int numVars;
+    private String maxTime;
     private Variable[] variables;
 
-    public Problem(String problemName, String problemDescription, Variable[] variables ) {
+    public Problem(String problemName, String problemDescription, int maxVars, String maxTime, Variable[] variables ) {
         this.problemName = problemName;
         this.problemDescription = problemDescription;
-        this.numVars = variables.length;
+        this.numVars =maxVars;
+        this.maxTime = maxTime;
         this.variables = variables;
     }
 
     public String getProblemName() {
         return problemName;
+    }
+
+    public String getMaxTime() { return this.maxTime; }
+
+    public void setmaxTime(String maxTime) {
+        this.maxTime = maxTime;
     }
 
     public void setProblemName(String problemName) {

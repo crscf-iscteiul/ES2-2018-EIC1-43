@@ -1,6 +1,7 @@
 package gui;
 
 import gui.screens.*;
+import utils.Problem;
 
 import javax.swing.*;
 
@@ -22,6 +23,8 @@ public class GUI {
 
     private JFrame parent;
     private JFrame child;
+
+    private Problem currentP = null;
 
     private GUI() {
         setLookAndFeel("Windows");
@@ -118,5 +121,13 @@ public class GUI {
             JOptionPane.showMessageDialog(child, error, "Error", JOptionPane.ERROR_MESSAGE);
         else
             JOptionPane.showMessageDialog(parent, error, "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void setCurrentP(Problem p) {
+        this.currentP = p;
+    }
+
+    public Problem getCurrentP() {
+        return this.currentP;
     }
 }

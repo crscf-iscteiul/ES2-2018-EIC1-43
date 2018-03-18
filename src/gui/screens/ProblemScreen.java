@@ -6,6 +6,8 @@
 package gui.screens;
 
 import gui.GUI;
+import utils.Problem;
+import utils.Variable;
 
 import javax.swing.*;
 import java.text.ParseException;
@@ -172,6 +174,13 @@ public class ProblemScreen extends javax.swing.JFrame {
 
     private void ButtonDoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDoneActionPerformed
         if(!ProblemName.getText().equals("")) {
+            String problem_name = ProblemName.getText();
+            String problem_description = Description.getText();
+            int maxVars = Integer.valueOf(MaxVars.getText());
+            String maxTime = MaxTime.getText();
+            Problem currentProblem = new Problem(problem_name, problem_description, maxVars, maxTime, new Variable[maxVars]);
+            GUI.getInstance().setCurrentP(currentProblem);
+
             GUI.getInstance().next_screen(GUI.MainScreen);
         }
         else{

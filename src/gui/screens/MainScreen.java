@@ -7,6 +7,7 @@ package gui.screens;
 
 import gui.GUI;
 import solver.SolverandOptimizer;
+import utils.Problem;
 
 import javax.swing.table.DefaultTableModel;
 

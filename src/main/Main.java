@@ -25,14 +25,14 @@ import java.io.FileNotFoundException;
 public class Main {
 
     public static void main(String[] args) {
-        SolverandOptimizer.getInstance();
+        //SolverandOptimizer.getInstance();
 
+        Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
+        Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml",4,"00:05:00"  ,vars);
 
-//        Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
-//        Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml", vars);
-//
-//        saveProblemXML("test", p);
-//        Problem p_r = readXMLProblem("test");
+        //saveProblemXML("test", p);
+        Problem p_r = readXMLProblem("test");
+        System.out.println(p_r.getNumVars());
 
     }
 
@@ -52,18 +52,31 @@ public class Main {
             rootElement.appendChild(staff);
 
             // set attribute to problem element
-            staff.setAttribute("description", p.getProblemDescription());
-            staff.setAttribute("name", p.getProblemName());
+            Element name = doc.createElement("Name");
+            name.appendChild(doc.createTextNode(p.getProblemName()));
+            staff.appendChild(name);
+
+            Element desc = doc.createElement("Description");
+            desc.appendChild(doc.createTextNode(p.getProblemDescription()));
+            staff.appendChild(desc);
 
             Element variables = doc.createElement("Variables");
-            rootElement.appendChild(variables);
+            staff.appendChild(variables);
 
             // variable elements
             for (int i = 0; i < p.getVariables().length; i++) {
                 Element variable = doc.createElement(p.getVariables()[i].getVariableName().replace(" ", "_"));
-                variable.appendChild(doc.createTextNode(p.getVariables()[i].getVariable().toString().replace(" ", "_")));
+                variable.appendChild(doc.createTextNode(p.getVariables()[i].getVariable().toString()));
                 variables.appendChild(variable);
             }
+
+            Element time = doc.createElement("Max_Time");
+            time.appendChild(doc.createTextNode(p.getMaxTime()));
+            staff.appendChild(time);
+
+            Element maxVars = doc.createElement("Max_Vars");
+            maxVars.appendChild(doc.createTextNode(String.valueOf(p.getNumVars())));
+            staff.appendChild(maxVars);
 
             // write the content into xml file
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -89,7 +102,9 @@ public class Main {
         try {
             String p_description = "";
             String p_name = "";
-
+            String m_Time = "";
+            int mVars = 0;
+            Variable[] vars = null;
 
             File config = new File(System.getProperty("user.dir") + "\\" + filename + ".xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -99,30 +114,40 @@ public class Main {
 
             XPathFactory xpathFactory = XPathFactory.newInstance();
             XPath xpath = xpathFactory.newXPath();
-            XPathExpression expr = xpath.compile("/root/Problem/@*");
+            XPathExpression expr = xpath.compile("/root/Problem/*");
 
             NodeList nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
 
-            for (int i = 0; i < nl.getLength(); i++) {
-                if (nl.item(i).getNodeName().equals("description"))
-                    p_description = nl.item(i).getNodeValue();
-                if (nl.item(i).getNodeName().equals("name"))
-                    p_name = nl.item(i).getNodeValue();
+
+            for(int i = 0; i < nl.getLength(); i++) {
+                if(nl.item(i).getNodeName().equals("Name"))
+                    p_name = nl.item(i).getFirstChild().getNodeValue();
+                if(nl.item(i).getNodeName().equals("Description"))
+                    p_description = nl.item(i).getFirstChild().getNodeValue();
+                if(nl.item(i).getNodeName().equals("Max_Time"))
+                    m_Time = nl.item(i).getFirstChild().getNodeValue();
+                if(nl.item(i).getNodeName().equals("Max_Vars"))
+                    mVars = Integer.parseInt(nl.item(i).getFirstChild().getNodeValue());
+
             }
 
-            expr = xpath.compile("/root/Variables/*");
+
+            expr = xpath.compile("/root/Problem/Variables/*");
+
             nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+
             Variable[] vars_l = new Variable[nl.getLength()];
             for (int i = 0; i < nl.getLength(); i++) {
                 Variable v = new Variable(nl.item(i).getNodeName(), nl.item(i).getFirstChild().getNodeValue().toString());
                 vars_l[i] = v;
             }
 
-            return new Problem(p_name, p_description, vars_l);
+            return new Problem(p_name, p_description, mVars, m_Time, vars_l);
 
         } catch (FileNotFoundException e) {
             System.out.println("Make sure configuration file is available.");
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return null;
     }
