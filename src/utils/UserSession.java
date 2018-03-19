@@ -4,8 +4,6 @@ public class UserSession {
 
     private String name;
     private String mail;
-    private Problem p;
-
 
     public UserSession(String name, String mail){
         this.name = name;
@@ -20,9 +18,4 @@ public class UserSession {
         return mail;
     }
 
-    public void setProblem(Problem p) {
-        this.p = p;
-    }
-
-    public Problem getProblem() { return this.p; }
 }

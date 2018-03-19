@@ -68,6 +68,11 @@ public class ProjectScreen extends javax.swing.JFrame {
         });
 
         ButtonFAQ.setText("FAQ");
+        ButtonFAQ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonFAQActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -125,10 +130,13 @@ public class ProjectScreen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ButtonLoadActionPerformed
 
+    private void ButtonFAQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonFAQActionPerformed
+        GUI.getInstance().child_screen(GUI.FAQScreen);
+    }//GEN-LAST:event_ButtonFAQActionPerformed
+
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
-
 
     public void open(){
         //Show Screen (Thread Safe)

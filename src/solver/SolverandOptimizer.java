@@ -5,6 +5,7 @@ import main.Main;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import utils.Mail;
+import utils.Problem;
 import utils.UserSession;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -28,6 +29,7 @@ public class SolverandOptimizer {
     }
 
     private UserSession user;
+    private Problem problem;
 
     private SolverandOptimizer(){
         new Thread(){
@@ -46,6 +48,12 @@ public class SolverandOptimizer {
     public UserSession getUser() {
         return user;
     }
+
+    public void setProblem(Problem problem) {
+        this.problem = problem;
+    }
+
+    public Problem getProblem() { return this.problem; }
 
     public HashMap<String, String> load_config(){
         HashMap<String, String> adminInfo = new HashMap();

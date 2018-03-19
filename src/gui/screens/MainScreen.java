@@ -241,7 +241,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuOpSendMailActionPerformed
 
     private void MenuOpAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpAboutActionPerformed
-        // TODO add your handling code here:
+        GUI.getInstance().child_screen(GUI.AboutScreen);
     }//GEN-LAST:event_MenuOpAboutActionPerformed
 
     private void ButtonRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRemoveActionPerformed
@@ -275,7 +275,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuOpLogoutActionPerformed
 
     private void MenuOpFAQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpFAQActionPerformed
-        // TODO Show FAQ Screen
+        GUI.getInstance().child_screen(GUI.FAQScreen);
     }//GEN-LAST:event_MenuOpFAQActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing

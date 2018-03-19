@@ -20,6 +20,7 @@ public class GUI {
     public static final int MainScreen = 3;
     public static final int MailScreen = 4;
     public static final int FAQScreen = 5;
+    public static final int AboutScreen = 6;
 
     private JFrame parent;
     private JFrame child;
@@ -82,6 +83,11 @@ public class GUI {
                 parent = new MailScreen();
                 ((MailScreen)parent).open();
                 break;
+            case (5):
+                parent.dispose();
+                parent = new FAQScreen();
+                ((FAQScreen)parent).open();
+                break;
         }
     }
 
@@ -89,7 +95,7 @@ public class GUI {
         switch (screen) {
             case (2):
                 parent.setEnabled(false);
-                child = new ProjectScreen();
+                child = new ProblemScreen();
                 child.setTitle("Problem Solver and Optimizer - Edit Problem");
                 child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 ((ProblemScreen)child).open();
@@ -99,6 +105,18 @@ public class GUI {
                 child = new MailScreen();
                 child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 ((MailScreen)child).open();
+                break;
+            case (5):
+                parent.setEnabled(false);
+                child = new FAQScreen();
+                child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                ((FAQScreen)child).open();
+                break;
+            case (6):
+                parent.setEnabled(false);
+                child = new AboutScreen();
+                child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                ((AboutScreen)child).open();
                 break;
         }
     }

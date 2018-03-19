@@ -107,6 +107,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="FAQ"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonFAQActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
