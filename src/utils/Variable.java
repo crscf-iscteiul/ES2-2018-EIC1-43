@@ -2,11 +2,17 @@ package utils;
 
 public class Variable {
 
-    String variableName;
+    private String variableName;
 
-    Integer integerVar;
-    Double doubleVar;
-    Boolean booleanVar;
+    private Integer integerVar;
+    private Double doubleVar;
+    private Boolean booleanVar;
+
+    private boolean optimized = false;
+    private String jarPath;
+
+    private String interval;
+    private String exclusions;
 
     public Variable(String name, Object i) {
         this.variableName = name;
@@ -30,5 +36,19 @@ public class Variable {
         if(booleanVar != null)
             return booleanVar;
         return null;
+    }
+
+    public String getType(){
+        if(integerVar != null)
+            return "Integer";
+        if(doubleVar != null)
+            return "Double";
+        if(booleanVar != null)
+            return "Boolean";
+        return "";
+    }
+
+    public boolean isOptimized(){
+        return optimized;
     }
 }

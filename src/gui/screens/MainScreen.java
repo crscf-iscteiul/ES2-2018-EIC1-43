@@ -8,6 +8,7 @@ package gui.screens;
 import gui.GUI;
 import solver.SolverandOptimizer;
 import utils.Problem;
+import utils.Variable;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -282,8 +283,11 @@ public class MainScreen extends javax.swing.JFrame {
         GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
 
-    public void loadProblem(Problem problem){
-
+    public void loadProblemVars(Problem problem){
+        DefaultTableModel model = new DefaultTableModel();
+        for(Variable v : problem.getVariables()){
+            model.addRow(new Object[]{v.getVariableName(), v.getType(), "", "", v.isOptimized(), ""});
+        }
     }
 
     public void open(){
