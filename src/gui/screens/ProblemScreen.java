@@ -189,6 +189,13 @@ public class ProblemScreen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ButtonDoneActionPerformed
 
+    public void setProblem(Problem problem){
+        ProblemName.setText(problem.getProblemName());
+        Description.setText(problem.getProblemDescription());
+        MaxVars.setText(problem.getNumVars()+"");
+        MaxTime.setText(problem.getMaxTime()+"");
+    }
+
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing

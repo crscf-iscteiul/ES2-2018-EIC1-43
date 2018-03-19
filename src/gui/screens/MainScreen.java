@@ -282,6 +282,10 @@ public class MainScreen extends javax.swing.JFrame {
         GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
 
+    public void loadProblem(Problem problem){
+
+    }
+
     public void open(){
         //Show Screen (Thread Safe)
         java.awt.EventQueue.invokeLater(new Runnable() {

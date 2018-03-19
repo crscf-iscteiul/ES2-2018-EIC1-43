@@ -1,6 +1,7 @@
 package gui;
 
 import gui.screens.*;
+import solver.SolverandOptimizer;
 import utils.Problem;
 
 import javax.swing.*;
@@ -24,8 +25,6 @@ public class GUI {
 
     private JFrame parent;
     private JFrame child;
-
-    private Problem currentP = null;
 
     private GUI() {
         setLookAndFeel("Windows");
@@ -97,6 +96,7 @@ public class GUI {
                 parent.setEnabled(false);
                 child = new ProblemScreen();
                 child.setTitle("Problem Solver and Optimizer - Edit Problem");
+                ((ProblemScreen)child).setProblem(SolverandOptimizer.getInstance().getProblem());
                 child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 ((ProblemScreen)child).open();
                 break;
@@ -139,13 +139,5 @@ public class GUI {
             JOptionPane.showMessageDialog(child, error, "Error", JOptionPane.ERROR_MESSAGE);
         else
             JOptionPane.showMessageDialog(parent, error, "Error", JOptionPane.ERROR_MESSAGE);
-    }
-
-    public void setCurrentP(Problem p) {
-        this.currentP = p;
-    }
-
-    public Problem getCurrentP() {
-        return this.currentP;
     }
 }
