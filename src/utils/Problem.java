@@ -63,4 +63,8 @@ public class Problem {
         this.numVars = variables.length;
         this.variables = variables;
     }
+
+    public String toString(){
+        return this.getProblemName()+" Variable number: "+this.numVars;
+    }
 }

@@ -4,18 +4,19 @@ import gui.GUI;
 import main.Main;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 import utils.Mail;
 import utils.Problem;
 import utils.UserSession;
+import utils.XML;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
 
 
@@ -47,10 +48,6 @@ public class SolverandOptimizer {
 
     public UserSession getUser() {
         return user;
-    }
-
-    public void setProblem(Problem problem) {
-        this.problem = problem;
     }
 
     public Problem getProblem() { return this.problem; }
@@ -85,6 +82,29 @@ public class SolverandOptimizer {
         return adminInfo;
     }
 
+    public void changeProblem(Problem problem){
+        this.problem = problem;
+    }
+
+    public boolean saveProblem(String file_path) {
+        try {
+            XML.saveXMLProblem(file_path, problem);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean loadProblem(String file_path) {
+        try {
+            problem = XML.readXMLProblem(file_path);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
 
 /*   TO ITERATE HASH-MAP

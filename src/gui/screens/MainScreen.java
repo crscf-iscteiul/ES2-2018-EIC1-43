@@ -9,8 +9,12 @@ import gui.GUI;
 import solver.SolverandOptimizer;
 import utils.Problem;
 import utils.Variable;
+import utils.XML;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+import java.io.File;
 
 /**
  *
@@ -263,7 +267,17 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuOpEditProblemActionPerformed
 
     private void MenuOpSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpSaveActionPerformed
-        // TODO Save Current Problem
+        JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("XML File", "xml");
+        path_chooser.setFileFilter(filter);
+        path_chooser.setDialogTitle("Choose File Problem");
+        path_chooser.setSelectedFile(new File(System.getProperty("user.dir")+"\\"+SolverandOptimizer.getInstance().getProblem().getProblemName()+".xml"));
+        int returnVal = path_chooser.showSaveDialog(this);
+        if(returnVal == JFileChooser.APPROVE_OPTION) {
+            if(SolverandOptimizer.getInstance().saveProblem(path_chooser.getSelectedFile().getAbsolutePath())){
+                GUI.getInstance().show_message("File Saved");
+            }
+        }
     }//GEN-LAST:event_MenuOpSaveActionPerformed
 
     private void MenuOpLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLoadActionPerformed

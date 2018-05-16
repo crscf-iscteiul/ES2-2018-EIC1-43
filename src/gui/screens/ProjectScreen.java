@@ -6,6 +6,7 @@
 package gui.screens;
 
 import gui.GUI;
+import solver.SolverandOptimizer;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -124,7 +125,7 @@ public class ProjectScreen extends javax.swing.JFrame {
             path_chooser.setDialogTitle("Choose File Problem");
             int returnVal = path_chooser.showOpenDialog(this);
             if(returnVal == JFileChooser.APPROVE_OPTION) {
-                //TODO Read and load file to a class format
+                SolverandOptimizer.getInstance().loadProblem(path_chooser.getSelectedFile().getAbsolutePath());
                 GUI.getInstance().next_screen(GUI.MainScreen);
             }
         }
