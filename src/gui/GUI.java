@@ -8,13 +8,6 @@ import javax.swing.*;
 
 public class GUI {
 
-    private static GUI instance;
-    public static GUI getInstance() {
-        if (instance == null)
-            instance = new GUI();
-        return instance;
-    }
-
     public static final int StartScreen = 0;
     public static final int ProjectScreen = 1;
     public static final int ProblemScreen = 2;
@@ -22,6 +15,13 @@ public class GUI {
     public static final int MailScreen = 4;
     public static final int FAQScreen = 5;
     public static final int AboutScreen = 6;
+
+    private static GUI instance;
+    public static GUI getInstance() {
+        if (instance == null)
+            instance = new GUI();
+        return instance;
+    }
 
     private JFrame parent;
     private JFrame child;
