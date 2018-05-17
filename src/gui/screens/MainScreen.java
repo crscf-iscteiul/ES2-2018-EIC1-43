@@ -332,7 +332,7 @@ public class MainScreen extends javax.swing.JFrame {
 
         for(Variable v : problem.getVariables()){
             System.out.println(v);
-            model.addRow(new Object[]{v.getVariableName(), v.getType_toString(), "", "", v.isOptimized(), ""});
+            model.addRow(new Object[]{v.getVariableName(), v.getType_toString(), v.getInterval(), v.getExclusions(), v.isOptimized(), v.getJarPath()});
         }
         TableVars.setModel(model);
     }

@@ -17,10 +17,10 @@ import java.io.File;
 
 public class XML {
 
-        public static Variable[] vars = {new Variable("a", 0, "0; 10", "2;3;4", false, " "),
-                new Variable("a", 1, "0.0; 10.2", "2.0;3.5;4.5", false, " "),
-                new Variable("a", 2, " ", " ", false, " ")};
-        public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml",4,"00:05:00"  ,vars);
+        public static Variable[] vars = {new Variable("a", 0, "0; 10", "2;3;4", false, ""),
+                new Variable("a", 1, "0.0; 10.2", "2.0;3.5;4.5", false, ""),
+                new Variable("a", 2, "", "", false, "")};
+        public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml",3,"00:05:00"  ,vars);
 
     public static void saveXMLProblem(String file_path, Problem p) throws Exception{
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -66,15 +66,25 @@ public class XML {
 
                 //JAR Path
                 Element variable_jarPath = doc.createElement("JAR_Path");
-                variable_jarPath.appendChild(doc.createTextNode(p.getVariables()[i].getJarPath()));
+                if(p.getVariables()[i].getJarPath() != "")
+                    variable_jarPath.appendChild(doc.createTextNode(p.getVariables()[i].getJarPath()));
+                else
+                    variable_jarPath.appendChild(doc.createTextNode("NULL"));
+
 
                 //Values
                 Element variable_value = doc.createElement("Values");
                 Element inc_values = doc.createElement("Interval");
-                inc_values.appendChild(doc.createTextNode(p.getVariables()[i].getInterval()));
+                if(p.getVariables()[i].getInterval() != "")
+                    inc_values.appendChild(doc.createTextNode(p.getVariables()[i].getInterval()));
+                else
+                    inc_values.appendChild(doc.createTextNode("NULL"));
                 variable_value.appendChild(inc_values);
                 Element exc_values = doc.createElement("Excluded");
-                exc_values.appendChild(doc.createTextNode(p.getVariables()[i].getExclusions()));
+                if(p.getVariables()[i].getExclusions() != "")
+                    exc_values.appendChild(doc.createTextNode(p.getVariables()[i].getExclusions()));
+                else
+                    exc_values.appendChild(doc.createTextNode("NULL"));
                 variable_value.appendChild(exc_values);
 
                 variable.appendChild(variable_name);
