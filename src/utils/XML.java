@@ -17,7 +17,9 @@ import java.io.File;
 
 public class XML {
 
-        public static Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
+        public static Variable[] vars = {new Variable("a", 0, "0; 10", "2;3;4", false, " "),
+                new Variable("a", 1, "0.0; 10.2", "2.0;3.5;4.5", false, " "),
+                new Variable("a", 2, " ", " ", false, " ")};
         public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml",4,"00:05:00"  ,vars);
 
     public static void saveXMLProblem(String file_path, Problem p) throws Exception{
@@ -50,16 +52,35 @@ public class XML {
             try {
                 Element variable = doc.createElement("Variable");
                 variable.setAttribute("id", String.valueOf(i+1));
+                //Name
                 Element variable_name = doc.createElement("Name");
-                Element variable_type = doc.createElement("Type");
-                Element variable_value = doc.createElement("Value");
-
                 variable_name.appendChild(doc.createTextNode(p.getVariables()[i].getVariableName().replace(" ", "_")));
-                variable_type.appendChild(doc.createTextNode(p.getVariables()[i].getType()));
-                variable_value.appendChild(doc.createTextNode(p.getVariables()[i].getVariable().toString()));
+
+                //Type
+                Element variable_type = doc.createElement("Type");
+                variable_type.appendChild(doc.createTextNode(p.getVariables()[i].getType_toString()));
+
+                //Optimize
+                Element variable_optimized = doc.createElement("To_Optimize");
+                variable_optimized.appendChild(doc.createTextNode(String.valueOf(p.getVariables()[i].isOptimized())));
+
+                //JAR Path
+                Element variable_jarPath = doc.createElement("JAR_Path");
+                variable_jarPath.appendChild(doc.createTextNode(p.getVariables()[i].getJarPath()));
+
+                //Values
+                Element variable_value = doc.createElement("Values");
+                Element inc_values = doc.createElement("Interval");
+                inc_values.appendChild(doc.createTextNode(p.getVariables()[i].getInterval()));
+                variable_value.appendChild(inc_values);
+                Element exc_values = doc.createElement("Excluded");
+                exc_values.appendChild(doc.createTextNode(p.getVariables()[i].getExclusions()));
+                variable_value.appendChild(exc_values);
 
                 variable.appendChild(variable_name);
                 variable.appendChild(variable_type);
+                variable.appendChild(variable_optimized);
+                variable.appendChild(variable_jarPath);
                 variable.appendChild(variable_value);
                 variables.appendChild(variable);
             } catch ( NullPointerException e) {
@@ -133,17 +154,16 @@ public class XML {
                 String var_Name = varN.item(0).getFirstChild().getNodeValue();
                 NodeList varT = firstElement.getElementsByTagName("Type");
                 String var_Type = varT.item(0).getFirstChild().getNodeValue();
-                NodeList varV = firstElement.getElementsByTagName("Value");
+                NodeList varO = firstElement.getElementsByTagName("To_Optimize");
+                String var_Opt = varO.item(0).getFirstChild().getNodeValue();
+                NodeList varP = firstElement.getElementsByTagName("JAR_Path");
+                String var_Path = varP.item(0).getFirstChild().getNodeValue();
+                NodeList varV = firstElement.getElementsByTagName("Values");
+                Element varVI = (Element) varV.item(0);
+                String varInt = varVI.getElementsByTagName("Interval").item(0).getFirstChild().getNodeValue();
+                String varExc = varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue();
 
-                if(var_Type.equals("Integer")) {
-                    var_Val = Integer.valueOf(varV.item(0).getFirstChild().getNodeValue());
-                } if(var_Type.equals("Boolean")) {
-                    var_Val = Boolean.valueOf(varV.item(0).getFirstChild().getNodeValue());
-                } if(var_Type.equals("Double")) {
-                    var_Val = Double.valueOf(varV.item(0).getFirstChild().getNodeValue());
-                }
-
-            vars_l[i] = new Variable(var_Name, var_Val);
+                vars_l[i] = new Variable(var_Name, var_Type, varInt, varExc, Boolean.valueOf(var_Opt), var_Path);
             }
         }
 

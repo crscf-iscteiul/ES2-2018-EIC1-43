@@ -60,6 +60,11 @@ public class Variable {
             return "";
     }
 
+    public String getInterval() { return this.interval; }
+
+    public String getExclusions() { return this.exclusions; }
+
+    public String getJarPath() { return this.jar_path; }
     public boolean isOptimized(){
         return optimized;
     }
