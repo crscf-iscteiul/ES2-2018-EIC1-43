@@ -274,14 +274,21 @@ public class MainScreen extends javax.swing.JFrame {
         path_chooser.setSelectedFile(new File(System.getProperty("user.dir")+"\\"+SolverandOptimizer.getInstance().getProblem().getProblemName()+".xml"));
         int returnVal = path_chooser.showSaveDialog(this);
         if(returnVal == JFileChooser.APPROVE_OPTION) {
-            if(SolverandOptimizer.getInstance().saveProblem(path_chooser.getSelectedFile().getAbsolutePath())){
+            if(SolverandOptimizer.getInstance().saveProblem(path_chooser.getSelectedFile().getAbsolutePath()))
                 GUI.getInstance().show_message("File Saved");
-            }
         }
     }//GEN-LAST:event_MenuOpSaveActionPerformed
 
     private void MenuOpLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLoadActionPerformed
-        // TODO Load Problem
+        JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("XML File", "xml");
+        path_chooser.setFileFilter(filter);
+        path_chooser.setDialogTitle("Choose File Problem");
+        int returnVal = path_chooser.showOpenDialog(this);
+        if(returnVal == JFileChooser.APPROVE_OPTION) {
+            if(SolverandOptimizer.getInstance().loadProblem(path_chooser.getSelectedFile().getAbsolutePath()))
+                GUI.getInstance().next_screen(GUI.MainScreen);
+        }
     }//GEN-LAST:event_MenuOpLoadActionPerformed
 
     private void MenuOpLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLogoutActionPerformed
