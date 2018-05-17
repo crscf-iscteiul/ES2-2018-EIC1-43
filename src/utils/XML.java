@@ -1,32 +1,24 @@
 package utils;
 
-import gui.GUI;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.*;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class XML {
 
-    /*        Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
-        Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml",4,"00:05:00"  ,vars);
-
-        saveProblemXML("test", p);
-        Problem p_r = readXMLProblem("test");*/
+        public static Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
+        public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml",4,"00:05:00"  ,vars);
 
 
     public static void saveXMLProblem(String file_path, Problem p) throws Exception{
@@ -56,9 +48,25 @@ public class XML {
 
         // variable elements
         for (int i = 0; i < p.getVariables().length; i++) {
-            Element variable = doc.createElement(p.getVariables()[i].getVariableName().replace(" ", "_"));
-            variable.appendChild(doc.createTextNode(p.getVariables()[i].getVariable().toString()));
-            variables.appendChild(variable);
+            try {
+                Element variable = doc.createElement("Variable");
+                variable.setAttribute("id", String.valueOf(i+1));
+                Element variable_name = doc.createElement("Name");
+                Element variable_type = doc.createElement("Type");
+                Element variable_value = doc.createElement("Value");
+
+                variable_name.appendChild(doc.createTextNode(p.getVariables()[i].getVariableName().replace(" ", "_")));
+                variable_type.appendChild(doc.createTextNode(p.getVariables()[i].getType()));
+                variable_value.appendChild(doc.createTextNode(p.getVariables()[i].getVariable().toString()));
+
+                variable.appendChild(variable_name);
+                variable.appendChild(variable_type);
+                variable.appendChild(variable_value);
+                variables.appendChild(variable);
+            } catch ( NullPointerException e) {
+                System.out.println("One or more variables were left blank.");
+                System.out.println(p.getVariables().toString());
+            }
         }
 
         Element time = doc.createElement("Max_Time");
@@ -113,14 +121,32 @@ public class XML {
         }
 
 
-        expr = xpath.compile("/root/Problem/Variables/*");
+        NodeList variableList = doc.getElementsByTagName("Variable");
+        System.out.println("TOTAL VARIABLES: " + variableList.getLength());
+        Variable[] vars_l = new Variable[variableList.getLength()];
 
-        nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+        for (int i = 0; i < variableList.getLength(); i++) {
+            Node firstVariableNode = variableList.item(i);
+            if(firstVariableNode.getNodeType() == Node.ELEMENT_NODE) {
+                Object var_Val = null;
+                Element firstElement = (Element) firstVariableNode;
 
-        Variable[] vars_l = new Variable[nl.getLength()];
-        for (int i = 0; i < nl.getLength(); i++) {
-            Variable v = new Variable(nl.item(i).getNodeName(), nl.item(i).getFirstChild().getNodeValue().toString());
-            vars_l[i] = v;
+                NodeList varN = firstElement.getElementsByTagName("Name");
+                String var_Name = varN.item(0).getFirstChild().getNodeValue();
+                NodeList varT = firstElement.getElementsByTagName("Type");
+                String var_Type = varT.item(0).getFirstChild().getNodeValue();
+                NodeList varV = firstElement.getElementsByTagName("Value");
+
+                if(var_Type.equals("Integer")) {
+                    var_Val = Integer.valueOf(varV.item(0).getFirstChild().getNodeValue());
+                } if(var_Type.equals("Boolean")) {
+                    var_Val = Boolean.valueOf(varV.item(0).getFirstChild().getNodeValue());
+                } if(var_Type.equals("Double")) {
+                    var_Val = Double.valueOf(varV.item(0).getFirstChild().getNodeValue());
+                }
+
+            vars_l[i] = new Variable(var_Name, var_Val);
+            }
         }
 
         return new Problem(p_name, p_description, mVars, m_Time, vars_l);

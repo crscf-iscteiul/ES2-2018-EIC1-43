@@ -51,4 +51,9 @@ public class Variable {
     public boolean isOptimized(){
         return optimized;
     }
+
+    @Override
+    public String toString() {
+        return this.getVariable().toString();
+    }
 }
