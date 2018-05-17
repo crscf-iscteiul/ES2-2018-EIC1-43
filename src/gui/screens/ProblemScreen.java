@@ -179,7 +179,17 @@ public class ProblemScreen extends javax.swing.JFrame {
             String problem_description = Description.getText();
             int maxVars = Integer.valueOf(MaxVars.getText());
             String maxTime = MaxTime.getText();
-            Problem currentProblem = new Problem(problem_name, problem_description, maxVars, maxTime, new Variable[maxVars]);
+
+            Variable[] variables = new Variable[maxVars];
+            if(SolverandOptimizer.getInstance().getProblem()!=null){
+                for(int i=0; i<SolverandOptimizer.getInstance().getProblem().getVariables().length; i++)
+                    variables[i] = SolverandOptimizer.getInstance().getProblem().getVariables()[i];
+            }
+            for(int i=0; i<maxVars; i++)
+                if(variables[i]==null)
+                    variables[i] = new Variable("","");
+
+            Problem currentProblem = new Problem(problem_name, problem_description, maxVars, maxTime, variables);
             SolverandOptimizer.getInstance().changeProblem(currentProblem);
 
             GUI.getInstance().next_screen(GUI.MainScreen);

@@ -20,7 +20,6 @@ public class XML {
         public static Variable[] vars = {new Variable("a", 4), new Variable("p", 0.0), new Variable("v", false), new Variable("c", false)};
         public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml",4,"00:05:00"  ,vars);
 
-
     public static void saveXMLProblem(String file_path, Problem p) throws Exception{
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -122,7 +121,6 @@ public class XML {
 
 
         NodeList variableList = doc.getElementsByTagName("Variable");
-        System.out.println("TOTAL VARIABLES: " + variableList.getLength());
         Variable[] vars_l = new Variable[variableList.getLength()];
 
         for (int i = 0; i < variableList.getLength(); i++) {

@@ -2,50 +2,62 @@ package utils;
 
 public class Variable {
 
-    private String variableName;
+    private static final int Integer = 0;
+    private static final int Double = 1;
+    private static final int Binary = 2;
+    private static final int Not_Defined = 2;
 
-    private Integer integerVar;
-    private Double doubleVar;
-    private Boolean booleanVar;
-
-    private boolean optimized = false;
-    private String jarPath;
+    private String name;
+    private int type;
 
     private String interval;
     private String exclusions;
 
-    public Variable(String name, Object i) {
-        this.variableName = name;
-        if (i.getClass().equals(Integer.class))
-            integerVar = (int)i;
-        if(i.getClass().equals(Double.class))
-            doubleVar = (double) i;
-        if(i.getClass().equals(Boolean.class))
-            booleanVar = (Boolean) i;
+    private boolean optimized;
+    private String jar_path;
+
+    public Variable(String name, int type, String interval, String exclusions, boolean optimized, String jar_path) {
+        this.name = name;
+        this.type=type;
+        this.interval=interval;
+        this.exclusions=exclusions;
+        this.optimized=optimized;
+        this.jar_path=jar_path;
+    }
+
+    public Variable(String name, String type, String interval, String exclusions, boolean optimized, String jar_path) {
+        this.name = name;
+        if(type.equals("Integer"))
+            this.type = Variable.Integer;
+        else if (type.equals("Double"))
+            this.type = Variable.Double;
+        else if (type.equals("Binary"))
+            this.type = Variable.Binary;
+        else
+            this.type = Variable.Not_Defined;
+        this.interval=interval;
+        this.exclusions=exclusions;
+        this.optimized=optimized;
+        this.jar_path=jar_path;
     }
 
     public String getVariableName() {
-        return variableName;
+        return name;
     }
 
-    public Object getVariable() {
-        if(integerVar != null)
-            return integerVar;
-        if(doubleVar != null)
-            return doubleVar;
-        if(booleanVar != null)
-            return booleanVar;
-        return null;
+    public int getType(){
+        return type;
     }
 
-    public String getType(){
-        if(integerVar != null)
+    public String getType_toString(){
+        if(type==Variable.Integer)
             return "Integer";
-        if(doubleVar != null)
+        else if (type==Variable.Double)
             return "Double";
-        if(booleanVar != null)
-            return "Boolean";
-        return "";
+        else if (type==Variable.Binary)
+            return "Binary";
+        else
+            return "";
     }
 
     public boolean isOptimized(){
@@ -54,6 +66,6 @@ public class Variable {
 
     @Override
     public String toString() {
-        return this.getVariable().toString();
+        return "{Name: "+name+", Type :"+getType()+"}";
     }
 }

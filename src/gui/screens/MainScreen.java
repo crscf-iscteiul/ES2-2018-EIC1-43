@@ -12,6 +12,8 @@ import utils.Variable;
 import utils.XML;
 
 import javax.swing.*;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import java.io.File;
@@ -30,6 +32,24 @@ public class MainScreen extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         if(SolverandOptimizer.getInstance().getUser()!=null)
             SendInfo.setSelected(true);
+        loadProblemData(SolverandOptimizer.getInstance().getProblem());
+        TableVars.getModel().addTableModelListener(new TableModelListener() {
+            @Override
+            public void tableChanged(TableModelEvent e) {
+                Variable [] variables = new Variable [TableVars.getModel().getRowCount()];
+                for(int i=0; i<variables.length; i++){
+                    String name = (String) TableVars.getModel().getValueAt(i,0);
+                    String type = (String) TableVars.getModel().getValueAt(i,1);
+                    String interval = (String) TableVars.getModel().getValueAt(i,2);
+                    String excluded = (String) TableVars.getModel().getValueAt(i,3);
+                    boolean optimize = (boolean) TableVars.getModel().getValueAt(i,4);
+                    String jar_path = (String) TableVars.getModel().getValueAt(i,5);
+                    variables[i] = new Variable(name, type, interval, excluded, optimize, jar_path);
+                }
+                SolverandOptimizer.getInstance().getProblem().updateVaribles(variables);
+            }
+        });
+
     }
 
     /**
@@ -304,11 +324,17 @@ public class MainScreen extends javax.swing.JFrame {
         GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
 
-    public void loadProblemVars(Problem problem){
-        DefaultTableModel model = new DefaultTableModel();
+    public void loadProblemData(Problem problem){
+        DefaultTableModel model = (DefaultTableModel) TableVars.getModel();
+        if(model.getRowCount()>0)
+            for (int i = model.getRowCount() - 1; i > -1; i--)
+                model.removeRow(i);
+
         for(Variable v : problem.getVariables()){
+            System.out.println(v);
             model.addRow(new Object[]{v.getVariableName(), v.getType(), "", "", v.isOptimized(), ""});
         }
+        TableVars.setModel(model);
     }
 
     public void open(){
