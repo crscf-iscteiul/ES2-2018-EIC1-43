@@ -157,7 +157,6 @@ public class XML {
         for (int i = 0; i < variableList.getLength(); i++) {
             Node firstVariableNode = variableList.item(i);
             if(firstVariableNode.getNodeType() == Node.ELEMENT_NODE) {
-                Object var_Val = null;
                 Element firstElement = (Element) firstVariableNode;
 
                 NodeList varN = firstElement.getElementsByTagName("Name");
@@ -167,11 +166,17 @@ public class XML {
                 NodeList varO = firstElement.getElementsByTagName("To_Optimize");
                 String var_Opt = varO.item(0).getFirstChild().getNodeValue();
                 NodeList varP = firstElement.getElementsByTagName("JAR_Path");
-                String var_Path = varP.item(0).getFirstChild().getNodeValue();
+                String var_Path = "";
+                if(!varP.item(0).getFirstChild().getNodeValue().equals("NULL"))
+                    var_Path = varP.item(0).getFirstChild().getNodeValue();
                 NodeList varV = firstElement.getElementsByTagName("Values");
                 Element varVI = (Element) varV.item(0);
-                String varInt = varVI.getElementsByTagName("Interval").item(0).getFirstChild().getNodeValue();
-                String varExc = varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue();
+                String varInt = "";
+                String varExc = "";
+                if(!varVI.getElementsByTagName("Interval").item(0).getFirstChild().getNodeValue().equals("NULL"))
+                    varInt = varVI.getElementsByTagName("Interval").item(0).getFirstChild().getNodeValue();
+                if(!varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue().equals("NULL"))
+                    varExc = varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue();
 
                 vars_l[i] = new Variable(var_Name, var_Type, varInt, varExc, Boolean.valueOf(var_Opt), var_Path);
             }
