@@ -28,7 +28,7 @@ public class Main {
     public static void main(String[] args) {
        SolverandOptimizer.getInstance();
 
-        /*try {
+/*        try {
             XML.saveXMLProblem(System.getProperty("user.dir")+"/Problem.xml", XML.p);
             Problem p = XML.readXMLProblem(System.getProperty("user.dir")+"/Problem.xml");
             System.out.println(p.getProblemName());
@@ -45,5 +45,4 @@ public class Main {
             e.printStackTrace();
         }*/
     }
-
 }

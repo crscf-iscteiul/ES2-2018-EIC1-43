@@ -137,10 +137,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="ScrollPane" pref="816" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="ProblemSolver" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="Start" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="SendInfo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="ButtonRemove" min="-2" pref="100" max="-2" attributes="0"/>
@@ -165,7 +163,6 @@
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Start" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ProblemSolver" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="SendInfo" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -254,39 +251,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Start"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="ProblemSolver">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="22">
-            <StringItem index="0" value="AbYSS"/>
-            <StringItem index="1" value="CellDE"/>
-            <StringItem index="2" value="dMPOSO"/>
-            <StringItem index="3" value="GDE3"/>
-            <StringItem index="4" value="FastPGA"/>
-            <StringItem index="5" value="IBEA"/>
-            <StringItem index="6" value="MOCHC"/>
-            <StringItem index="7" value="MOCell"/>
-            <StringItem index="8" value="MOEA/D-DE"/>
-            <StringItem index="9" value="pMOEA/D-DE"/>
-            <StringItem index="10" value="MOEA/D-DRA"/>
-            <StringItem index="11" value="NSGA-II"/>
-            <StringItem index="12" value="ssNSGA-II"/>
-            <StringItem index="13" value="NSGAIIr"/>
-            <StringItem index="14" value="NSGAIIa"/>
-            <StringItem index="15" value="pNSGA-II"/>
-            <StringItem index="16" value="OMOPSO"/>
-            <StringItem index="17" value="PAES"/>
-            <StringItem index="18" value="SMPSO"/>
-            <StringItem index="19" value="pSMPSO"/>
-            <StringItem index="20" value="SMPSOhv"/>
-            <StringItem index="21" value="SPEA2"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="StartActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="SendInfo">
       <Properties>

@@ -15,6 +15,7 @@ public class GUI {
     public static final int MailScreen = 4;
     public static final int FAQScreen = 5;
     public static final int AboutScreen = 6;
+    public static final int RunScreen = 7;
 
     private static GUI instance;
     public static GUI getInstance() {
@@ -118,6 +119,12 @@ public class GUI {
                 child = new AboutScreen();
                 child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 ((AboutScreen)child).open();
+                break;
+            case (7):
+                parent.setEnabled(false);
+                child = new RunScreen();
+                child.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                ((RunScreen)child).open();
                 break;
         }
     }

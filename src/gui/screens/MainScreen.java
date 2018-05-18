@@ -67,7 +67,6 @@ public class MainScreen extends javax.swing.JFrame {
         ButtonAdd = new javax.swing.JButton();
         ButtonRemove = new javax.swing.JButton();
         Start = new javax.swing.JButton();
-        ProblemSolver = new javax.swing.JComboBox<>();
         SendInfo = new javax.swing.JCheckBox();
         Menu = new javax.swing.JMenuBar();
         MenuFile = new javax.swing.JMenu();
@@ -144,8 +143,11 @@ public class MainScreen extends javax.swing.JFrame {
         });
 
         Start.setText("Start");
-
-        ProblemSolver.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AbYSS", "CellDE", "dMPOSO", "GDE3", "FastPGA", "IBEA", "MOCHC", "MOCell", "MOEA/D-DE", "pMOEA/D-DE", "MOEA/D-DRA", "NSGA-II", "ssNSGA-II", "NSGAIIr", "NSGAIIa", "pNSGA-II", "OMOPSO", "PAES", "SMPSO", "pSMPSO", "SMPSOhv", "SPEA2" }));
+        Start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StartActionPerformed(evt);
+            }
+        });
 
         SendInfo.setText("Send Info");
 
@@ -230,10 +232,8 @@ public class MainScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 816, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(ProblemSolver, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Start)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SendInfo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ButtonRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -253,7 +253,6 @@ public class MainScreen extends javax.swing.JFrame {
                         .addComponent(ButtonAdd))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Start)
-                        .addComponent(ProblemSolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(SendInfo)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -320,9 +319,15 @@ public class MainScreen extends javax.swing.JFrame {
         GUI.getInstance().child_screen(GUI.FAQScreen);
     }//GEN-LAST:event_MenuOpFAQActionPerformed
 
+    private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
+        //TODO Check if var is optimized then if has jar_path
+        GUI.getInstance().child_screen(GUI.RunScreen);
+    }//GEN-LAST:event_StartActionPerformed
+
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
+
 
     public void loadProblemData(Problem problem){
         DefaultTableModel model = (DefaultTableModel) TableVars.getModel();
@@ -361,7 +366,6 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuOpLogout;
     private javax.swing.JMenuItem MenuOpSave;
     private javax.swing.JMenuItem MenuOpSendMail;
-    private javax.swing.JComboBox<String> ProblemSolver;
     private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JCheckBox SendInfo;
     private javax.swing.JButton Start;
