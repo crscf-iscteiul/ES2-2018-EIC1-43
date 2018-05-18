@@ -73,14 +73,3 @@ public class SolverandOptimizer {
         return false;
     }
 }
-
-/*   TO ITERATE HASH-MAP
-
-            Iterator it = adminInfo.entrySet().iterator();
-            while (it.hasNext()) {
-                Map.Entry pair = (Map.Entry)it.next();
-                System.out.println(pair.getKey() + " : " + pair.getValue());
-                it.remove(); // avoids a ConcurrentModificationException
-            }
-
- */
