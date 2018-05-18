@@ -136,6 +136,7 @@ public class RunScreen extends javax.swing.JFrame {
 
     private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
         if(JList.getSelectedIndex()>=0){
+            //TODO ORDER
             ((DefaultListModel<String>) JListRun.getModel()).addElement(JList.getSelectedValue());
             ((DefaultListModel<String>) JList.getModel()).remove(JList.getSelectedIndex());
         }
@@ -143,6 +144,7 @@ public class RunScreen extends javax.swing.JFrame {
 
     private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
         if(JListRun.getSelectedIndex()>=0){
+            //TODO ORDER
             ((DefaultListModel<String>) JList.getModel()).addElement(JListRun.getSelectedValue());
             ((DefaultListModel<String>) JListRun.getModel()).removeElement(JListRun.getSelectedValue());
         }

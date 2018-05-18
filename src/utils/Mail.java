@@ -1,7 +1,6 @@
 package utils;
 
 import gui.GUI;
-import main.Main;
 import solver.SolverandOptimizer;
 
 import javax.mail.*;
@@ -9,8 +8,6 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.Properties;
 
 public class Mail {

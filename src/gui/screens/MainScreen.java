@@ -32,6 +32,8 @@ public class MainScreen extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         if(SolverandOptimizer.getInstance().getUser()!=null)
             SendInfo.setSelected(true);
+        else
+            SendInfo.setEnabled(false);
         loadProblemData(SolverandOptimizer.getInstance().getProblem());
         TableVars.getModel().addTableModelListener(new TableModelListener() {
             @Override

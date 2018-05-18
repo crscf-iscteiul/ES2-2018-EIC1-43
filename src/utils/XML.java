@@ -14,15 +14,17 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.*;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
 
 public class XML {
 
-        public static Variable[] vars = {new Variable("a", 0, "0; 10", "2;3;4", false, ""),
-                new Variable("a", 1, "0.0; 10.2", "2.0;3.5;4.5", false, ""),
-                new Variable("a", 2, "", "", false, "")};
-        public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml",3,"00:05:00"  ,vars);
+    public static Variable[] vars = {new Variable("a", 0, "0; 10", "2;3;4", false, ""),
+            new Variable("a", 1, "0.0; 10.2", "2.0;3.5;4.5", false, ""),
+            new Variable("a", 2, "", "", false, "")};
+    public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml", 3, "00:05:00", vars);
 
-    public static void saveXMLProblem(String file_path, Problem p) throws Exception{
+    public static void saveXMLProblem(String file_path, Problem p) throws Exception {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 
@@ -51,7 +53,7 @@ public class XML {
         for (int i = 0; i < p.getVariables().length; i++) {
             try {
                 Element variable = doc.createElement("Variable");
-                variable.setAttribute("id", String.valueOf(i+1));
+                variable.setAttribute("id", String.valueOf(i + 1));
                 //Name
                 Element variable_name = doc.createElement("Name");
                 variable_name.appendChild(doc.createTextNode(p.getVariables()[i].getVariableName().replace(" ", "_")));
@@ -66,7 +68,7 @@ public class XML {
 
                 //JAR Path
                 Element variable_jarPath = doc.createElement("JAR_Path");
-                if(p.getVariables()[i].getJarPath() != "")
+                if (p.getVariables()[i].getJarPath() != "")
                     variable_jarPath.appendChild(doc.createTextNode(p.getVariables()[i].getJarPath()));
                 else
                     variable_jarPath.appendChild(doc.createTextNode("NULL"));
@@ -75,13 +77,13 @@ public class XML {
                 //Values
                 Element variable_value = doc.createElement("Values");
                 Element inc_values = doc.createElement("Interval");
-                if(p.getVariables()[i].getInterval() != "")
+                if (p.getVariables()[i].getInterval() != "")
                     inc_values.appendChild(doc.createTextNode(p.getVariables()[i].getInterval()));
                 else
                     inc_values.appendChild(doc.createTextNode("NULL"));
                 variable_value.appendChild(inc_values);
                 Element exc_values = doc.createElement("Excluded");
-                if(p.getVariables()[i].getExclusions() != "")
+                if (p.getVariables()[i].getExclusions() != "")
                     exc_values.appendChild(doc.createTextNode(p.getVariables()[i].getExclusions()));
                 else
                     exc_values.appendChild(doc.createTextNode("NULL"));
@@ -93,7 +95,7 @@ public class XML {
                 variable.appendChild(variable_jarPath);
                 variable.appendChild(variable_value);
                 variables.appendChild(variable);
-            } catch ( NullPointerException e) {
+            } catch (NullPointerException e) {
                 System.out.println("One or more variables were left blank.");
                 System.out.println(p.getVariables().toString());
             }
@@ -156,7 +158,7 @@ public class XML {
 
         for (int i = 0; i < variableList.getLength(); i++) {
             Node firstVariableNode = variableList.item(i);
-            if(firstVariableNode.getNodeType() == Node.ELEMENT_NODE) {
+            if (firstVariableNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element firstElement = (Element) firstVariableNode;
 
                 NodeList varN = firstElement.getElementsByTagName("Name");
@@ -167,15 +169,15 @@ public class XML {
                 String var_Opt = varO.item(0).getFirstChild().getNodeValue();
                 NodeList varP = firstElement.getElementsByTagName("JAR_Path");
                 String var_Path = "";
-                if(!varP.item(0).getFirstChild().getNodeValue().equals("NULL"))
+                if (!varP.item(0).getFirstChild().getNodeValue().equals("NULL"))
                     var_Path = varP.item(0).getFirstChild().getNodeValue();
                 NodeList varV = firstElement.getElementsByTagName("Values");
                 Element varVI = (Element) varV.item(0);
                 String varInt = "";
                 String varExc = "";
-                if(!varVI.getElementsByTagName("Interval").item(0).getFirstChild().getNodeValue().equals("NULL"))
+                if (!varVI.getElementsByTagName("Interval").item(0).getFirstChild().getNodeValue().equals("NULL"))
                     varInt = varVI.getElementsByTagName("Interval").item(0).getFirstChild().getNodeValue();
-                if(!varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue().equals("NULL"))
+                if (!varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue().equals("NULL"))
                     varExc = varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue();
 
                 vars_l[i] = new Variable(var_Name, var_Type, varInt, varExc, Boolean.valueOf(var_Opt), var_Path);
@@ -183,5 +185,34 @@ public class XML {
         }
 
         return new Problem(p_name, p_description, mVars, m_Time, vars_l);
+    }
+
+    public static HashMap<String, String> load_config() {
+        HashMap<String, String> adminInfo = new HashMap();
+        System.out.println(System.getProperty("user.dir") + "\\config.xml");
+        try {
+            File config = new File(System.getProperty("user.dir") + "\\config.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(config);
+            doc.getDocumentElement().normalize();
+
+            XPathFactory xpathFactory = XPathFactory.newInstance();
+            XPath xpath = xpathFactory.newXPath();
+            XPathExpression expr = xpath.compile("/CONFIG/Administrator/@*");
+
+            NodeList nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+            for (int i = 0; i < nl.getLength(); i += 2) {
+                String name = nl.item(i).getFirstChild().getNodeValue();
+                String email = nl.item(i + 1).getFirstChild().getNodeValue();
+                adminInfo.put(name, email);
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Make sure configuration file is available.");
+        } catch (Exception e) {
+
+        }
+        return adminInfo;
     }
 }
