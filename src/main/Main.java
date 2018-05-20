@@ -6,7 +6,7 @@ import solverandoptimizer.SolverandOptimizer;
 public class Main {
 
     public static void main(String[] args) {
-       SolverandOptimizer.getInstance();
+      SolverandOptimizer.getInstance();
 
 /*        try {
             XML.saveXMLProblem(System.getProperty("user.dir")+"/Problem.xml", XML.p);

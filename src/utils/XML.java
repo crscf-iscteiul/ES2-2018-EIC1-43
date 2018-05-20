@@ -118,6 +118,7 @@ public class XML {
         // Output to console for testing
         // StreamResult result = new StreamResult(System.out);
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
         transformer.transform(source, result);
     }
 
