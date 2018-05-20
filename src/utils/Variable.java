@@ -5,7 +5,7 @@ public class Variable {
     public static final int Type_Integer = 0;
     public static final int Type_Double = 1;
     public static final int Type_Binary = 2;
-    public static final int Type_Not_Defined = 2;
+    public static final int Type_Not_Defined = 3;
 
     private String name;
     private int type;
@@ -67,30 +67,26 @@ public class Variable {
     public String getJarPath() { return this.jar_path; }
 
     public Object[] parseValues(boolean isInterval) {
-        String[] values = null;
+        String work_string;
         if(isInterval)
-            values = interval.replace(" ", "").split(";");
-        if(isInterval && interval.length() == 0)
+            work_string = interval;
+        else
+            work_string = exclusions;
+        if(work_string.length() == 0)
             return null;
-        if(!isInterval && exclusions.length() == 0)
-            return null;
-        if(!isInterval && exclusions.length() != 0) {
-            values = exclusions.replace(" ", "").split(";");
-        }
+
+        String[] values = work_string.replace(" ", "").split(";");;
         Object[] array = new Object[values.length];
         if(type == 0 || type == 2) {
-            for(int i = 0; i < values.length; i++) {
+            for(int i = 0; i < values.length; i++)
                 array[i] = Integer.parseInt(values[i]);
-            }
         }
         if(type == 1) {
-            for(int i = 0; i < values.length; i++) {
+            for(int i = 0; i < values.length; i++)
                 array[i] = Double.parseDouble(values[i]);
-            }
         }
-        if(type == 3) {
+        if(type == 3)
             return null;
-        }
         return array;
     }
 

@@ -21,7 +21,7 @@ public class XML {
 
     public static Variable[] vars = {new Variable("a", 0, "0; 10", "2;3;4", false, ""),
             new Variable("a", 1, "0.0; 10.2", "2.0;3.5;4.5", false, ""),
-            new Variable("a", 2, "", "", false, "")};
+            new Variable("a", 2, "4", "", false, "")};
     public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml", 3, "00:05:00", vars);
 
     public static void saveXMLProblem(String file_path, Problem p) throws Exception {
