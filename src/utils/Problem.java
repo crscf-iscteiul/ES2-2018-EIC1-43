@@ -1,5 +1,7 @@
 package utils;
 
+import java.io.File;
+
 public class Problem {
     private String name;
     private String description;
@@ -47,7 +49,13 @@ public class Problem {
         for(Variable v : variables){
             if(v.getVariableName().equals(""))
                 return false;
-
+            if(v.getType()==Variable.Type_Not_Defined)
+                return false;
+            if(v.isOptimized() && v.getJarPath().equals(""))
+                return false;
+            if(v.isOptimized() && !new File(v.getJarPath()).isFile())
+                return false;
+            //TODO add parse test interval and exclusions
         }
         return true;
     }

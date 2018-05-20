@@ -287,6 +287,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuOpEditProblemActionPerformed
 
     private void MenuOpSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpSaveActionPerformed
+        if(SolverandOptimizer.getInstance().getProblem().isProblemValid()){
             JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
             FileNameExtensionFilter filter = new FileNameExtensionFilter("XML File", "xml");
             path_chooser.setFileFilter(filter);
@@ -297,6 +298,10 @@ public class MainScreen extends javax.swing.JFrame {
                 if(SolverandOptimizer.getInstance().saveProblem(path_chooser.getSelectedFile().getAbsolutePath()))
                     GUI.getInstance().show_message("File Saved");
             }
+        } else {
+            GUI.getInstance().show_error("The current problem is not valid");
+        }
+
         }//GEN-LAST:event_MenuOpSaveActionPerformed
 
     private void MenuOpLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLoadActionPerformed
