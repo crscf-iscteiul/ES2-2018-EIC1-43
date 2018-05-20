@@ -2,10 +2,10 @@ package utils;
 
 public class Variable {
 
-    private static final int Integer = 0;
-    private static final int Double = 1;
-    private static final int Binary = 2;
-    private static final int Not_Defined = 2;
+    public static final int Type_Integer = 0;
+    public static final int Type_Double = 1;
+    public static final int Type_Binary = 2;
+    public static final int Type_Not_Defined = 2;
 
     private String name;
     private int type;
@@ -27,14 +27,14 @@ public class Variable {
 
     public Variable(String name, String type, String interval, String exclusions, boolean optimized, String jar_path) {
         this.name = name;
-        if(type.equals("Integer"))
-            this.type = Variable.Integer;
-        else if (type.equals("Double"))
-            this.type = Variable.Double;
-        else if (type.equals("Binary"))
-            this.type = Variable.Binary;
+        if(type.equals("Type_Integer"))
+            this.type = Variable.Type_Integer;
+        else if (type.equals("Type_Double"))
+            this.type = Variable.Type_Double;
+        else if (type.equals("Type_Binary"))
+            this.type = Variable.Type_Binary;
         else
-            this.type = Variable.Not_Defined;
+            this.type = Variable.Type_Not_Defined;
         this.interval=interval;
         this.exclusions=exclusions;
         this.optimized=optimized;
@@ -50,12 +50,12 @@ public class Variable {
     }
 
     public String getType_toString(){
-        if(type==Variable.Integer)
-            return "Integer";
-        else if (type==Variable.Double)
-            return "Double";
-        else if (type==Variable.Binary)
-            return "Binary";
+        if(type==Variable.Type_Integer)
+            return "Type_Integer";
+        else if (type==Variable.Type_Double)
+            return "Type_Double";
+        else if (type==Variable.Type_Binary)
+            return "Type_Binary";
         else
             return "";
     }
@@ -65,6 +65,35 @@ public class Variable {
     public String getExclusions() { return this.exclusions; }
 
     public String getJarPath() { return this.jar_path; }
+
+    public Object[] parseValues(boolean isInterval) {
+        String[] values = null;
+        if(isInterval)
+            values = interval.replace(" ", "").split(";");
+        if(isInterval && interval.length() == 0)
+            return null;
+        if(!isInterval && exclusions.length() == 0)
+            return null;
+        if(!isInterval && exclusions.length() != 0) {
+            values = exclusions.replace(" ", "").split(";");
+        }
+        Object[] array = new Object[values.length];
+        if(type == 0 || type == 2) {
+            for(int i = 0; i < values.length; i++) {
+                array[i] = Integer.parseInt(values[i]);
+            }
+        }
+        if(type == 1) {
+            for(int i = 0; i < values.length; i++) {
+                array[i] = Double.parseDouble(values[i]);
+            }
+        }
+        if(type == 3) {
+            return null;
+        }
+        return array;
+    }
+
     public boolean isOptimized(){
         return optimized;
     }
