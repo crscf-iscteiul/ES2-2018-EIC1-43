@@ -1,35 +1,34 @@
 package utils;
 
 import java.io.File;
-import java.util.ArrayList;
 
 public class Problem {
-    private String problemName;
-    private String problemDescription;
-    private int numVars;
-    private String maxTime;
+    private String name;
+    private String description;
+    private int num_vars;
+    private String max_time;
     private Variable[] variables;
 
-    public Problem(String problemName, String problemDescription, int maxVars, String maxTime, Variable[] variables ) {
-        this.problemName = problemName;
-        this.problemDescription = problemDescription;
-        this.numVars =maxVars;
-        this.maxTime = maxTime;
+    public Problem(String name, String description, int num_vars, String max_time, Variable[] variables ) {
+        this.name = name;
+        this.description = description;
+        this.num_vars = num_vars;
+        this.max_time = max_time;
         this.variables = variables;
     }
 
-    public String getProblemName() {
-        return problemName;
+    public String getName() {
+        return name;
     }
 
-    public String getMaxTime() { return this.maxTime; }
+    public String getMaxTime() { return this.max_time; }
 
-    public String getProblemDescription() {
-        return problemDescription;
+    public String getDescription() {
+        return description;
     }
 
     public int getNumVars() {
-        return numVars;
+        return num_vars;
     }
 
     public Variable[] getVariables() {
@@ -38,7 +37,7 @@ public class Problem {
 
     public void updateVaribles(Variable [] varibles){
         this.variables = varibles;
-        this.numVars = varibles.length;
+        this.num_vars = varibles.length;
     }
 
     public boolean isProblemValid(){
@@ -58,6 +57,6 @@ public class Problem {
     }
 
     public String toString(){
-        return this.getProblemName()+" Variable number: "+this.numVars;
+        return this.getName()+" Variable number: "+this.num_vars;
     }
 }
