@@ -1,34 +1,35 @@
 package utils;
 
 import java.io.File;
+import java.util.ArrayList;
 
 public class Problem {
-    private String name;
-    private String description;
-    private int num_vars;
-    private String max_time;
+    private String problemName;
+    private String problemDescription;
+    private int numVars;
+    private String maxTime;
     private Variable[] variables;
 
-    public Problem(String name, String description, int num_vars, String maxTime, Variable[] variables ) {
-        this.name = name;
-        this.description = description;
-        this.num_vars = num_vars;
-        this.max_time = max_time;
+    public Problem(String problemName, String problemDescription, int maxVars, String maxTime, Variable[] variables ) {
+        this.problemName = problemName;
+        this.problemDescription = problemDescription;
+        this.numVars =maxVars;
+        this.maxTime = maxTime;
         this.variables = variables;
     }
 
-    public String getName() {
-        return name;
+    public String getProblemName() {
+        return problemName;
     }
 
-    public String getMaxTime() { return this.max_time; }
+    public String getMaxTime() { return this.maxTime; }
 
-    public String getDescription() {
-        return description;
+    public String getProblemDescription() {
+        return problemDescription;
     }
 
     public int getNumVars() {
-        return num_vars;
+        return numVars;
     }
 
     public Variable[] getVariables() {
@@ -37,12 +38,7 @@ public class Problem {
 
     public void updateVaribles(Variable [] varibles){
         this.variables = varibles;
-        this.num_vars = varibles.length;
-    }
-
-    public void setVariables(Variable[] variables) {
-        this.num_vars = variables.length;
-        this.variables = variables;
+        this.numVars = varibles.length;
     }
 
     public boolean isProblemValid(){
@@ -62,6 +58,6 @@ public class Problem {
     }
 
     public String toString(){
-        return this.getName()+" Variable number: "+this.num_vars;
+        return this.getProblemName()+" Variable number: "+this.numVars;
     }
 }

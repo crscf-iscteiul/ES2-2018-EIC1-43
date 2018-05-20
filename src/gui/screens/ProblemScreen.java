@@ -200,8 +200,8 @@ public class ProblemScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonDoneActionPerformed
 
     public void setProblem(Problem problem){
-        ProblemName.setText(problem.getName());
-        Description.setText(problem.getDescription());
+        ProblemName.setText(problem.getProblemName());
+        Description.setText(problem.getProblemDescription());
         MaxVars.setText(problem.getNumVars()+"");
         MaxTime.setText(problem.getMaxTime()+"");
     }

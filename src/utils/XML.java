@@ -39,11 +39,11 @@ public class XML {
 
         // set attribute to problem element
         Element name = doc.createElement("Name");
-        name.appendChild(doc.createTextNode(p.getName()));
+        name.appendChild(doc.createTextNode(p.getProblemName()));
         staff.appendChild(name);
 
         Element desc = doc.createElement("Description");
-        desc.appendChild(doc.createTextNode(p.getDescription()));
+        desc.appendChild(doc.createTextNode(p.getProblemDescription()));
         staff.appendChild(desc);
 
         Element variables = doc.createElement("Variables");

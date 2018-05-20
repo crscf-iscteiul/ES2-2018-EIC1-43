@@ -75,7 +75,7 @@ public class GUI {
             case (3):
                 parent.dispose();
                 parent = new MainScreen();
-                parent.setTitle("Problem Solver and Optimizer - " + SolverandOptimizer.getInstance().getProblem().getName());
+                parent.setTitle("Problem Solver and Optimizer - " + SolverandOptimizer.getInstance().getProblem().getProblemName());
                 ((MainScreen)parent).open();
                 break;
             case (4):

@@ -9,7 +9,7 @@ public class Test {
         try {
             XML.saveXMLProblem(System.getProperty("user.dir")+"/Problem.xml", XML.p);
             Problem p = XML.readXMLProblem(System.getProperty("user.dir")+"/Problem.xml");
-            System.out.println(p.getName());
+            System.out.println(p.getProblemName());
             for(int i = 0; i < p.getVariables().length; i++) {
                 System.out.println(p.getVariables()[i].getVariableName() + " - " + p.getVariables()[i].getType_toString());
                 System.out.println("INCLUDED VALUES: ");
