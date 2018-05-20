@@ -47,6 +47,7 @@ public class Problem {
 
     public boolean isProblemValid(){
         for(Variable v : variables){
+            System.out.println(v);
             if(v.getVariableName().equals(""))
                 return false;
             if(v.getType()==Variable.Type_Not_Defined)

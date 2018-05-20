@@ -27,11 +27,11 @@ public class Variable {
 
     public Variable(String name, String type, String interval, String exclusions, boolean optimized, String jar_path) {
         this.name = name;
-        if(type.equals("Type_Integer"))
+        if(type.equals("Integer"))
             this.type = Variable.Type_Integer;
-        else if (type.equals("Type_Double"))
+        else if (type.equals("Double"))
             this.type = Variable.Type_Double;
-        else if (type.equals("Type_Binary"))
+        else if (type.equals("Binary"))
             this.type = Variable.Type_Binary;
         else
             this.type = Variable.Type_Not_Defined;
@@ -51,11 +51,11 @@ public class Variable {
 
     public String getType_toString(){
         if(type==Variable.Type_Integer)
-            return "Type_Integer";
+            return "Integer";
         else if (type==Variable.Type_Double)
-            return "Type_Double";
+            return "Double";
         else if (type==Variable.Type_Binary)
-            return "Type_Binary";
+            return "Binary";
         else
             return "";
     }
