@@ -1,7 +1,7 @@
 package utils;
 
 import gui.GUI;
-import solver.SolverandOptimizer;
+import solverandoptimizer.SolverandOptimizer;
 
 import javax.mail.*;
 import javax.mail.internet.AddressException;

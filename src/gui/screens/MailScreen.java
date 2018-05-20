@@ -6,12 +6,11 @@
 package gui.screens;
 
 import gui.GUI;
-import solver.SolverandOptimizer;
+import solverandoptimizer.SolverandOptimizer;
 import utils.Mail;
 import utils.UserSession;
 
 import javax.swing.*;
-import java.util.Properties;
 
 /**
  *

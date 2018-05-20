@@ -1,15 +1,11 @@
-package solver;
+package solverandoptimizer;
 
 import gui.GUI;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
 import utils.Mail;
 import utils.Problem;
 import utils.UserSession;
 import utils.XML;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.HashMap;
 
 

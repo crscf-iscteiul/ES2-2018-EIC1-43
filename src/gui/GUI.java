@@ -1,8 +1,7 @@
 package gui;
 
 import gui.screens.*;
-import solver.SolverandOptimizer;
-import utils.Problem;
+import solverandoptimizer.SolverandOptimizer;
 
 import javax.swing.*;
 

@@ -6,8 +6,7 @@
 package gui.screens;
 
 import gui.GUI;
-import main.Main;
-import solver.SolverandOptimizer;
+import solverandoptimizer.SolverandOptimizer;
 import utils.UserSession;
 
 import javax.swing.*;

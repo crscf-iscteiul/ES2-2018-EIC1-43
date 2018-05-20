@@ -8,6 +8,7 @@ package gui.screens;
 import gui.GUI;
 
 import javax.swing.*;
+import java.util.*;
 
 /**
  *
@@ -22,6 +23,7 @@ public class RunScreen extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         String [] strings = { "AbYSS", "CellDE", "dMPOSO", "GDE3", "FastPGA", "IBEA", "MOCHC", "MOCell", "MOEA/D-DE", "pMOEA/D-DE", "MOEA/D-DRA", "NSGA-II", "ssNSGA-II", "NSGAIIr", "NSGAIIa", "pNSGA-II", "OMOPSO", "PAES", "SMPSO", "pSMPSO", "SMPSOhv", "SPEA2" };
+        //TODO Pre-select the efficient algorithms
         for(String s : strings)
             ((DefaultListModel<String>)JList.getModel()).addElement(s);
     }
@@ -135,36 +137,58 @@ public class RunScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
-        if(JList.getSelectedIndex()>=0){
-            //TODO ORDER
-            ((DefaultListModel<String>) JListRun.getModel()).addElement(JList.getSelectedValue());
-            ((DefaultListModel<String>) JList.getModel()).remove(JList.getSelectedIndex());
-        }
+        SelectAlgorithm();
     }//GEN-LAST:event_AddActionPerformed
 
     private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
-        if(JListRun.getSelectedIndex()>=0){
-            //TODO ORDER
-            ((DefaultListModel<String>) JList.getModel()).addElement(JListRun.getSelectedValue());
-            ((DefaultListModel<String>) JListRun.getModel()).removeElement(JListRun.getSelectedValue());
-        }
+        DeselectAlgorithm();
     }//GEN-LAST:event_RemoveActionPerformed
 
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
-        // TODO add your handling code here:
+        //TODO Start JMetal Part
     }//GEN-LAST:event_StartActionPerformed
 
     private void JListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JListMouseClicked
-        // TODO add your handling code here:
+        if(evt.getClickCount()==2){
+            SelectAlgorithm();
+        }
     }//GEN-LAST:event_JListMouseClicked
 
     private void JListRunMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JListRunMouseClicked
-        // TODO add your handling code here:
+        if(evt.getClickCount()==2){
+            DeselectAlgorithm();
+        }
     }//GEN-LAST:event_JListRunMouseClicked
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
+
+    private void SelectAlgorithm(){
+        if(JList.getSelectedIndex()>=0) {
+            ((DefaultListModel<String>) JListRun.getModel()).addElement(JList.getSelectedValue());
+            Object[] objs = ((DefaultListModel<String>) JListRun.getModel()).toArray();
+            ArrayList<String> list = new ArrayList<>(Arrays.asList(Arrays.copyOf(objs, objs.length, String[].class)));
+            Collections.sort(list);
+            ((DefaultListModel<String>) JListRun.getModel()).removeAllElements();
+            for (String s : list)
+                ((DefaultListModel<String>) JListRun.getModel()).addElement(s);
+            ((DefaultListModel<String>) JList.getModel()).remove(JList.getSelectedIndex());
+        }
+    }
+
+    private void DeselectAlgorithm(){
+        if(JListRun.getSelectedIndex()>=0) {
+            ((DefaultListModel<String>) JList.getModel()).addElement(JListRun.getSelectedValue());
+            Object[] objs = ((DefaultListModel<String>) JList.getModel()).toArray();
+            ArrayList<String> list = new ArrayList<>(Arrays.asList(Arrays.copyOf(objs, objs.length, String[].class)));
+            Collections.sort(list);
+            ((DefaultListModel<String>) JList.getModel()).removeAllElements();
+            for (String s : list)
+                ((DefaultListModel<String>) JList.getModel()).addElement(s);
+            ((DefaultListModel<String>) JListRun.getModel()).removeElement(JListRun.getSelectedValue());
+        }
+    }
 
     public void open(){
         //Show Screen (Thread Safe)

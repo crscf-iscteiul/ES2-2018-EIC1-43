@@ -6,7 +6,7 @@
 package gui.screens;
 
 import gui.GUI;
-import solver.SolverandOptimizer;
+import solverandoptimizer.SolverandOptimizer;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
