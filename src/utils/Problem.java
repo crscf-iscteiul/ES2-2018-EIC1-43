@@ -35,14 +35,13 @@ public class Problem {
         return variables;
     }
 
-    public void updateVaribles(Variable [] varibles){
-        this.variables = varibles;
-        this.num_vars = varibles.length;
+    public void updateVaribles(Variable [] variables){
+        this.variables = variables;
+        this.num_vars = variables.length;
     }
 
     public boolean isProblemValid(){
         for(Variable v : variables){
-            System.out.println(v);
             if(v.getVariableName().equals(""))
                 return false;
             if(v.getType()==Variable.Type_Not_Defined)
