@@ -141,6 +141,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="SendInfo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
+                      <Component id="JarPath" min="-2" pref="287" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="ButtonRemove" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="ButtonAdd" min="-2" pref="100" max="-2" attributes="0"/>
@@ -160,6 +162,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="ButtonRemove" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ButtonAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JarPath" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Start" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -179,13 +182,12 @@
         <Component class="javax.swing.JTable" name="TableVars">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="6" rowCount="10">
+              <Table columnCount="5" rowCount="10">
                 <Column editable="true" title="Name" type="java.lang.String"/>
                 <Column editable="true" title="Type" type="java.lang.String"/>
                 <Column editable="true" title="Interval Values" type="java.lang.String"/>
                 <Column editable="true" title="Exclusion Values" type="java.lang.String"/>
                 <Column editable="true" title="Optimize" type="java.lang.Boolean"/>
-                <Column editable="true" title="Jar" type="java.lang.String"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -259,6 +261,18 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Send Info"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JarPath">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Optimization Jar"/>
+        <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JarPathMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -19,7 +19,6 @@ public class Test {
                 for(Object a : p.getVariables()[i].parseValues(false))
                     System.out.println(a.toString());
                 System.out.println("IS OPTIMIZED: \n" + p.getVariables()[i].isOptimized());
-                System.out.println("JAR PATH: \n" + p.getVariables()[i].getJarPath());
                 System.out.println("-------------------------");
             }
 

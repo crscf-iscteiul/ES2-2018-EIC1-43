@@ -37,6 +37,7 @@ public class MainScreen extends javax.swing.JFrame {
         TableVars.getModel().addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
+
                 Variable [] variables = new Variable [TableVars.getModel().getRowCount()];
                 for(int i=0; i<variables.length; i++){
                     String name = (String) TableVars.getModel().getValueAt(i,0);
@@ -44,8 +45,7 @@ public class MainScreen extends javax.swing.JFrame {
                     String interval = (String) TableVars.getModel().getValueAt(i,2);
                     String excluded = (String) TableVars.getModel().getValueAt(i,3);
                     boolean optimize = (boolean) TableVars.getModel().getValueAt(i,4);
-                    String jar_path = (String) TableVars.getModel().getValueAt(i,5);
-                    variables[i] = new Variable(name, type, interval, excluded, optimize, jar_path);
+                    variables[i] = new Variable(name, type, interval, excluded, optimize);
                 }
                 SolverandOptimizer.getInstance().getProblem().updateVaribles(variables);
             }
@@ -69,6 +69,7 @@ public class MainScreen extends javax.swing.JFrame {
         ButtonRemove = new javax.swing.JButton();
         Start = new javax.swing.JButton();
         SendInfo = new javax.swing.JCheckBox();
+        JarPath = new javax.swing.JTextField();
         Menu = new javax.swing.JMenuBar();
         MenuFile = new javax.swing.JMenu();
         MenuOpSave = new javax.swing.JMenuItem();
@@ -94,23 +95,23 @@ public class MainScreen extends javax.swing.JFrame {
 
         TableVars.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Name", "Type", "Interval Values", "Exclusion Values", "Optimize", "Jar"
+                "Name", "Type", "Interval Values", "Exclusion Values", "Optimize"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -126,7 +127,7 @@ public class MainScreen extends javax.swing.JFrame {
             TableVars.getColumnModel().getColumn(2).setResizable(false);
             TableVars.getColumnModel().getColumn(3).setResizable(false);
             TableVars.getColumnModel().getColumn(4).setResizable(false);
-            TableVars.getColumnModel().getColumn(5).setResizable(false);
+//            TableVars.getColumnModel().getColumn(5).setResizable(false);
         }
 
         ButtonAdd.setText("Add Row");
@@ -151,6 +152,15 @@ public class MainScreen extends javax.swing.JFrame {
         });
 
         SendInfo.setText("Send Info");
+
+        JarPath.setEditable(false);
+        JarPath.setText("Optimization Jar");
+        JarPath.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        JarPath.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JarPathMouseClicked(evt);
+            }
+        });
 
         MenuFile.setText("File");
 
@@ -237,6 +247,8 @@ public class MainScreen extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SendInfo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(JarPath, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ButtonRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -251,7 +263,8 @@ public class MainScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(ButtonRemove)
-                        .addComponent(ButtonAdd))
+                        .addComponent(ButtonAdd)
+                        .addComponent(JarPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Start)
                         .addComponent(SendInfo)))
@@ -325,6 +338,18 @@ public class MainScreen extends javax.swing.JFrame {
         GUI.getInstance().child_screen(GUI.FAQScreen);
     }//GEN-LAST:event_MenuOpFAQActionPerformed
 
+    private void JarPathMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JarPathMouseClicked
+        JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("JAR File", "jar");
+        path_chooser.setFileFilter(filter);
+        path_chooser.setDialogTitle("Choose JAR File");
+        int returnVal = path_chooser.showOpenDialog(this);
+        if(returnVal == JFileChooser.APPROVE_OPTION) {
+            JarPath.setText(path_chooser.getSelectedFile().getAbsolutePath());
+            SolverandOptimizer.getInstance().getProblem().setJarPath(path_chooser.getSelectedFile().getAbsolutePath());
+        }
+    }//GEN-LAST:event_JarPathMouseClicked
+
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
         //TODO Check if var is optimized then if has jar_path
         GUI.getInstance().child_screen(GUI.RunScreen);
@@ -343,7 +368,7 @@ public class MainScreen extends javax.swing.JFrame {
 
         for(Variable v : problem.getVariables()){
             System.out.println(v);
-            model.addRow(new Object[]{v.getVariableName(), v.getType_toString(), v.getInterval(), v.getExclusions(), v.isOptimized(), v.getJarPath()});
+            model.addRow(new Object[]{v.getVariableName(), v.getType_toString(), v.getInterval(), v.getExclusions(), v.isOptimized()});
         }
         TableVars.setModel(model);
     }
@@ -361,6 +386,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JButton ButtonAdd;
     private javax.swing.JButton ButtonRemove;
     private javax.swing.JComboBox<String> ComboBoxTypes;
+    private javax.swing.JTextField JarPath;
     private javax.swing.JMenuBar Menu;
     private javax.swing.JMenu MenuEdit;
     private javax.swing.JMenu MenuFile;

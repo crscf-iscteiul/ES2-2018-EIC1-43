@@ -1,5 +1,9 @@
 package utils;
 
+import solverandoptimizer.SolverandOptimizer;
+import solverandoptimizer.solver.Solver;
+
+import java.awt.datatransfer.DataFlavor;
 import java.io.File;
 
 public class Problem {
@@ -8,6 +12,8 @@ public class Problem {
     private int num_vars;
     private String max_time;
     private Variable[] variables;
+
+    private String jar_path;
 
     public Problem(String name, String description, int num_vars, String max_time, Variable[] variables ) {
         this.name = name;
@@ -46,13 +52,21 @@ public class Problem {
                 return false;
             if(v.getType()==Variable.Type_Not_Defined)
                 return false;
-            if(v.isOptimized() && v.getJarPath().equals(""))
+            if(v.isOptimized() && SolverandOptimizer.getInstance().getProblem().getJarPath().equals(""))
                 return false;
-            if(v.isOptimized() && !new File(v.getJarPath()).isFile())
+            if(v.isOptimized() && !new File(SolverandOptimizer.getInstance().getProblem().getJarPath()).isFile())
                 return false;
             //TODO add parse test interval and exclusions
         }
         return true;
+    }
+
+    public void setJarPath(String jar_path) {
+        this.jar_path = jar_path;
+    }
+
+    public String getJarPath() {
+        return jar_path;
     }
 
     public String toString(){

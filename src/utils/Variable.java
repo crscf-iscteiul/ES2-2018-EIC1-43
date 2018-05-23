@@ -14,18 +14,16 @@ public class Variable {
     private String exclusions;
 
     private boolean optimized;
-    private String jar_path;
 
-    public Variable(String name, int type, String interval, String exclusions, boolean optimized, String jar_path) {
+    public Variable(String name, int type, String interval, String exclusions, boolean optimized) {
         this.name = name;
         this.type=type;
         this.interval=interval;
         this.exclusions=exclusions;
         this.optimized=optimized;
-        this.jar_path=jar_path;
     }
 
-    public Variable(String name, String type, String interval, String exclusions, boolean optimized, String jar_path) {
+    public Variable(String name, String type, String interval, String exclusions, boolean optimized) {
         this.name = name;
         if(type.equals("Integer"))
             this.type = Variable.Type_Integer;
@@ -38,7 +36,6 @@ public class Variable {
         this.interval=interval;
         this.exclusions=exclusions;
         this.optimized=optimized;
-        this.jar_path=jar_path;
     }
 
     public String getVariableName() {
@@ -63,8 +60,6 @@ public class Variable {
     public String getInterval() { return this.interval; }
 
     public String getExclusions() { return this.exclusions; }
-
-    public String getJarPath() { return this.jar_path; }
 
     public Double[] parseValues(boolean isInterval) {
         String work_string;

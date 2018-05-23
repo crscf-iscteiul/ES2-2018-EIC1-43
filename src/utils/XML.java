@@ -19,9 +19,9 @@ import java.util.HashMap;
 
 public class XML {
 
-    public static Variable[] vars = {new Variable("a", 0, "0; 10", "2;3;4", false, ""),
-            new Variable("a", 1, "0.0; 10.2", "2.0;3.5;4.5", false, ""),
-            new Variable("a", 2, "4", "", false, "")};
+    public static Variable[] vars = {new Variable("a", 0, "0; 10", "2;3;4", false),
+            new Variable("a", 1, "0.0; 10.2", "2.0;3.5;4.5", false),
+            new Variable("a", 2, "4", "", false)};
     public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml", 3, "00:05:00", vars);
 
     public static void saveXMLProblem(String file_path, Problem p) throws Exception {
@@ -66,12 +66,6 @@ public class XML {
                 Element variable_optimized = doc.createElement("To_Optimize");
                 variable_optimized.appendChild(doc.createTextNode(String.valueOf(p.getVariables()[i].isOptimized())));
 
-                //JAR Path
-                Element variable_jarPath = doc.createElement("JAR_Path");
-                if (p.getVariables()[i].getJarPath() != "")
-                    variable_jarPath.appendChild(doc.createTextNode(p.getVariables()[i].getJarPath()));
-                else
-                    variable_jarPath.appendChild(doc.createTextNode("NULL"));
 
 
                 //Values
@@ -92,7 +86,6 @@ public class XML {
                 variable.appendChild(variable_name);
                 variable.appendChild(variable_type);
                 variable.appendChild(variable_optimized);
-                variable.appendChild(variable_jarPath);
                 variable.appendChild(variable_value);
                 variables.appendChild(variable);
             } catch (NullPointerException e) {
@@ -168,10 +161,6 @@ public class XML {
                 String var_Type = varT.item(0).getFirstChild().getNodeValue();
                 NodeList varO = firstElement.getElementsByTagName("To_Optimize");
                 String var_Opt = varO.item(0).getFirstChild().getNodeValue();
-                NodeList varP = firstElement.getElementsByTagName("JAR_Path");
-                String var_Path = "";
-                if (!varP.item(0).getFirstChild().getNodeValue().equals("NULL"))
-                    var_Path = varP.item(0).getFirstChild().getNodeValue();
                 NodeList varV = firstElement.getElementsByTagName("Values");
                 Element varVI = (Element) varV.item(0);
                 String varInt = "";
@@ -181,7 +170,7 @@ public class XML {
                 if (!varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue().equals("NULL"))
                     varExc = varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue();
 
-                vars_l[i] = new Variable(var_Name, var_Type, varInt, varExc, Boolean.valueOf(var_Opt), var_Path);
+                vars_l[i] = new Variable(var_Name, var_Type, varInt, varExc, Boolean.valueOf(var_Opt));
             }
         }
 

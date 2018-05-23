@@ -20,9 +20,9 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
         List<Integer> lowerLimit = new ArrayList<>(variables.length);
         List<Integer> upperLimit = new ArrayList<>(variables.length);
 
-        for (int i = 0; i < getNumberOfVariables(); i++) {
+        for (Variable v: variables) {
             //TODO check if the limits even exist
-            Double[] limits = variables[i].parseValues(true);
+            Double[] limits = v.parseValues(true);
 
             lowerLimit.add((int)(double)limits[0]);
             upperLimit.add((int)(double)limits[1]);
@@ -42,7 +42,7 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
         }
         try {
             String line;
-            Process p = Runtime.getRuntime().exec("java -jar c:\\NMMin.jar" + " " + solutionString);
+            Process p = Runtime.getRuntime().exec("java -jar "+SolverandOptimizer.getInstance().getProblem().getJarPath()+ " " + solutionString);
             BufferedReader brinput = new BufferedReader(new InputStreamReader(p.getInputStream()));
             while ((line = brinput.readLine()) != null) {
                 evaluationResultString += line;

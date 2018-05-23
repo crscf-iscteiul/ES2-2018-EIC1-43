@@ -187,7 +187,7 @@ public class ProblemScreen extends javax.swing.JFrame {
             }
             for(int i=0; i<maxVars; i++)
                 if(variables[i]==null)
-                    variables[i] = new Variable("","","","",false,"");
+                    variables[i] = new Variable("","","","",false);
 
             Problem currentProblem = new Problem(problem_name, problem_description, maxVars, maxTime, variables);
             SolverandOptimizer.getInstance().changeProblem(currentProblem);
