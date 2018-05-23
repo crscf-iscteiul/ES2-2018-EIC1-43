@@ -6,6 +6,8 @@
 package gui.screens;
 
 import gui.GUI;
+import solverandoptimizer.SolverandOptimizer;
+import solverandoptimizer.solver.Solver;
 
 import javax.swing.*;
 import java.util.*;
@@ -145,7 +147,7 @@ public class RunScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_RemoveActionPerformed
 
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
-        //TODO Start JMetal Part
+        Solver.solve(SolverandOptimizer.getInstance().getProblem().getVariables());
     }//GEN-LAST:event_StartActionPerformed
 
     private void JListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JListMouseClicked

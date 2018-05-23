@@ -66,7 +66,7 @@ public class Variable {
 
     public String getJarPath() { return this.jar_path; }
 
-    public Object[] parseValues(boolean isInterval) {
+    public Double[] parseValues(boolean isInterval) {
         String work_string;
         if(isInterval)
             work_string = interval;
@@ -75,11 +75,11 @@ public class Variable {
         if(work_string.length() == 0)
             return null;
 
-        String[] values = work_string.replace(" ", "").split(";");;
-        Object[] array = new Object[values.length];
+        String[] values = work_string.replace(" ", "").split(";");
+        Double[] array = new Double[values.length];
         if(type == 0 || type == 2) {
             for(int i = 0; i < values.length; i++)
-                array[i] = Integer.parseInt(values[i]);
+                array[i] = (double) Integer.parseInt(values[i]);
         }
         if(type == 1) {
             for(int i = 0; i < values.length; i++)

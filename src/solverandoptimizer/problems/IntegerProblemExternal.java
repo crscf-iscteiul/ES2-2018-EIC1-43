@@ -12,19 +12,21 @@ import java.util.List;
 
 public class IntegerProblemExternal extends AbstractIntegerProblem {
 
-    public IntegerProblemExternal(Variable[] varibles) {
-        setNumberOfVariables(varibles.length);
+    public IntegerProblemExternal(Variable[] variables) {
+        setNumberOfVariables(variables.length);
         setNumberOfObjectives(2);
         setName(SolverandOptimizer.getInstance().getProblem().getName() + " - Integer Variables");
 
-        List<Integer> lowerLimit = new ArrayList<>(varibles.length);
-        List<Integer> upperLimit = new ArrayList<>(varibles.length);
+        List<Integer> lowerLimit = new ArrayList<>(variables.length);
+        List<Integer> upperLimit = new ArrayList<>(variables.length);
 
         for (int i = 0; i < getNumberOfVariables(); i++) {
             //TODO check if the limits even exist
-            Integer[] limits = (Integer[]) varibles[i].parseValues(true);
-            lowerLimit.add(limits[0]);
-            upperLimit.add(limits[1]);
+            Double[] limits = variables[i].parseValues(true);
+            System.out.println(limits[0]+" ;"+limits[1]);
+
+            lowerLimit.add((int)(double)limits[0]);
+            upperLimit.add((int)(double)limits[1]);
         }
 
         //TODO Find how to exclude values
