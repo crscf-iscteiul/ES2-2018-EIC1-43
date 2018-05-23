@@ -21,7 +21,7 @@ public class Solver {
             if(v.isOptimized()){
                 optimized_variables.add(v);
             } else {
-                optimized_variables.add(v);
+                not_optimized_variables.add(v);
             }
         }
 

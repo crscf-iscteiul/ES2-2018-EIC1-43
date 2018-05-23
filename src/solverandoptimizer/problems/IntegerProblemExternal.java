@@ -23,7 +23,6 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
         for (int i = 0; i < getNumberOfVariables(); i++) {
             //TODO check if the limits even exist
             Double[] limits = variables[i].parseValues(true);
-            System.out.println(limits[0]+" ;"+limits[1]);
 
             lowerLimit.add((int)(double)limits[0]);
             upperLimit.add((int)(double)limits[1]);
