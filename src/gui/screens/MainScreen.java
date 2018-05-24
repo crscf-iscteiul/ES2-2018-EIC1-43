@@ -355,6 +355,15 @@ public class MainScreen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_JarPathMouseClicked
 
+    private void VariableTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VariableTypeActionPerformed
+        if(TableVars.getModel().getRowCount()>0 && !TableVars.getModel().getValueAt(0,1).equals(VariableType.getSelectedItem())){
+            for(int i=0; i<TableVars.getModel().getRowCount(); i++){
+                TableVars.getModel().setValueAt(VariableType.getSelectedItem(),i,1);
+            }
+            updateProblemData();
+        }
+    }//GEN-LAST:event_VariableTypeActionPerformed
+
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
         //TODO Check if var is optimized then if has jar_path
         GUI.getInstance().child_screen(GUI.RunScreen);
@@ -363,10 +372,6 @@ public class MainScreen extends javax.swing.JFrame {
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
-
-    private void VariableTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VariableTypeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_VariableTypeActionPerformed
 
 
     public void loadProblemData(Problem problem){
