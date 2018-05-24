@@ -53,7 +53,6 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
         } catch (Exception err) {
             err.printStackTrace();
         }
-
         String[] individualEvaluationCriteria = evaluationResultString.split("\\s+");
         // It is assumed that all evaluated criteria are returned in the same result string
         for (int i = 0; i < solution.getNumberOfObjectives(); i++) {

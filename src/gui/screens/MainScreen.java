@@ -37,17 +37,7 @@ public class MainScreen extends javax.swing.JFrame {
         TableVars.getModel().addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
-
-                Variable [] variables = new Variable [TableVars.getModel().getRowCount()];
-                for(int i=0; i<variables.length; i++){
-                    String name = (String) TableVars.getModel().getValueAt(i,0);
-                    String type = (String) TableVars.getModel().getValueAt(i,1);
-                    String interval = (String) TableVars.getModel().getValueAt(i,2);
-                    String excluded = (String) TableVars.getModel().getValueAt(i,3);
-                    boolean optimize = (boolean) TableVars.getModel().getValueAt(i,4);
-                    variables[i] = new Variable(name, type, interval, excluded, optimize);
-                }
-                SolverandOptimizer.getInstance().getProblem().updateVaribles(variables);
+                updateProblemData();
             }
         });
 
@@ -70,6 +60,8 @@ public class MainScreen extends javax.swing.JFrame {
         Start = new javax.swing.JButton();
         SendInfo = new javax.swing.JCheckBox();
         JarPath = new javax.swing.JTextField();
+        VariableType = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
         Menu = new javax.swing.JMenuBar();
         MenuFile = new javax.swing.JMenu();
         MenuOpSave = new javax.swing.JMenuItem();
@@ -113,22 +105,20 @@ public class MainScreen extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class
             };
+            boolean[] canEdit = new boolean [] {
+                true, false, true, true, true
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
         TableVars.getTableHeader().setReorderingAllowed(false);
         ScrollPane.setViewportView(TableVars);
-        if (TableVars.getColumnModel().getColumnCount() > 0) {
-            TableVars.getColumnModel().getColumn(0).setResizable(false);
-            TableVars.getColumnModel().getColumn(1).setResizable(false);
-            TableVars.getColumnModel().getColumn(1).setCellEditor(new javax.swing.DefaultCellEditor(ComboBoxTypes));
-            TableVars.getColumnModel().getColumn(2).setResizable(false);
-            TableVars.getColumnModel().getColumn(3).setResizable(false);
-            TableVars.getColumnModel().getColumn(4).setResizable(false);
-//            TableVars.getColumnModel().getColumn(5).setResizable(false);
-        }
 
         ButtonAdd.setText("Add Row");
         ButtonAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +151,15 @@ public class MainScreen extends javax.swing.JFrame {
                 JarPathMouseClicked(evt);
             }
         });
+
+        VariableType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Integer", "Double", "Binary" }));
+        VariableType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VariableTypeActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("External Jar:");
 
         MenuFile.setText("File");
 
@@ -238,16 +237,20 @@ public class MainScreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 816, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ScrollPane)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Start)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SendInfo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(JarPath, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(VariableType, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ButtonRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -264,7 +267,9 @@ public class MainScreen extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(ButtonRemove)
                         .addComponent(ButtonAdd)
-                        .addComponent(JarPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(VariableType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JarPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Start)
                         .addComponent(SendInfo)))
@@ -359,6 +364,10 @@ public class MainScreen extends javax.swing.JFrame {
         GUI.getInstance().close_screen(this);
     }//GEN-LAST:event_formWindowClosing
 
+    private void VariableTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VariableTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VariableTypeActionPerformed
+
 
     public void loadProblemData(Problem problem){
         DefaultTableModel model = (DefaultTableModel) TableVars.getModel();
@@ -371,6 +380,20 @@ public class MainScreen extends javax.swing.JFrame {
             model.addRow(new Object[]{v.getVariableName(), v.getType_toString(), v.getInterval(), v.getExclusions(), v.isOptimized()});
         }
         TableVars.setModel(model);
+    }
+
+    public void updateProblemData(){
+        Variable [] variables = new Variable [TableVars.getModel().getRowCount()];
+        for(int i=0; i<variables.length; i++){
+            String name = (String) TableVars.getModel().getValueAt(i,0);
+            String type = (String) TableVars.getModel().getValueAt(i,1);
+            String interval = (String) TableVars.getModel().getValueAt(i,2);
+            String excluded = (String) TableVars.getModel().getValueAt(i,3);
+            boolean optimize = (boolean) TableVars.getModel().getValueAt(i,4);
+            variables[i] = new Variable(name, type, interval, excluded, optimize);
+        }
+
+        SolverandOptimizer.getInstance().getProblem().updateVaribles(variables);
     }
 
     public void open(){
@@ -402,5 +425,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JCheckBox SendInfo;
     private javax.swing.JButton Start;
     private javax.swing.JTable TableVars;
+    private javax.swing.JComboBox<String> VariableType;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
