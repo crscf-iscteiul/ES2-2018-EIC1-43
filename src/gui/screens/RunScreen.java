@@ -145,10 +145,6 @@ public class RunScreen extends javax.swing.JFrame {
         DeselectAlgorithm();
     }//GEN-LAST:event_RemoveActionPerformed
 
-    private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
-        Solver.solve(SolverandOptimizer.getInstance().getProblem().getVariables());
-    }//GEN-LAST:event_StartActionPerformed
-
     private void JListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JListMouseClicked
         if(evt.getClickCount()==2){
             SelectAlgorithm();
@@ -160,6 +156,16 @@ public class RunScreen extends javax.swing.JFrame {
             DeselectAlgorithm();
         }
     }//GEN-LAST:event_JListRunMouseClicked
+
+    private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
+        ArrayList<String> algorithms = new ArrayList<>();
+        for(int i=0; i<JListRun.getModel().getSize(); i++)
+            algorithms.add(JListRun.getModel().getElementAt(i));
+        if(algorithms.isEmpty())
+            JOptionPane.showMessageDialog(this, "No algorithms selected", "Run what?", JOptionPane.INFORMATION_MESSAGE);
+        else
+            Solver.solve(SolverandOptimizer.getInstance().getProblem().getVariables(), algorithms);
+    }//GEN-LAST:event_StartActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         GUI.getInstance().close_screen(this);

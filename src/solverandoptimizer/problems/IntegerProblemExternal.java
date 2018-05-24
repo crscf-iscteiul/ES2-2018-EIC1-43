@@ -12,13 +12,13 @@ import java.util.List;
 
 public class IntegerProblemExternal extends AbstractIntegerProblem {
 
-    public IntegerProblemExternal(Variable[] variables) {
-        setNumberOfVariables(variables.length);
+    public IntegerProblemExternal(List<Variable> variables) {
+        setNumberOfVariables(variables.size());
         setNumberOfObjectives(2);
         setName(SolverandOptimizer.getInstance().getProblem().getName() + " - Integer Variables External");
 
-        List<Integer> lowerLimit = new ArrayList<>(variables.length);
-        List<Integer> upperLimit = new ArrayList<>(variables.length);
+        List<Integer> lowerLimit = new ArrayList<>(variables.size());
+        List<Integer> upperLimit = new ArrayList<>(variables.size());
 
         for (Variable v: variables) {
             //TODO check if the limits even exist
@@ -34,6 +34,7 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
         setUpperLimit(upperLimit);
     }
 
+    @Override
     public void evaluate(IntegerSolution solution) {
         String solutionString = "";
         String evaluationResultString = "";

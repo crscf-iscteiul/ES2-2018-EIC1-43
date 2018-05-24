@@ -9,10 +9,11 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Solver {
 
-    public static void solve(Variable[] variables){
+    public static void solve(Variable[] variables, List<String> algorithms){
 
         ArrayList<Variable> optimized_variables = new ArrayList<>();
         ArrayList<Variable> not_optimized_variables = new ArrayList<>();
@@ -24,7 +25,6 @@ public class Solver {
                 not_optimized_variables.add(v);
             }
         }
-
 
         try {
             switch (variables[0].getType()) {

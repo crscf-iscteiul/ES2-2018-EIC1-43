@@ -8,19 +8,19 @@ import utils.Variable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IntegerProblem extends AbstractIntegerProblem {
+public class IntegerProblemInternal extends AbstractIntegerProblem {
 
-    public IntegerProblem(Variable[] variables){
-        setNumberOfVariables(variables.length);
+    public IntegerProblemInternal(List<Variable> variables){
+        setNumberOfVariables(variables.size());
         setNumberOfObjectives(2);
         setName(SolverandOptimizer.getInstance().getProblem().getName()+" - Integer Variables Internal");
 
-        List<Integer> lowerLimit = new ArrayList<>(variables.length);
-        List<Integer> upperLimit = new ArrayList<>(variables.length);
+        List<Integer> lowerLimit = new ArrayList<>(variables.size());
+        List<Integer> upperLimit = new ArrayList<>(variables.size());
 
-        for (int i = 0; i < getNumberOfVariables(); i++) {
+        for (Variable v: variables) {
             //TODO check if the limits even exist
-            Double[] limits = variables[i].parseValues(true);
+            Double[] limits = v.parseValues(true);
 
             lowerLimit.add((int)(double)limits[0]);
             upperLimit.add((int)(double)limits[1]);

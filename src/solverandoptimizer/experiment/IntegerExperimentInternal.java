@@ -8,7 +8,7 @@ import org.uma.jmetal.util.experiment.ExperimentBuilder;
 import org.uma.jmetal.util.experiment.component.*;
 import org.uma.jmetal.util.experiment.util.ExperimentAlgorithm;
 import org.uma.jmetal.util.experiment.util.ExperimentProblem;
-import solverandoptimizer.problems.IntegerProblem;
+import solverandoptimizer.problems.IntegerProblemInternal;
 import utils.Variable;
 
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class IntegerExperimentInternal {
         String experimentBaseDirectory = "experimentBaseDirectory";
 
         List<ExperimentProblem<IntegerSolution>> problemList = new ArrayList<>();
-        problemList.add(new ExperimentProblem<>(new IntegerProblem(variables)));
+        problemList.add(new ExperimentProblem<>(new IntegerProblemInternal(variables)));
 
         List<ExperimentAlgorithm<IntegerSolution, List<IntegerSolution>>> algorithmList =
                 IntegerExperiment.configureAlgorithmList(problemList, maxEvaluations);
