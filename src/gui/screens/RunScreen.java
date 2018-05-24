@@ -8,6 +8,7 @@ package gui.screens;
 import gui.GUI;
 import solverandoptimizer.SolverandOptimizer;
 import solverandoptimizer.solver.Solver;
+import utils.Variable;
 
 import javax.swing.*;
 import java.util.*;
@@ -24,10 +25,7 @@ public class RunScreen extends javax.swing.JFrame {
     public RunScreen() {
         initComponents();
         setLocationRelativeTo(null);
-        String [] strings = { "AbYSS", "CellDE", "dMPOSO", "GDE3", "FastPGA", "IBEA", "MOCHC", "MOCell", "MOEA/D-DE", "pMOEA/D-DE", "MOEA/D-DRA", "NSGA-II", "ssNSGA-II", "NSGAIIr", "NSGAIIa", "pNSGA-II", "OMOPSO", "PAES", "SMPSO", "pSMPSO", "SMPSOhv", "SPEA2" };
-        //TODO Pre-select the efficient algorithms
-        for(String s : strings)
-            ((DefaultListModel<String>)JList.getModel()).addElement(s);
+        SetAlgorithmsForVarible(SolverandOptimizer.getInstance().getProblem().getVariables()[0].getType_toString());
     }
 
     /**
@@ -191,6 +189,27 @@ public class RunScreen extends javax.swing.JFrame {
                 ((DefaultListModel<String>) JList.getModel()).addElement(s);
             ((DefaultListModel<String>) JListRun.getModel()).removeElement(JListRun.getSelectedValue());
         }
+    }
+
+    private void SetAlgorithmsForVarible(String type){
+        ArrayList<String> deselected_algorithms = new ArrayList<>(Arrays.asList("AbYSS", "CellDE", "dMPOSO", "GDE3", "GWASFGA", "IBEA", "MOCell", "MOCH", "MOEAD", "MOMBI", "NSGA-II", "NSGA-III", "OMOPSO", "PAES", "PAES2", "RandomSearch", "rNSGA-II", "SMPSO", "SMSEMOA", "SPEA2", "WASFGA"));
+        ArrayList<String> selected_algorithms = new ArrayList<>();
+        switch (Variable.StringToType(type)){
+            case (0):
+                selected_algorithms.addAll(Arrays.asList("NSGA-II", "MOCell", "PAES", "RandomSearch", "SMSEMOA"));
+                break;
+            case (1):
+                selected_algorithms.addAll(Arrays.asList("NSGA-II", "GDE3", "IBEA", "MOCell", "MOEAD", "PAES", "RandomSearch", "SMSEMOA"));
+                break;
+            case (2):
+                selected_algorithms.addAll(Arrays.asList("NSGA-II", "MOCell", "MOCH", "PAES", "RandomSearch", "SMSEMOA", "SPEA2"));
+                break;
+        }
+        deselected_algorithms.removeAll(selected_algorithms);
+        for(String s : deselected_algorithms)
+            ((DefaultListModel<String>)JList.getModel()).addElement(s);
+        for(String s : selected_algorithms)
+            ((DefaultListModel<String>)JListRun.getModel()).addElement(s);
     }
 
     public void open(){

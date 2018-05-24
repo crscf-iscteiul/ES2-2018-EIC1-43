@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8dcdab30-5ebb-44d4-9aa2-14a8ed7b5181" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/MainScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/RunScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/RunScreen.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/RunScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/RunScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Problem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Problem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Variable.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,69 +14,72 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="IntegerExperiment.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/IntegerExperiment.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="476">
+                    <caret line="28" column="68" lean-forward="true" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="NSGAIIBuilder.java" pinned="false" current-in-tab="true">
+              <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-algorithm/5.5/jmetal-algorithm-5.5-sources.jar!/org/uma/jmetal/algorithm/multiobjective/nsgaii/NSGAIIBuilder.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state>
+                    <caret column="35" selection-start-column="35" selection-end-column="35" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="AlgorithmBuilder.java" pinned="false" current-in-tab="false">
+              <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-core/5.5/jmetal-core-5.5-sources.jar!/org/uma/jmetal/util/AlgorithmBuilder.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="34">
+                    <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainScreen.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.java">
+      <file leaf-file-name="XML.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/XML.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1812">
-              <caret line="300" column="58" selection-start-line="300" selection-start-column="58" selection-end-line="300" selection-end-column="58" />
+            <state relative-caret-position="432">
+              <caret line="239" column="5" selection-start-line="239" selection-start-column="5" selection-end-line="239" selection-end-column="5" />
               <folding>
-                <element signature="method#MainScreen#0;class#MainScreen#0" />
-                <element signature="e#1046#1213#0" expanded="true" />
-                <element signature="e#1212#1213#0" expanded="true" />
-                <element signature="e#1442#1472#0" expanded="true" />
-                <element signature="e#2939#3111#0" expanded="true" />
-                <element signature="e#3110#3111#0" expanded="true" />
-                <element signature="e#4205#4206#0" expanded="true" />
-                <element signature="e#4263#4264#0" expanded="true" />
-                <element signature="e#4339#4340#0" expanded="true" />
-                <element signature="e#4399#4400#0" expanded="true" />
-                <element signature="e#4599#4781#0" expanded="true" />
-                <element signature="e#4780#4781#0" expanded="true" />
-                <element signature="e#4868#5053#0" expanded="true" />
-                <element signature="e#5052#5053#0" expanded="true" />
-                <element signature="e#5121#5299#0" expanded="true" />
-                <element signature="e#5298#5299#0" expanded="true" />
-                <element signature="e#5530#5701#0" expanded="true" />
-                <element signature="e#5700#5701#0" expanded="true" />
-                <element signature="e#5863#6048#0" expanded="true" />
-                <element signature="e#6047#6048#0" expanded="true" />
-                <element signature="e#6341#6524#0" expanded="true" />
-                <element signature="e#6523#6524#0" expanded="true" />
-                <element signature="e#6773#6956#0" expanded="true" />
-                <element signature="e#6955#6956#0" expanded="true" />
-                <element signature="e#7078#7263#0" expanded="true" />
-                <element signature="e#7262#7263#0" expanded="true" />
-                <element signature="e#7457#7647#0" expanded="true" />
-                <element signature="e#7646#7647#0" expanded="true" />
-                <element signature="e#7843#8030#0" expanded="true" />
-                <element signature="e#8029#8030#0" expanded="true" />
-                <element signature="e#8142#8324#0" expanded="true" />
-                <element signature="e#8323#8324#0" expanded="true" />
-                <element signature="e#8437#8621#0" expanded="true" />
-                <element signature="e#8620#8621#0" expanded="true" />
-                <element signature="e#18641#18747#0" expanded="true" />
-                <element signature="e#18746#18747#0" expanded="true" />
+                <element signature="method#load_config#0;class#XML#0" />
+                <element signature="method#load_project_history#0;class#XML#0" />
+                <element signature="method#save_project_history#0;class#XML#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProblemScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/screens/ProblemScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="789">
-              <caret line="194" column="56" selection-start-line="194" selection-start-column="46" selection-end-line="194" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="77" column="125" lean-forward="true" selection-start-line="77" selection-start-column="125" selection-end-line="77" selection-end-column="125" />
             </state>
           </provider>
         </entry>
@@ -86,8 +87,8 @@
       <file leaf-file-name="Problem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Problem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updateVaribles#0;class#Problem#0" />
@@ -96,11 +97,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunScreen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SolverandOptimizer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/SolverandOptimizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding>
+                <element signature="method#saveProblem#0;class#SolverandOptimizer#0" />
+                <element signature="method#loadProblem#0;class#SolverandOptimizer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/screens/ProjectScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="182" column="37" lean-forward="true" selection-start-line="182" selection-start-column="37" selection-end-line="182" selection-end-column="37" />
+            <state relative-caret-position="289">
+              <caret line="27" column="116" lean-forward="true" selection-start-line="27" selection-start-column="116" selection-end-line="27" selection-end-column="116" />
+              <folding>
+                <element signature="method#formWindowClosing#0;class#RunScreen#0" />
+                <element signature="method#SelectAlgorithm#0;class#RunScreen#0" />
+                <element signature="method#DeselectAlgorithm#0;class#RunScreen#0" />
+                <element signature="method#SetAlgorithmsForVarible#0;class#RunScreen#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Variable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/Variable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+              <folding>
+                <element signature="method#parseValues#0;class#Variable#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1025">
+              <caret line="432" column="54" selection-start-line="432" selection-start-column="54" selection-end-line="432" selection-end-column="54" />
+              <folding>
+                <element signature="method#MainScreen#0;class#MainScreen#0" />
+                <element signature="e#4205#4206#0" expanded="true" />
+                <element signature="e#4263#4264#0" expanded="true" />
+                <element signature="e#4339#4340#0" expanded="true" />
+                <element signature="e#4399#4400#0" expanded="true" />
+                <element signature="method#loadProblemData#0;class#MainScreen#0" />
+                <element signature="method#updateProblemData#0;class#MainScreen#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,17 +188,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/solverandoptimizer/SolverandOptimizer.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/Problem.xml" />
         <option value="$PROJECT_DIR$/src/gui/GUI.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Experiment.java" />
-        <option value="$PROJECT_DIR$/src/gui/screens/RunScreen.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/IntegerExperiment.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java" />
-        <option value="$PROJECT_DIR$/src/utils/Variable.java" />
         <option value="$PROJECT_DIR$/src/main/Test.java" />
-        <option value="$PROJECT_DIR$/src/utils/XML.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/IntegerExperimentInternal.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/IntegerExperimentExternal.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblem.java" />
@@ -147,6 +202,12 @@
         <option value="$PROJECT_DIR$/src/gui/screens/ProblemScreen.java" />
         <option value="$PROJECT_DIR$/src/utils/Problem.java" />
         <option value="$PROJECT_DIR$/src/gui/screens/MainScreen.java" />
+        <option value="$PROJECT_DIR$/src/utils/Mail.java" />
+        <option value="$PROJECT_DIR$/src/gui/screens/ProjectScreen.java" />
+        <option value="$PROJECT_DIR$/src/utils/XML.java" />
+        <option value="$PROJECT_DIR$/src/solverandoptimizer/SolverandOptimizer.java" />
+        <option value="$PROJECT_DIR$/src/utils/Variable.java" />
+        <option value="$PROJECT_DIR$/src/gui/screens/RunScreen.java" />
       </list>
     </option>
   </component>
@@ -160,10 +221,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-237" />
-    <option name="y" value="-14" />
+    <option name="x" value="-18" />
+    <option name="y" value="-23" />
     <option name="width" value="1932" />
-    <option name="height" value="1045" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -225,9 +286,7 @@
             </path>
             <path>
               <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -360,7 +419,7 @@
       <workItem from="1527076697832" duration="17898000" />
       <workItem from="1527157207339" duration="5445000" />
       <workItem from="1527187007652" duration="45000" />
-      <workItem from="1527187200975" duration="3699000" />
+      <workItem from="1527187200975" duration="8142000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Eclipse Link">
       <created>1526672026864</created>
@@ -460,11 +519,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527190029611</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Completed and Deleted some TODO code over the GUI classes">
+      <created>1527190962354</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1527190962354</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Started Adding Project History">
+      <created>1527192044182</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1527192044182</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49995000" />
+    <option name="totallyTimeSpent" value="54438000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -480,7 +553,7 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32897604" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="6" />
@@ -489,13 +562,14 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info anchor="right" id="Mongo Explorer" order="7" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -507,7 +581,6 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -559,7 +632,9 @@
     <MESSAGE value="Jmetal integer evaluations is now working" />
     <MESSAGE value="Changed GUI Screen&#10;TODO: Add additional functionality" />
     <MESSAGE value="Added select type functionality for all variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added select type functionality for all variables" />
+    <MESSAGE value="Completed and Deleted some TODO code over the GUI classes" />
+    <MESSAGE value="Started Adding Project History" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started Adding Project History" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -570,39 +645,11 @@
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/utils/Problem.java</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="147" column="32" lean-forward="true" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Mail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Object.java" />
     <entry file="file://$PROJECT_DIR$/Problem.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -658,9 +705,6 @@
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/SolverandOptimizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -704,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Mail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/screens/AboutScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -746,17 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/SolverandOptimizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding>
-            <element signature="method#saveProblem#0;class#SolverandOptimizer#0" />
-            <element signature="method#loadProblem#0;class#SolverandOptimizer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-core/5.5/jmetal-core-5.5-sources.jar!/org/uma/jmetal/util/experiment/component/ExecuteAlgorithms.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -771,30 +797,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/IntegerExperiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Variable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1214">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#2572#2573#0" expanded="true" />
-            <element signature="e#2604#2605#0" expanded="true" />
-            <element signature="e#2650#2651#0" expanded="true" />
-            <element signature="e#2721#2722#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="91" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -812,27 +821,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/javax/swing/event/TableModelEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="86" column="24" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/ProjectScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/XML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="162" column="77" selection-start-line="162" selection-start-column="77" selection-end-line="162" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -866,16 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -886,27 +868,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="182" column="37" lean-forward="true" selection-start-line="182" selection-start-column="37" selection-end-line="182" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/screens/ProblemScreen.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="77" column="125" lean-forward="true" selection-start-line="77" selection-start-column="125" selection-end-line="77" selection-end-column="125" />
+        <state relative-caret-position="189">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/StartScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="141" column="51" lean-forward="true" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/ProblemScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="194" column="56" selection-start-line="194" selection-start-column="46" selection-end-line="194" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/SolverandOptimizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="method#saveProblem#0;class#SolverandOptimizer#0" />
+            <element signature="method#loadProblem#0;class#SolverandOptimizer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/ProjectScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="432" column="54" selection-start-line="432" selection-start-column="54" selection-end-line="432" selection-end-column="54" />
+          <folding>
+            <element signature="method#MainScreen#0;class#MainScreen#0" />
+            <element signature="e#4205#4206#0" expanded="true" />
+            <element signature="e#4263#4264#0" expanded="true" />
+            <element signature="e#4339#4340#0" expanded="true" />
+            <element signature="e#4399#4400#0" expanded="true" />
+            <element signature="method#loadProblemData#0;class#MainScreen#0" />
+            <element signature="method#updateProblemData#0;class#MainScreen#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/XML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="239" column="5" selection-start-line="239" selection-start-column="5" selection-end-line="239" selection-end-column="5" />
+          <folding>
+            <element signature="method#load_config#0;class#XML#0" />
+            <element signature="method#load_project_history#0;class#XML#0" />
+            <element signature="method#save_project_history#0;class#XML#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/IntegerExperiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="68" lean-forward="true" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-core/5.5/jmetal-core-5.5-sources.jar!/org/uma/jmetal/util/AlgorithmBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-algorithm/5.5/jmetal-algorithm-5.5-sources.jar!/org/uma/jmetal/algorithm/multiobjective/nsgaii/NSGAIIBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-algorithm/5.5/jmetal-algorithm-5.5-sources.jar!/org/uma/jmetal/algorithm/multiobjective/nsgaiii/NSGAIII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Problem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#updateVaribles#0;class#Problem#0" />
@@ -914,54 +1003,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/ProblemScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/Variable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="194" column="56" selection-start-line="194" selection-start-column="46" selection-end-line="194" selection-end-column="56" />
+        <state relative-caret-position="245">
+          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <folding>
+            <element signature="method#parseValues#0;class#Variable#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1812">
-          <caret line="300" column="58" selection-start-line="300" selection-start-column="58" selection-end-line="300" selection-end-column="58" />
+        <state relative-caret-position="289">
+          <caret line="27" column="116" lean-forward="true" selection-start-line="27" selection-start-column="116" selection-end-line="27" selection-end-column="116" />
           <folding>
-            <element signature="method#MainScreen#0;class#MainScreen#0" />
-            <element signature="e#1046#1213#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1442#1472#0" expanded="true" />
-            <element signature="e#2939#3111#0" expanded="true" />
-            <element signature="e#3110#3111#0" expanded="true" />
-            <element signature="e#4205#4206#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4339#4340#0" expanded="true" />
-            <element signature="e#4399#4400#0" expanded="true" />
-            <element signature="e#4599#4781#0" expanded="true" />
-            <element signature="e#4780#4781#0" expanded="true" />
-            <element signature="e#4868#5053#0" expanded="true" />
-            <element signature="e#5052#5053#0" expanded="true" />
-            <element signature="e#5121#5299#0" expanded="true" />
-            <element signature="e#5298#5299#0" expanded="true" />
-            <element signature="e#5530#5701#0" expanded="true" />
-            <element signature="e#5700#5701#0" expanded="true" />
-            <element signature="e#5863#6048#0" expanded="true" />
-            <element signature="e#6047#6048#0" expanded="true" />
-            <element signature="e#6341#6524#0" expanded="true" />
-            <element signature="e#6523#6524#0" expanded="true" />
-            <element signature="e#6773#6956#0" expanded="true" />
-            <element signature="e#6955#6956#0" expanded="true" />
-            <element signature="e#7078#7263#0" expanded="true" />
-            <element signature="e#7262#7263#0" expanded="true" />
-            <element signature="e#7457#7647#0" expanded="true" />
-            <element signature="e#7646#7647#0" expanded="true" />
-            <element signature="e#7843#8030#0" expanded="true" />
-            <element signature="e#8029#8030#0" expanded="true" />
-            <element signature="e#8142#8324#0" expanded="true" />
-            <element signature="e#8323#8324#0" expanded="true" />
-            <element signature="e#8437#8621#0" expanded="true" />
-            <element signature="e#8620#8621#0" expanded="true" />
-            <element signature="e#18641#18747#0" expanded="true" />
-            <element signature="e#18746#18747#0" expanded="true" />
+            <element signature="method#formWindowClosing#0;class#RunScreen#0" />
+            <element signature="method#SelectAlgorithm#0;class#RunScreen#0" />
+            <element signature="method#DeselectAlgorithm#0;class#RunScreen#0" />
+            <element signature="method#SetAlgorithmsForVarible#0;class#RunScreen#0" />
           </folding>
         </state>
       </provider>

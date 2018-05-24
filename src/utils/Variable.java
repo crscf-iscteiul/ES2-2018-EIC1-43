@@ -7,6 +7,30 @@ public class Variable {
     public static final int Type_Binary = 2;
     public static final int Type_Not_Defined = 3;
 
+    public static String TypeToString(int t){
+        if(t==Variable.Type_Integer)
+            return "Integer";
+        else if (t==Variable.Type_Double)
+            return "Double";
+        else if (t==Variable.Type_Binary)
+            return "Binary";
+        else
+            return "";
+    }
+
+    public static int StringToType(String t){
+        if(t.equals("Integer"))
+            return Variable.Type_Integer;
+        else if (t.equals("Double"))
+            return Variable.Type_Double;
+        else if (t.equals("Binary"))
+            return Variable.Type_Binary;
+        else
+            return Variable.Type_Not_Defined;
+    }
+
+
+
     private String name;
     private int type;
 
@@ -25,14 +49,7 @@ public class Variable {
 
     public Variable(String name, String type, String interval, String exclusions, boolean optimized) {
         this.name = name;
-        if(type.equals("Integer"))
-            this.type = Variable.Type_Integer;
-        else if (type.equals("Double"))
-            this.type = Variable.Type_Double;
-        else if (type.equals("Binary"))
-            this.type = Variable.Type_Binary;
-        else
-            this.type = Variable.Type_Not_Defined;
+        this.type = StringToType(type);
         this.interval=interval;
         this.exclusions=exclusions;
         this.optimized=optimized;
@@ -47,14 +64,7 @@ public class Variable {
     }
 
     public String getType_toString(){
-        if(type==Variable.Type_Integer)
-            return "Integer";
-        else if (type==Variable.Type_Double)
-            return "Double";
-        else if (type==Variable.Type_Binary)
-            return "Binary";
-        else
-            return "";
+        return TypeToString(this.type);
     }
 
     public String getInterval() { return this.interval; }
