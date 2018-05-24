@@ -29,8 +29,7 @@ public class DoubleExperimentInternal {
 
         List<ExperimentAlgorithm<DoubleSolution, List<DoubleSolution>>> algorithmList = DoubleExperiment.configureAlgorithmList(problemList, maxEvaluations);
 
-        Experiment<DoubleSolution, List<DoubleSolution>> experiment =
-                new ExperimentBuilder<DoubleSolution, List<DoubleSolution>>("ExperimentsDouble")
+        Experiment<DoubleSolution, List<DoubleSolution>> experiment = new ExperimentBuilder<DoubleSolution, List<DoubleSolution>>("DoubleExperimentInternal")
                         .setAlgorithmList(algorithmList)
                         .setProblemList(problemList)
                         .setExperimentBaseDirectory(experimentBaseDirectory)

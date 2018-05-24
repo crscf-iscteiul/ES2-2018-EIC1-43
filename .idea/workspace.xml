@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdab30-5ebb-44d4-9aa2-14a8ed7b5181" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemExternal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentExternal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentExternal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentInternal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentInternal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,47 +59,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Solver.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Solver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="87" column="47" lean-forward="true" selection-start-line="87" selection-start-column="47" selection-end-line="87" selection-end-column="47" />
+            <state relative-caret-position="782">
+              <caret line="57" column="79" lean-forward="true" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
               <folding>
-                <element signature="method#solve#0;class#Solver#0" />
+                <element signature="method#runExternalJar#0;class#Solver#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoubleProblemInternal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java">
+      <file leaf-file-name="DoubleExperimentInternal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentInternal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+            <state relative-caret-position="445">
+              <caret line="31" column="157" lean-forward="true" selection-start-line="31" selection-start-column="157" selection-end-line="31" selection-end-column="157" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1897#1931#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoubleExperimentExternal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentExternal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="31" column="157" lean-forward="true" selection-start-line="31" selection-start-column="157" selection-end-line="31" selection-end-column="157" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1958#1992#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntegerExperimentExternal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Integer/IntegerExperimentExternal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="31" column="162" lean-forward="true" selection-start-line="31" selection-start-column="162" selection-end-line="31" selection-end-column="162" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoubleProblemExternal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemExternal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="43" column="92" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="92" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntegerProblemExternal.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="43" column="92" lean-forward="true" selection-start-line="43" selection-start-column="92" selection-end-line="43" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -163,12 +167,13 @@
         <option value="$PROJECT_DIR$/src/gui/screens/RunScreen.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperiment.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Binary/BinaryExperiment.java" />
-        <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentInternal.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleProblemInternal.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java" />
-        <option value="$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemExternal.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java" />
+        <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentExternal.java" />
+        <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentInternal.java" />
+        <option value="$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java" />
       </list>
     </option>
   </component>
@@ -414,7 +419,7 @@
       <workItem from="1527076697832" duration="17898000" />
       <workItem from="1527157207339" duration="5445000" />
       <workItem from="1527187007652" duration="45000" />
-      <workItem from="1527187200975" duration="12782000" />
+      <workItem from="1527187200975" duration="13627000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Eclipse Link">
       <created>1526672026864</created>
@@ -570,11 +575,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527199693201</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added Double Problems">
+      <created>1527200476494</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1527200476494</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added Double Experiment Internal">
+      <created>1527200968210</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1527200968210</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59078000" />
+    <option name="totallyTimeSpent" value="59923000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -676,7 +695,9 @@
     <MESSAGE value="Optimized Imports" />
     <MESSAGE value="Changed Project Structure" />
     <MESSAGE value="Added Some of the constructors for the algorithm builders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Some of the constructors for the algorithm builders" />
+    <MESSAGE value="Added Double Problems" />
+    <MESSAGE value="Added Double Experiment Internal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Double Experiment Internal" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -693,20 +714,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/utils/Variable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/MainScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="301" column="77" lean-forward="true" selection-start-line="301" selection-start-column="77" selection-end-line="301" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1015,20 +1022,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Integer/IntegerExperimentExternal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="61" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemInternal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="41" column="92" lean-forward="true" selection-start-line="41" selection-start-column="92" selection-end-line="41" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemExternal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="41" column="92" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1042,30 +1056,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java">
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentExternal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="87" column="47" lean-forward="true" selection-start-line="87" selection-start-column="47" selection-end-line="87" selection-end-column="47" />
+        <state relative-caret-position="496">
+          <caret line="31" column="157" lean-forward="true" selection-start-line="31" selection-start-column="157" selection-end-line="31" selection-end-column="157" />
           <folding>
-            <element signature="method#solve#0;class#Solver#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1958#1992#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemExternal.java">
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Integer/IntegerExperimentExternal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="43" column="92" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="92" />
+        <state relative-caret-position="445">
+          <caret line="31" column="162" lean-forward="true" selection-start-line="31" selection-start-column="162" selection-end-line="31" selection-end-column="162" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java">
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentInternal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="43" column="92" lean-forward="true" selection-start-line="43" selection-start-column="92" selection-end-line="43" selection-end-column="92" />
+        <state relative-caret-position="445">
+          <caret line="31" column="157" lean-forward="true" selection-start-line="31" selection-start-column="157" selection-end-line="31" selection-end-column="157" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1897#1931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="57" column="79" lean-forward="true" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
+          <folding>
+            <element signature="method#runExternalJar#0;class#Solver#0" />
+          </folding>
         </state>
       </provider>
     </entry>
