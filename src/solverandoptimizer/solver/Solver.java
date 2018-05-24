@@ -1,10 +1,13 @@
 package solverandoptimizer.solver;
 
+import solverandoptimizer.SolverandOptimizer;
 import solverandoptimizer.experiment.Integer.IntegerExperimentExternal;
 import solverandoptimizer.experiment.Integer.IntegerExperimentInternal;
 import utils.Variable;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,6 +76,24 @@ public class Solver {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String runExternalJar(String solutionString){
+        String evaluationResultString = "";
+        try {
+            String line;
+            Process p = Runtime.getRuntime().exec("java -jar \""+SolverandOptimizer.getInstance().getProblem().getJarPath()+ "\" " + solutionString);
+            BufferedReader brinput = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            while ((line = brinput.readLine()) != null) {
+                evaluationResultString += line;
+            }
+            brinput.close();
+            p.waitFor();
+
+        } catch (Exception err) {
+            err.printStackTrace();
+        }
+        return evaluationResultString;
     }
 
     public List<String> getAlgorithms(){

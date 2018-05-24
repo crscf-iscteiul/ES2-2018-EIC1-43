@@ -1,7 +1,7 @@
 package solverandoptimizer.problems;
 
-import org.uma.jmetal.problem.impl.AbstractIntegerProblem;
-import org.uma.jmetal.solution.IntegerSolution;
+import org.uma.jmetal.problem.impl.AbstractDoubleProblem;
+import org.uma.jmetal.solution.DoubleSolution;
 import solverandoptimizer.SolverandOptimizer;
 import solverandoptimizer.solver.Solver;
 import utils.Variable;
@@ -9,22 +9,22 @@ import utils.Variable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IntegerProblemExternal extends AbstractIntegerProblem {
+public class DoubleProblemExternal extends AbstractDoubleProblem {
 
-    public IntegerProblemExternal(List<Variable> variables) {
+    public DoubleProblemExternal(List<Variable> variables) {
         setNumberOfVariables(variables.size());
         setNumberOfObjectives(2);
-        setName(SolverandOptimizer.getInstance().getProblem().getName() + " - Integer Variables External");
+        setName(SolverandOptimizer.getInstance().getProblem().getName()+" - Double Variables Internal");
 
-        List<Integer> lowerLimit = new ArrayList<>(variables.size());
-        List<Integer> upperLimit = new ArrayList<>(variables.size());
+        List<Double> lowerLimit = new ArrayList<>(getNumberOfVariables()) ;
+        List<Double> upperLimit = new ArrayList<>(getNumberOfVariables()) ;
 
         for (Variable v: variables) {
             //TODO check if the limits even exist
             Double[] limits = v.parseValues(true);
 
-            lowerLimit.add((int)(double)limits[0]);
-            upperLimit.add((int)(double)limits[1]);
+            lowerLimit.add(limits[0]);
+            upperLimit.add(limits[1]);
         }
 
         //TODO Find how to exclude values
@@ -34,8 +34,8 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
     }
 
     @Override
-    public void evaluate(IntegerSolution solution) {
-        String solutionString = "";
+    public void evaluate(DoubleSolution solution){
+        String solutionString ="";
         for (int i = 0; i < solution.getNumberOfVariables(); i++) {
             solutionString = solutionString + " " + solution.getVariableValue(i);
         }
@@ -43,7 +43,7 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
         String[] individualEvaluationCriteria = evaluationResultString.split("\\s+");
         // It is assumed that all evaluated criteria are returned in the same result string
         for (int i = 0; i < solution.getNumberOfObjectives(); i++) {
-            solution.setObjective(i, Integer.parseInt(individualEvaluationCriteria[i]));
+            solution.setObjective(i, Double.parseDouble(individualEvaluationCriteria[i]));
         }
     }
 }
