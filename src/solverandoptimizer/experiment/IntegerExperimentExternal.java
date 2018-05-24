@@ -18,8 +18,8 @@ import java.util.List;
 
 public class IntegerExperimentExternal {
 
-    private static final int INDEPENDENT_RUNS = 5;
-    private static final int maxEvaluations = 500;
+    private static final int INDEPENDENT_RUNS = 2;
+    private static final int maxEvaluations = 250;
 
     public IntegerExperimentExternal(Variable[] variables) throws IOException {
 
@@ -31,7 +31,7 @@ public class IntegerExperimentExternal {
         List<ExperimentAlgorithm<IntegerSolution, List<IntegerSolution>>> algorithmList =
                 IntegerExperiment.configureAlgorithmList(problemList, maxEvaluations);
 
-        Experiment<IntegerSolution, List<IntegerSolution>> experiment = new ExperimentBuilder<IntegerSolution, List<IntegerSolution>>("ExperimentsIntegerExternalViaJAR")
+        Experiment<IntegerSolution, List<IntegerSolution>> experiment = new ExperimentBuilder<IntegerSolution, List<IntegerSolution>>("IntegerExperimentExternal")
                 .setAlgorithmList(algorithmList)
                 .setProblemList(problemList)
                 .setExperimentBaseDirectory(experimentBaseDirectory)
@@ -46,7 +46,6 @@ public class IntegerExperimentExternal {
         new ExecuteAlgorithms<>(experiment).run();
         new GenerateReferenceParetoFront(experiment).run();
         new ComputeQualityIndicators<>(experiment).run();
-
         new GenerateLatexTablesWithStatistics(experiment).run();
         new GenerateBoxplotsWithR<>(experiment).setRows(1).setColumns(1).run();
     }

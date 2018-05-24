@@ -15,7 +15,7 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
     public IntegerProblemExternal(Variable[] variables) {
         setNumberOfVariables(variables.length);
         setNumberOfObjectives(2);
-        setName(SolverandOptimizer.getInstance().getProblem().getName() + " - Integer Variables");
+        setName(SolverandOptimizer.getInstance().getProblem().getName() + " - Integer Variables External");
 
         List<Integer> lowerLimit = new ArrayList<>(variables.length);
         List<Integer> upperLimit = new ArrayList<>(variables.length);
@@ -42,13 +42,14 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
         }
         try {
             String line;
-            Process p = Runtime.getRuntime().exec("java -jar "+SolverandOptimizer.getInstance().getProblem().getJarPath()+ " " + solutionString);
+            Process p = Runtime.getRuntime().exec("java -jar \""+SolverandOptimizer.getInstance().getProblem().getJarPath()+ "\" " + solutionString);
             BufferedReader brinput = new BufferedReader(new InputStreamReader(p.getInputStream()));
             while ((line = brinput.readLine()) != null) {
                 evaluationResultString += line;
             }
             brinput.close();
             p.waitFor();
+
         } catch (Exception err) {
             err.printStackTrace();
         }

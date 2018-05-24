@@ -26,13 +26,12 @@ public class IntegerExperimentInternal {
 
         List<ExperimentProblem<IntegerSolution>> problemList = new ArrayList<>();
         problemList.add(new ExperimentProblem<>(new IntegerProblem(variables)));
-        System.out.println("ProblemAdded");
 
         List<ExperimentAlgorithm<IntegerSolution, List<IntegerSolution>>> algorithmList =
                 IntegerExperiment.configureAlgorithmList(problemList, maxEvaluations);
 
         Experiment<IntegerSolution, List<IntegerSolution>> experiment =
-                new ExperimentBuilder<IntegerSolution, List<IntegerSolution>>("ExperimentsInteger")
+                new ExperimentBuilder<IntegerSolution, List<IntegerSolution>>("IntegerExperimentInternal")
                         .setAlgorithmList(algorithmList)
                         .setProblemList(problemList)
                         .setExperimentBaseDirectory(experimentBaseDirectory)

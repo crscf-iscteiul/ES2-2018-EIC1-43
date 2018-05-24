@@ -13,7 +13,7 @@ public class IntegerProblem extends AbstractIntegerProblem {
     public IntegerProblem(Variable[] variables){
         setNumberOfVariables(variables.length);
         setNumberOfObjectives(2);
-        setName(SolverandOptimizer.getInstance().getProblem().getName()+" - Integer Variables");
+        setName(SolverandOptimizer.getInstance().getProblem().getName()+" - Integer Variables Internal");
 
         List<Integer> lowerLimit = new ArrayList<>(variables.length);
         List<Integer> upperLimit = new ArrayList<>(variables.length);
@@ -47,9 +47,8 @@ public class IntegerProblem extends AbstractIntegerProblem {
 
         fx[1] = 0;
         for (int var = 0; var < solution.getNumberOfVariables(); var++) {
-            fx[1] += Math.abs(x[1]+Math.random()*10); // Example for testing
+            fx[1] += Math.abs(x[1] + Math.random() * 10); // Example for testing
         }
-
         solution.setObjective(0, fx[0]);
         solution.setObjective(1, fx[1]);
     }
