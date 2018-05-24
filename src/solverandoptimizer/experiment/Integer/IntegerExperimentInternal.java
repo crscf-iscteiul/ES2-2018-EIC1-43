@@ -1,4 +1,4 @@
-package solverandoptimizer.experiment;
+package solverandoptimizer.experiment.Integer;
 
 import org.uma.jmetal.qualityindicator.impl.GenericIndicator;
 import org.uma.jmetal.qualityindicator.impl.hypervolume.PISAHypervolume;
@@ -21,7 +21,7 @@ public class IntegerExperimentInternal {
     private static final int INDEPENDENT_RUNS = 5;
     private static final int maxEvaluations = 500;
 
-    public IntegerExperimentInternal(Variable[] variables) throws IOException {
+    public IntegerExperimentInternal(List<Variable> variables) throws IOException {
         String experimentBaseDirectory = "experimentBaseDirectory";
 
         List<ExperimentProblem<IntegerSolution>> problemList = new ArrayList<>();

@@ -1,4 +1,4 @@
-package solverandoptimizer.experiment;
+package solverandoptimizer.experiment.Integer;
 
 import org.uma.jmetal.qualityindicator.impl.GenericIndicator;
 import org.uma.jmetal.qualityindicator.impl.hypervolume.PISAHypervolume;
@@ -21,16 +21,14 @@ public class IntegerExperimentExternal {
     private static final int INDEPENDENT_RUNS = 2;
     private static final int maxEvaluations = 250;
 
-    public IntegerExperimentExternal(Variable[] variables) throws IOException {
+    public IntegerExperimentExternal(List<Variable> variables) throws IOException {
 
         String experimentBaseDirectory = "experimentBaseDirectory";
 
         List<ExperimentProblem<IntegerSolution>> problemList = new ArrayList<>();
         problemList.add(new ExperimentProblem<>(new IntegerProblemExternal(variables)));
 
-        List<ExperimentAlgorithm<IntegerSolution, List<IntegerSolution>>> algorithmList =
-                IntegerExperiment.configureAlgorithmList(problemList, maxEvaluations);
-
+        List<ExperimentAlgorithm<IntegerSolution, List<IntegerSolution>>> algorithmList = IntegerExperiment.configureAlgorithmList(problemList, maxEvaluations);
         Experiment<IntegerSolution, List<IntegerSolution>> experiment = new ExperimentBuilder<IntegerSolution, List<IntegerSolution>>("IntegerExperimentExternal")
                 .setAlgorithmList(algorithmList)
                 .setProblemList(problemList)
@@ -49,6 +47,4 @@ public class IntegerExperimentExternal {
         new GenerateLatexTablesWithStatistics(experiment).run();
         new GenerateBoxplotsWithR<>(experiment).setRows(1).setColumns(1).run();
     }
-
-
 }

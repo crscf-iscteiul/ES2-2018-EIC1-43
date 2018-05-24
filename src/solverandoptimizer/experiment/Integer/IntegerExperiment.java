@@ -1,4 +1,4 @@
-package solverandoptimizer.experiment;
+package solverandoptimizer.experiment.Integer;
 
 import org.uma.jmetal.algorithm.Algorithm;
 import org.uma.jmetal.algorithm.multiobjective.mocell.MOCellBuilder;
