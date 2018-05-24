@@ -1,14 +1,11 @@
 package solverandoptimizer.solver;
 
-import solverandoptimizer.experiment.IntegerExperiment;
 import solverandoptimizer.experiment.IntegerExperimentExternal;
 import solverandoptimizer.experiment.IntegerExperimentInternal;
 import utils.Variable;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Solver {

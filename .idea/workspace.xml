@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8dcdab30-5ebb-44d4-9aa2-14a8ed7b5181" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/RunScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/RunScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/experiment/IntegerExperimentInternal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/experiment/IntegerExperimentInternal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemInternal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,8 +72,8 @@
       <file leaf-file-name="Solver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -437,7 +433,7 @@
       <workItem from="1527076697832" duration="17898000" />
       <workItem from="1527157207339" duration="5445000" />
       <workItem from="1527187007652" duration="45000" />
-      <workItem from="1527187200975" duration="8931000" />
+      <workItem from="1527187200975" duration="8986000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Eclipse Link">
       <created>1526672026864</created>
@@ -558,11 +554,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527196017683</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added pre-select and mixed-select the efficient algorithms taking in to account Variables type (Now going to JMetal Controller)">
+      <created>1527196630506</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1527196630506</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55227000" />
+    <option name="totallyTimeSpent" value="55282000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -660,7 +663,8 @@
     <MESSAGE value="Completed and Deleted some TODO code over the GUI classes" />
     <MESSAGE value="Started Adding Project History" />
     <MESSAGE value="Added pre-select and mixed-select the efficient algorithms taking in to account Variables type (only visual GUI)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added pre-select and mixed-select the efficient algorithms taking in to account Variables type (only visual GUI)" />
+    <MESSAGE value="Added pre-select and mixed-select the efficient algorithms taking in to account Variables type (Now going to JMetal Controller)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pre-select and mixed-select the efficient algorithms taking in to account Variables type (Now going to JMetal Controller)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1042,8 +1046,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
