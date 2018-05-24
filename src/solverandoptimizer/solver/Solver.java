@@ -10,7 +10,18 @@ import java.util.List;
 
 public class Solver {
 
-    public static void solve(Variable[] variables, List<String> algorithms){
+    private static Solver instance;
+    public static Solver getInstance(){
+        if(instance==null)
+            instance=new Solver();
+        return instance;
+    }
+
+    private List<String> algorithms;
+
+    public synchronized void solve(Variable[] variables, List<String> algorithms){
+
+        this.algorithms=algorithms;
 
         ArrayList<Variable> optimized_variables = new ArrayList<>();
         ArrayList<Variable> not_optimized_variables = new ArrayList<>();
@@ -64,5 +75,7 @@ public class Solver {
         }
     }
 
-
+    public List<String> getAlgorithms(){
+        return algorithms;
+    }
 }

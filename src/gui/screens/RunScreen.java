@@ -166,7 +166,7 @@ public class RunScreen extends javax.swing.JFrame {
         if(algorithms.isEmpty())
             JOptionPane.showMessageDialog(this, "No algorithms selected", "Run what?", JOptionPane.INFORMATION_MESSAGE);
         else
-            Solver.solve(SolverandOptimizer.getInstance().getProblem().getVariables(), algorithms);
+            Solver.getInstance().solve(SolverandOptimizer.getInstance().getProblem().getVariables(), algorithms);
     }//GEN-LAST:event_StartActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
