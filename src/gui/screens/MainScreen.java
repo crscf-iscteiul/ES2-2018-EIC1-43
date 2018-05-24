@@ -290,18 +290,15 @@ public class MainScreen extends javax.swing.JFrame {
     private void ButtonRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRemoveActionPerformed
         if(TableVars.getSelectedRow()>-1) {
             ((DefaultTableModel)TableVars.getModel()).removeRow(TableVars.getSelectedRow());
-            //TODO change var numbers
         }
     }//GEN-LAST:event_ButtonRemoveActionPerformed
 
     private void ButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddActionPerformed
         ((DefaultTableModel)TableVars.getModel()).addRow(new Object[]{"","","","",false,""});
-        //TODO change var numbers
     }//GEN-LAST:event_ButtonAddActionPerformed
 
     private void MenuOpEditProblemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpEditProblemActionPerformed
         GUI.getInstance().child_screen(GUI.ProblemScreen);
-        //TODO Load current problem info
     }//GEN-LAST:event_MenuOpEditProblemActionPerformed
 
     private void MenuOpSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpSaveActionPerformed
@@ -365,8 +362,10 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_VariableTypeActionPerformed
 
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
-        //TODO Check if var is optimized then if has jar_path
-        GUI.getInstance().child_screen(GUI.RunScreen);
+        if(!SolverandOptimizer.getInstance().getProblem().isProblemValid())
+            GUI.getInstance().show_error("The current problem is not valid");
+        else
+            GUI.getInstance().child_screen(GUI.RunScreen);
     }//GEN-LAST:event_StartActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -397,7 +396,6 @@ public class MainScreen extends javax.swing.JFrame {
             boolean optimize = (boolean) TableVars.getModel().getValueAt(i,4);
             variables[i] = new Variable(name, type, interval, excluded, optimize);
         }
-
         SolverandOptimizer.getInstance().getProblem().updateVaribles(variables);
     }
 

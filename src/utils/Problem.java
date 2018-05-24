@@ -15,12 +15,13 @@ public class Problem {
 
     private String jar_path;
 
-    public Problem(String name, String description, int num_vars, String max_time, Variable[] variables ) {
+    public Problem(String name, String description, int num_vars, String max_time, Variable[] variables) {
         this.name = name;
         this.description = description;
         this.num_vars = num_vars;
         this.max_time = max_time;
         this.variables = variables;
+        this.jar_path="";
     }
 
     public String getName() {
@@ -52,9 +53,9 @@ public class Problem {
                 return false;
             if(v.getType()==Variable.Type_Not_Defined)
                 return false;
-            if(v.isOptimized() && SolverandOptimizer.getInstance().getProblem().getJarPath().equals(""))
+            if(v.isOptimized() && this.jar_path.equals(""))
                 return false;
-            if(v.isOptimized() && !new File(SolverandOptimizer.getInstance().getProblem().getJarPath()).isFile())
+            if(v.isOptimized() && !new File(this.jar_path).isFile())
                 return false;
             //TODO add parse test interval and exclusions
         }
