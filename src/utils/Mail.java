@@ -66,7 +66,6 @@ public class Mail {
                     +"<p>Please respond to user as soon as possible</p>"
                     +"</body>";
 
-        //TODO Load xml config and send to those admins
         //TODO Add xml mail counter i guess or cagar
 
         HashMap<String, String> adminInfo = SolverandOptimizer.getInstance().load_config();

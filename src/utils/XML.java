@@ -205,4 +205,37 @@ public class XML {
         }
         return adminInfo;
     }
+
+    public static HashMap<String, String> load_project_history() {
+        HashMap<String, String> adminInfo = new HashMap();
+        System.out.println(System.getProperty("user.dir") + "\\project_history.xml");
+        try {
+            File config = new File(System.getProperty("user.dir") + "\\project_history.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(config);
+            doc.getDocumentElement().normalize();
+
+            XPathFactory xpathFactory = XPathFactory.newInstance();
+            XPath xpath = xpathFactory.newXPath();
+            XPathExpression expr = xpath.compile("/CONFIG/Administrator/@*");
+
+            NodeList nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+            for (int i = 0; i < nl.getLength(); i += 2) {
+                String name = nl.item(i).getFirstChild().getNodeValue();
+                String email = nl.item(i + 1).getFirstChild().getNodeValue();
+                adminInfo.put(name, email);
+            }
+
+        } catch (FileNotFoundException e) {
+            return null;
+        } catch (Exception e) {
+
+        }
+        return adminInfo;
+    }
+
+    public static void save_project_history(HashMap<String, String> projects) {
+
+    }
 }

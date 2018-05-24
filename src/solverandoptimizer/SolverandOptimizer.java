@@ -39,14 +39,22 @@ public class SolverandOptimizer {
         return user;
     }
 
+    public void changeProblem(Problem problem){
+        this.problem = problem;
+    }
+
     public Problem getProblem() { return this.problem; }
 
     public HashMap<String, String> load_config(){
         return XML.load_config();
     }
 
-    public void changeProblem(Problem problem){
-        this.problem = problem;
+    public HashMap<String, String> load_project_history(){
+        return XML.load_project_history();
+    }
+
+    public void save_project_history(HashMap<String, String> projects){
+        XML.save_project_history(projects);
     }
 
     public boolean saveProblem(String file_path) {
