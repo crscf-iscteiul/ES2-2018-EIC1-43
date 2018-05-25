@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdab30-5ebb-44d4-9aa2-14a8ed7b5181" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/solverandoptimizer/experiment/Binary/BinaryExperimentExternal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/solverandoptimizer/experiment/Binary/BinaryExterimentInternal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/solverandoptimizer/problems/BinaryProblemExternal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/solverandoptimizer/problems/BinaryProblemInternal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,7 +47,7 @@
       <file leaf-file-name="RunScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="782">
               <caret line="62" selection-start-line="62" selection-end-line="62" />
               <folding>
                 <element signature="e#2140#2141#0" expanded="true" />
@@ -61,24 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoubleExperimentInternal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperimentInternal.java">
+      <file leaf-file-name="BinaryProblemInternal.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/BinaryProblemInternal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="29" column="103" selection-start-line="29" selection-start-column="103" selection-end-line="29" selection-end-column="103" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1937#1971#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoubleProblemInternal.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+            <state relative-caret-position="442">
+              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,29 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrontNormalizer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-core/5.5/jmetal-core-5.5-sources.jar!/org/uma/jmetal/util/front/util/FrontNormalizer.java">
+      <file leaf-file-name="IntegerProblemInternal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemInternal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComputeQualityIndicators.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-core/5.5/jmetal-core-5.5-sources.jar!/org/uma/jmetal/util/experiment/component/ComputeQualityIndicators.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-304">
-              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoubleExperiment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperiment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="59" column="151" selection-start-line="59" selection-start-column="151" selection-end-line="59" selection-end-column="151" />
+            <state relative-caret-position="153">
+              <caret line="15" column="105" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="105" />
             </state>
           </provider>
         </entry>
@@ -178,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperiment.java" />
+        <option value="$PROJECT_DIR$/src/solverandoptimizer/problems/BinaryProblemInternal.java" />
       </list>
     </option>
   </component>
@@ -228,30 +200,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="solverandoptimizer" type="462c0819:PsiDirectoryNode" />
               <item name="experiment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="solverandoptimizer" type="462c0819:PsiDirectoryNode" />
-              <item name="experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="Binary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="solverandoptimizer" type="462c0819:PsiDirectoryNode" />
-              <item name="experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="Double" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="solverandoptimizer" type="462c0819:PsiDirectoryNode" />
-              <item name="experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="Integer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
@@ -393,7 +341,7 @@
       <workItem from="1527157207339" duration="5445000" />
       <workItem from="1527187007652" duration="45000" />
       <workItem from="1527187200975" duration="14415000" />
-      <workItem from="1527262993429" duration="3114000" />
+      <workItem from="1527262993429" duration="3774000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Eclipse Link">
       <created>1526672026864</created>
@@ -570,11 +518,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527201382922</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Pached Double Experiment External. Found bug">
+      <created>1527267101252</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1527267101252</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63825000" />
+    <option name="totallyTimeSpent" value="64485000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,7 +634,8 @@
     <MESSAGE value="Added Double Problems" />
     <MESSAGE value="Added Double Experiment Internal" />
     <MESSAGE value="Added Double Experiment External" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Double Experiment External" />
+    <MESSAGE value="Pached Double Experiment External. Found bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pached Double Experiment External. Found bug" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -696,18 +652,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Object.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Integer.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Problem.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -944,13 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemInternal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemExternal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -1026,19 +963,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-core/5.5/jmetal-core-5.5-sources.jar!/org/uma/jmetal/util/front/util/FrontNormalizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="262">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/BinaryProblemExternal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Binary/BinaryExterimentInternal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Binary/BinaryExperimentExternal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="59" column="151" selection-start-line="59" selection-start-column="151" selection-end-line="59" selection-end-column="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
           <folding>
-            <element signature="e#2140#2141#0" expanded="true" />
-            <element signature="method#AddActionPerformed#0;class#RunScreen#0" />
-            <element signature="method#RemoveActionPerformed#0;class#RunScreen#0" />
-            <element signature="method#JListMouseClicked#0;class#RunScreen#0" />
-            <element signature="method#JListRunMouseClicked#0;class#RunScreen#0" />
-            <element signature="method#formWindowClosing#0;class#RunScreen#0" />
-            <element signature="method#SelectAlgorithm#0;class#RunScreen#0" />
-            <element signature="method#DeselectAlgorithm#0;class#RunScreen#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1054,24 +1019,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/uma/jmetal/jmetal-core/5.5/jmetal-core-5.5-sources.jar!/org/uma/jmetal/util/front/util/FrontNormalizer.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="782">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#2140#2141#0" expanded="true" />
+            <element signature="method#AddActionPerformed#0;class#RunScreen#0" />
+            <element signature="method#RemoveActionPerformed#0;class#RunScreen#0" />
+            <element signature="method#JListMouseClicked#0;class#RunScreen#0" />
+            <element signature="method#JListRunMouseClicked#0;class#RunScreen#0" />
+            <element signature="method#formWindowClosing#0;class#RunScreen#0" />
+            <element signature="method#SelectAlgorithm#0;class#RunScreen#0" />
+            <element signature="method#DeselectAlgorithm#0;class#RunScreen#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/experiment/Double/DoubleExperiment.java">
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemInternal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="59" column="151" selection-start-line="59" selection-start-column="151" selection-end-line="59" selection-end-column="151" />
+        <state relative-caret-position="153">
+          <caret line="15" column="105" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java">
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/BinaryProblemInternal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+        <state relative-caret-position="442">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
