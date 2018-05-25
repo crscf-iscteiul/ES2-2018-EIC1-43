@@ -84,7 +84,7 @@ public class Variable {
         Double[] array = new Double[values.length];
         if(type == 0 || type == 2) {
             for(int i = 0; i < values.length; i++)
-                array[i] = (double) Integer.parseInt(values[i]);
+                array[i] = (double)Integer.parseInt(values[i]);
         }
         if(type == 1) {
             for(int i = 0; i < values.length; i++)
