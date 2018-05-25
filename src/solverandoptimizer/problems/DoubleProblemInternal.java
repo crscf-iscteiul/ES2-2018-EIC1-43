@@ -21,7 +21,6 @@ public class DoubleProblemInternal extends AbstractDoubleProblem {
         for (Variable v: variables) {
             //TODO check if the limits even exist
             Double[] limits = v.parseValues(true);
-
             lowerLimit.add(limits[0]);
             upperLimit.add(limits[1]);
         }

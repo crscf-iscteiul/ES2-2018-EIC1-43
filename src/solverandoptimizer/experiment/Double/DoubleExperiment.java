@@ -44,11 +44,11 @@ public class DoubleExperiment {
                 algorithms.add(new ExperimentAlgorithm<DoubleSolution, List<DoubleSolution>>(algorithm2, "SMSEMOA", problemList.get(i).getTag()));
             }
             if (al.contains("MOCell")) {
-                Algorithm<List<DoubleSolution>> algorithm5 = new MOCellBuilder<>(problemList.get(i).getProblem(), new SBXCrossover(1.0, 5), new PolynomialMutation(1.0 / problemList.get(i).getProblem().getNumberOfVariables(), 10.0)).setMaxEvaluations(maxEvaluations).build();
+                Algorithm<List<DoubleSolution>> algorithm5 = new MOCellBuilder<>(problemList.get(i).getProblem(),new SBXCrossover(1.0, 5), new PolynomialMutation(1.0 / problemList.get(i).getProblem().getNumberOfVariables(), 10.0)).setMaxEvaluations(maxEvaluations).build();
                 algorithms.add(new ExperimentAlgorithm<DoubleSolution, List<DoubleSolution>>(algorithm5, "MOCell", problemList.get(i).getTag()));
             }
             if (al.contains("MOEAD")) {
-                Algorithm<List<DoubleSolution>> algorithm6 = new MOEADBuilder(problemList.get(i).getProblem(), MOEADBuilder.Variant.MOEAD).setMaxEvaluations(maxEvaluations).build();
+                Algorithm<List<DoubleSolution>> algorithm6 = new MOEADBuilder(problemList.get(i).getProblem(),MOEADBuilder.Variant.MOEAD).setMaxEvaluations(maxEvaluations).build();
                 algorithms.add(new ExperimentAlgorithm<DoubleSolution, List<DoubleSolution>>(algorithm6, "MOEAD", problemList.get(i).getTag()));
             }
             if (al.contains("PAES")) {
