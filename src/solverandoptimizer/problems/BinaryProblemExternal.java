@@ -2,7 +2,6 @@ package solverandoptimizer.problems;
 
 import org.uma.jmetal.problem.impl.AbstractBinaryProblem;
 import org.uma.jmetal.solution.BinarySolution;
-import org.uma.jmetal.util.JMetalException;
 import solverandoptimizer.SolverandOptimizer;
 import solverandoptimizer.solver.Solver;
 import utils.Variable;
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class BinaryProblemExternal extends AbstractBinaryProblem {
 
-    private ArrayList<Integer> bits;
+    private ArrayList<Integer> bits = new ArrayList<>();
 
     public BinaryProblemExternal(List<Variable> variables){
         setNumberOfVariables(variables.size());
@@ -26,9 +25,6 @@ public class BinaryProblemExternal extends AbstractBinaryProblem {
 
     @Override
     protected int getBitsPerVariable(int index) {
-        if (index != 0) {
-            throw new JMetalException("Problem MyBinaryProblem has only a variable. Index = " + index) ;
-        }
         return bits.get(index) ;
     }
 

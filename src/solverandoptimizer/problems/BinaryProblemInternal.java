@@ -2,7 +2,6 @@ package solverandoptimizer.problems;
 
 import org.uma.jmetal.problem.impl.AbstractBinaryProblem;
 import org.uma.jmetal.solution.BinarySolution;
-import org.uma.jmetal.util.JMetalException;
 import solverandoptimizer.SolverandOptimizer;
 import utils.Variable;
 
@@ -25,9 +24,6 @@ public class BinaryProblemInternal extends AbstractBinaryProblem {
 
     @Override
     protected int getBitsPerVariable(int index) {
-        if (index != 0) {
-            throw new JMetalException("Problem MyBinaryProblem has only a variable. Index = " + index) ;
-        }
         return bits.get(index) ;
     }
 

@@ -34,6 +34,10 @@ public class MainScreen extends javax.swing.JFrame {
         else
             SendInfo.setEnabled(false);
         loadProblemData(SolverandOptimizer.getInstance().getProblem());
+        if(TableVars.getModel().getRowCount()>0){
+            System.out.println((String) TableVars.getModel().getValueAt(0,1));
+            VariableType.setSelectedIndex(Variable.StringToType((String) TableVars.getModel().getValueAt(0,1)));
+        }
         TableVars.getModel().addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
@@ -356,6 +360,9 @@ public class MainScreen extends javax.swing.JFrame {
         if(TableVars.getModel().getRowCount()>0 && !TableVars.getModel().getValueAt(0,1).equals(VariableType.getSelectedItem())){
             for(int i=0; i<TableVars.getModel().getRowCount(); i++){
                 TableVars.getModel().setValueAt(VariableType.getSelectedItem(),i,1);
+                if(Variable.StringToType((String)VariableType.getSelectedItem())==Variable.Type_Binary) {
+                    TableVars.getModel().setValueAt("-", i, 3);
+                }
             }
             updateProblemData();
         }
