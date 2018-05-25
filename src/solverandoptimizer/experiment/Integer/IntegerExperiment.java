@@ -25,7 +25,7 @@ public class IntegerExperiment {
         for (int i = 0; i < problemList.size(); i++) {
             if(al.contains("NSGA-II")) {
                 Algorithm<List<IntegerSolution>> algorithm1 = new NSGAIIBuilder<>(problemList.get(i).getProblem(), new IntegerSBXCrossover(0.9, 20.0), new IntegerPolynomialMutation(1 / problemList.get(i).getProblem().getNumberOfVariables(), 20.0)).setMaxEvaluations(maxEvaluations).setPopulationSize(100).build();
-                algorithms.add(new ExperimentAlgorithm<IntegerSolution, List<IntegerSolution>>(algorithm1, "NSGA-II", problemList.get(i).getTag()));
+                algorithms.add(new ExperimentAlgorithm<IntegerSolution, List<IntegerSolution>>(algorithm1, "NSGAII", problemList.get(i).getTag()));
             }
             if(al.contains("SMSEMOA")) {
                 Algorithm<List<IntegerSolution>> algorithm2 = new SMSEMOABuilder<>(problemList.get(i).getProblem(), new IntegerSBXCrossover(0.9, 20.0), new IntegerPolynomialMutation(1 / problemList.get(i).getProblem().getNumberOfVariables(), 20.0)).setMaxEvaluations(maxEvaluations).build();

@@ -2,7 +2,6 @@ package solverandoptimizer.problems;
 
 import org.uma.jmetal.problem.impl.AbstractIntegerProblem;
 import org.uma.jmetal.solution.IntegerSolution;
-import solverandoptimizer.SolverandOptimizer;
 import solverandoptimizer.solver.Solver;
 import utils.Variable;
 
@@ -14,7 +13,7 @@ public class IntegerProblemExternal extends AbstractIntegerProblem {
     public IntegerProblemExternal(List<Variable> variables) {
         setNumberOfVariables(variables.size());
         setNumberOfObjectives(2);
-        setName(SolverandOptimizer.getInstance().getProblem().getName() + " - Integer Variables External");
+        setName("Integer_Variables_External");
 
         List<Integer> lowerLimit = new ArrayList<>(variables.size());
         List<Integer> upperLimit = new ArrayList<>(variables.size());
