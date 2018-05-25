@@ -12,7 +12,10 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import javax.xml.xpath.*;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathFactory;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -46,6 +49,13 @@ public class XML {
         desc.appendChild(doc.createTextNode(p.getDescription()));
         staff.appendChild(desc);
 
+        Element type = doc.createElement("Problem_Type");
+        if(p.getVariables().length != 0)
+            type.appendChild(doc.createTextNode(p.getVariables()[0].getType_toString()));
+        else
+            type.appendChild(doc.createTextNode("Non existing variables"));
+        staff.appendChild(type);
+
         Element variables = doc.createElement("Variables");
         staff.appendChild(variables);
 
@@ -57,10 +67,6 @@ public class XML {
                 //Name
                 Element variable_name = doc.createElement("Name");
                 variable_name.appendChild(doc.createTextNode(p.getVariables()[i].getVariableName().replace(" ", "_")));
-
-                //Type
-                Element variable_type = doc.createElement("Type");
-                variable_type.appendChild(doc.createTextNode(p.getVariables()[i].getType_toString()));
 
                 //Optimize
                 Element variable_optimized = doc.createElement("To_Optimize");
@@ -84,7 +90,6 @@ public class XML {
                 variable_value.appendChild(exc_values);
 
                 variable.appendChild(variable_name);
-                variable.appendChild(variable_type);
                 variable.appendChild(variable_optimized);
                 variable.appendChild(variable_value);
                 variables.appendChild(variable);
@@ -119,6 +124,7 @@ public class XML {
         String p_description = "";
         String p_name = "";
         String m_Time = "";
+        String p_type = "";
         int mVars = 0;
         Variable[] vars = null;
 
@@ -140,6 +146,8 @@ public class XML {
                 p_name = nl.item(i).getFirstChild().getNodeValue();
             if (nl.item(i).getNodeName().equals("Description"))
                 p_description = nl.item(i).getFirstChild().getNodeValue();
+            if (nl.item(i).getNodeName().equals("Problem_Type"))
+                p_type = nl.item(i).getFirstChild().getNodeValue();
             if (nl.item(i).getNodeName().equals("Max_Time"))
                 m_Time = nl.item(i).getFirstChild().getNodeValue();
             if (nl.item(i).getNodeName().equals("Max_Vars"))
@@ -157,8 +165,6 @@ public class XML {
 
                 NodeList varN = firstElement.getElementsByTagName("Name");
                 String var_Name = varN.item(0).getFirstChild().getNodeValue();
-                NodeList varT = firstElement.getElementsByTagName("Type");
-                String var_Type = varT.item(0).getFirstChild().getNodeValue();
                 NodeList varO = firstElement.getElementsByTagName("To_Optimize");
                 String var_Opt = varO.item(0).getFirstChild().getNodeValue();
                 NodeList varV = firstElement.getElementsByTagName("Values");
@@ -170,7 +176,7 @@ public class XML {
                 if (!varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue().equals("NULL"))
                     varExc = varVI.getElementsByTagName("Excluded").item(0).getFirstChild().getNodeValue();
 
-                vars_l[i] = new Variable(var_Name, var_Type, varInt, varExc, Boolean.valueOf(var_Opt));
+                vars_l[i] = new Variable(var_Name, p_type, varInt, varExc, Boolean.valueOf(var_Opt));
             }
         }
 
