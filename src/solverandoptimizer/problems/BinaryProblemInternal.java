@@ -12,7 +12,7 @@ import java.util.List;
 
 public class BinaryProblemInternal extends AbstractBinaryProblem {
 
-    private ArrayList<Integer> bits;
+    private ArrayList<Integer> bits = new ArrayList<>();
 
     public BinaryProblemInternal(List<Variable> variables){
         setNumberOfVariables(variables.size());

@@ -80,7 +80,7 @@ public class Variable {
         if(work_string.length() == 0)
             return null;
 
-        String[] values = work_string.replace(" ", "").split(";");
+        String[] values = work_string.replace("\\s+", "").split(";");
         Double[] array = new Double[values.length];
         if(type == 0 || type == 2) {
             for(int i = 0; i < values.length; i++)

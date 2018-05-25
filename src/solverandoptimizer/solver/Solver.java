@@ -62,21 +62,6 @@ public class Solver {
                         new BinaryExperimentExternal(optimized_variables);
                     break;
             }
-
-        /* Deverão ser comentadas ou retiradas de comentário as linhas
-           correspondentes às simulações que se pretendem executar */
-        //            ExperimentsDouble.main(null);
-        //			  Ex1perimentsInteger.main(null);
-        //			  ExperimentsBinary.main(null);
-
-        /* As simulações com ExternalViaJAR no nome tem as funções de avaliação
-           implementadas em .JAR externos que são invocados no método evaluate()
-           As simulações que executam .jar externos são muito mais demoradas,
-           maxEvaluations e INDEPENDENT_RUNS tem por isso valores mais baixos */
-        //            ExperimentsDoubleExternalViaJAR(null);
-
-        //			  ExperimentsBinaryExternal(null);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
