@@ -1,6 +1,8 @@
 package solverandoptimizer.solver;
 
 import solverandoptimizer.SolverandOptimizer;
+import solverandoptimizer.experiment.Binary.BinaryExperimentExternal;
+import solverandoptimizer.experiment.Binary.BinaryExperimentInternal;
 import solverandoptimizer.experiment.Double.DoubleExperimentExternal;
 import solverandoptimizer.experiment.Double.DoubleExperimentInternal;
 import solverandoptimizer.experiment.Integer.IntegerExperimentExternal;
@@ -55,9 +57,9 @@ public class Solver {
                     break;
                 case(2):
                     if(!not_optimized_variables.isEmpty())
-                        new IntegerExperimentInternal(not_optimized_variables);
+                        new BinaryExperimentInternal(not_optimized_variables);
                     if(!optimized_variables.isEmpty())
-                        new IntegerExperimentExternal(optimized_variables);
+                        new BinaryExperimentExternal(optimized_variables);
                     break;
             }
 
