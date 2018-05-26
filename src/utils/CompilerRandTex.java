@@ -18,7 +18,7 @@ public class CompilerRandTex {
     }
 
     private String rscript;
-    private String pdflatex;
+    private String miktex;
 
     private CompilerRandTex(){
         ini_R();
@@ -47,8 +47,8 @@ public class CompilerRandTex {
 
     private void ini_Tex(){
         String rscript = null;
-        if(new File("C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\pdflatex.exe").isFile()){
-            this.pdflatex = "C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\pdflatex.exe";
+        if(new File("C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64").isDirectory()){
+            this.miktex = "C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64";
         }else{
             GUI.getInstance().show_error("MiKTeX 2.9 is no installed");
         }
@@ -66,7 +66,17 @@ public class CompilerRandTex {
 
 
     public void compileLatex(String experiment) throws IOException {
-        Process process = new ProcessBuilder(pdflatex,experiment+".tex").directory(new File("experimentBaseDirectory\\"+experiment+"\\latex\\")).start();
+        Process process = new ProcessBuilder(miktex +"\\pdflatex.exe",experiment+".tex").directory(new File("experimentBaseDirectory\\"+experiment+"\\latex\\")).start();
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+    }
+
+    public void compileEPS(String experiment) throws IOException{
+        Process process = new ProcessBuilder(miktex +"\\epstopdf.exe","HV.Boxplot.eps").directory(new File("experimentBaseDirectory\\"+experiment+"\\R")).start();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
         String line;
