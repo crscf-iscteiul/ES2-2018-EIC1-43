@@ -2,8 +2,10 @@ package gui;
 
 import gui.screens.*;
 import solverandoptimizer.SolverandOptimizer;
+import solverandoptimizer.solver.Solver;
 
 import javax.swing.*;
+import java.util.List;
 
 public class GUI {
 
@@ -153,5 +155,23 @@ public class GUI {
             JOptionPane.showMessageDialog(child, error, "Error", JOptionPane.INFORMATION_MESSAGE);
         else
             JOptionPane.showMessageDialog(parent, error, "Error", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public void start_optimization(final List<String> algorithms){
+        if(child instanceof RunScreen){
+            ((RunScreen) child).lock();
+            new Thread(){
+                @Override
+                public void run() {
+                    Solver.getInstance().solve(SolverandOptimizer.getInstance().getProblem().getVariables(), algorithms);
+                }
+            }.start();
+        }
+    }
+
+    public void end_optimization(){
+        if(child instanceof RunScreen){
+            ((RunScreen) child).unlock();
+        }
     }
 }

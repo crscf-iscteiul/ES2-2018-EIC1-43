@@ -1,5 +1,6 @@
 package solverandoptimizer.solver;
 
+import gui.GUI;
 import solverandoptimizer.SolverandOptimizer;
 import solverandoptimizer.experiment.Binary.BinaryExperimentExternal;
 import solverandoptimizer.experiment.Binary.BinaryExperimentInternal;
@@ -65,6 +66,7 @@ public class Solver {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        GUI.getInstance().end_optimization();
     }
 
     public String runExternalJar(String solutionString){

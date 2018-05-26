@@ -7,7 +7,6 @@ package gui.screens;
 
 import gui.GUI;
 import solverandoptimizer.SolverandOptimizer;
-import solverandoptimizer.solver.Solver;
 import utils.Variable;
 
 import javax.swing.*;
@@ -166,8 +165,7 @@ public class RunScreen extends javax.swing.JFrame {
         if(algorithms.isEmpty())
             JOptionPane.showMessageDialog(this, "No algorithms selected", "Run what?", JOptionPane.INFORMATION_MESSAGE);
         else {
-            Solver.getInstance().solve(SolverandOptimizer.getInstance().getProblem().getVariables(), algorithms);
-
+            GUI.getInstance().start_optimization(algorithms);
         }
     }//GEN-LAST:event_StartActionPerformed
 
@@ -218,6 +216,24 @@ public class RunScreen extends javax.swing.JFrame {
             ((DefaultListModel<String>)JList.getModel()).addElement(s);
         for(String s : selected_algorithms)
             ((DefaultListModel<String>)JListRun.getModel()).addElement(s);
+    }
+
+    public void lock(){
+        Start.setEnabled(false);
+        jProgressBar1.setIndeterminate(true);
+        JList.setEnabled(false);
+        JListRun.setEnabled(false);
+        Remove.setEnabled(false);
+        Add.setEnabled(false);
+    }
+
+    public void unlock(){
+        Start.setEnabled(true);
+        jProgressBar1.setIndeterminate(false);
+        JList.setEnabled(true);
+        JListRun.setEnabled(true);
+        Remove.setEnabled(true);
+        Add.setEnabled(true);
     }
 
     public void open(){
