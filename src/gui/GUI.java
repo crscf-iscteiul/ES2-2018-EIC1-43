@@ -35,7 +35,6 @@ public class GUI {
     }
 
     private void setLookAndFeel(String LookName) {
-        //TODO Make Better
         //<editor-fold defaultstate="collapsed" desc="Swing look and feel setting code">
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

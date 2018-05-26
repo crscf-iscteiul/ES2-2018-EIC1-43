@@ -21,7 +21,6 @@ public class ProjectScreen extends javax.swing.JFrame {
      * Creates new form ProjectScreen
      */
     public ProjectScreen() {
-        //TODO Load old known problems and display them
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -115,7 +114,6 @@ public class ProjectScreen extends javax.swing.JFrame {
 
     private void ButtonLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoadActionPerformed
         if(History.getSelectedIndex()!=-1){
-            //TODO Read and load file to a class format
             GUI.getInstance().next_screen(GUI.MainScreen);
         }
         else {
