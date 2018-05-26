@@ -138,8 +138,6 @@ public class StartScreen extends javax.swing.JFrame{
                 SolverandOptimizer.getInstance().setUser(null);
             else
                 SolverandOptimizer.getInstance().setUser(new UserSession(UserName.getText(), Mail.getText()));
-
-            //TODO remember option save user on xml
             GUI.getInstance().next_screen(GUI.ProjectScreen);
         }
     }//GEN-LAST:event_ContinueActionPerformed

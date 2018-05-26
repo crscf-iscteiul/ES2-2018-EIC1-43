@@ -1,9 +1,5 @@
 package utils;
 
-import solverandoptimizer.SolverandOptimizer;
-import solverandoptimizer.solver.Solver;
-
-import java.awt.datatransfer.DataFlavor;
 import java.io.File;
 
 public class Problem {
@@ -57,7 +53,6 @@ public class Problem {
                 return false;
             if(v.isOptimized() && !new File(this.jar_path).isFile())
                 return false;
-            //TODO add parse test interval and exclusions
         }
         return true;
     }

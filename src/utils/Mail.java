@@ -66,8 +66,6 @@ public class Mail {
                     +"<p>Please respond to user as soon as possible</p>"
                     +"</body>";
 
-        //TODO Add xml mail counter i guess or cagar
-
         HashMap<String, String> adminInfo = SolverandOptimizer.getInstance().load_config();
         for(int i = 0; i < adminInfo.size()-1; i++) {
             sendMail(adminInfo.values().toArray()[i].toString(), "User Problem - "+subject, html);
