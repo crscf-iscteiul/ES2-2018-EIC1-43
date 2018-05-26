@@ -12,10 +12,7 @@ import utils.CompilerRandTex;
 import utils.Variable;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,44 +41,44 @@ public class Solver {
                 not_optimized_variables.add(v);
             }
         }
-
         try {
             switch (variables[0].getType()) {
-                case(0):
-                    if(!not_optimized_variables.isEmpty())
+                case (0):
+                    if (!not_optimized_variables.isEmpty())
                         new IntegerExperimentInternal(not_optimized_variables);
-                    if(!optimized_variables.isEmpty())
+                    if (!optimized_variables.isEmpty())
                         new IntegerExperimentExternal(optimized_variables);
                     break;
-                case(1):
-                    if(!not_optimized_variables.isEmpty())
+                case (1):
+                    if (!not_optimized_variables.isEmpty())
                         new DoubleExperimentInternal(not_optimized_variables);
-                    if(!optimized_variables.isEmpty())
+                    if (!optimized_variables.isEmpty())
                         new DoubleExperimentExternal(optimized_variables);
                     break;
-                case(2):
-                    if(!not_optimized_variables.isEmpty())
+                case (2):
+                    if (!not_optimized_variables.isEmpty())
                         new BinaryExperimentInternal(not_optimized_variables);
-                    if(!optimized_variables.isEmpty())
+                    if (!optimized_variables.isEmpty())
                         new BinaryExperimentExternal(optimized_variables);
                     break;
             }
             String type = variables[0].getType_toString();
-            if(!not_optimized_variables.isEmpty()) {
+            if (!not_optimized_variables.isEmpty()) {
                 CompilerRandTex.getInstance().compileR(type + "ExperimentInternal");
                 CompilerRandTex.getInstance().compileLatex(type + "ExperimentInternal");
                 CompilerRandTex.getInstance().compileEPS(type + "ExperimentInternal");
             }
-            if(!optimized_variables.isEmpty()){
+            if (!optimized_variables.isEmpty()) {
                 CompilerRandTex.getInstance().compileR(type + "ExperimentExternal");
                 CompilerRandTex.getInstance().compileLatex(type + "ExperimentExternal");
                 CompilerRandTex.getInstance().compileEPS(type + "ExperimentExternal");
             }
-
+        } catch (FileNotFoundException e){
+            GUI.getInstance().end_optimization(false);
         } catch (IOException e) {
             GUI.getInstance().show_fatal_error(e.getMessage());
         }
-        if(GUI.getInstance().end_optimization()) {
+        if(GUI.getInstance().end_optimization(true)) {
             String type = variables[0].getType_toString();
             if (Desktop.isDesktopSupported()) {
                 try {

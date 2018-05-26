@@ -47,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solver.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Solver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="90" column="145" selection-start-line="90" selection-start-column="145" selection-end-line="90" selection-end-column="145" />
+            <state relative-caret-position="207">
+              <caret line="76" column="54" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
               <folding>
                 <element signature="e#4907#4908#0" expanded="true" />
                 <element signature="e#4940#4941#0" expanded="true" />
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="179" column="37" selection-start-line="179" selection-start-column="37" selection-end-line="179" selection-end-column="37" />
+            <state relative-caret-position="367">
+              <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
               <folding>
                 <element signature="method#GUI#0;class#GUI#0" />
                 <element signature="method#setLookAndFeel#0;class#GUI#0" />
@@ -86,15 +86,13 @@
       <file leaf-file-name="CompilerRandTex.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/CompilerRandTex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="77" column="150" selection-start-line="77" selection-start-column="108" selection-end-line="77" selection-end-column="150" />
+            <state relative-caret-position="170">
+              <caret line="10" column="77" lean-forward="true" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#CompilerRandTex#0;class#CompilerRandTex#0" />
-                <element signature="method#ini_R#0;class#CompilerRandTex#0" />
-                <element signature="method#ini_Tex#0;class#CompilerRandTex#0" />
                 <element signature="method#compileR#0;class#CompilerRandTex#0" />
                 <element signature="method#compileLatex#0;class#CompilerRandTex#0" />
+                <element signature="method#compileEPS#0;class#CompilerRandTex#0" />
                 <element signature="docComment;method#versionCompare#0;class#CompilerRandTex#0" />
                 <element signature="method#versionCompare#0;class#CompilerRandTex#0" />
               </folding>
@@ -214,31 +212,6 @@
             <path>
               <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
               <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
-              <item name="experimentBaseDirectory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
-              <item name="experimentBaseDirectory" type="462c0819:PsiDirectoryNode" />
-              <item name="IntegerExperimentInternal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
-              <item name="experimentBaseDirectory" type="462c0819:PsiDirectoryNode" />
-              <item name="IntegerExperimentInternal" type="462c0819:PsiDirectoryNode" />
-              <item name="latex" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
-              <item name="experimentBaseDirectory" type="462c0819:PsiDirectoryNode" />
-              <item name="IntegerExperimentInternal" type="462c0819:PsiDirectoryNode" />
-              <item name="R" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -246,13 +219,6 @@
               <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
@@ -265,6 +231,13 @@
               <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="solverandoptimizer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="solverandoptimizer" type="462c0819:PsiDirectoryNode" />
+              <item name="solver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
@@ -407,7 +380,7 @@
       <workItem from="1527187007652" duration="45000" />
       <workItem from="1527187200975" duration="14415000" />
       <workItem from="1527262993429" duration="5041000" />
-      <workItem from="1527337056057" duration="21667000" />
+      <workItem from="1527337056057" duration="22314000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Eclipse Link">
       <created>1526672026864</created>
@@ -675,11 +648,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527370131030</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Java now opens pdf">
+      <created>1527373850984</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1527373850984</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100107000" />
+    <option name="totallyTimeSpent" value="100754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -763,7 +743,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Jmetal integer evaluations is now working" />
     <MESSAGE value="Changed GUI Screen&#10;TODO: Add additional functionality" />
     <MESSAGE value="Added select type functionality for all variables" />
     <MESSAGE value="Completed and Deleted some TODO code over the GUI classes" />
@@ -788,7 +767,8 @@
     <MESSAGE value="Fixed Some Bugs" />
     <MESSAGE value="Latex and now R now fully working" />
     <MESSAGE value="EPS to pdf now working" />
-    <option name="LAST_COMMIT_MESSAGE" value="EPS to pdf now working" />
+    <MESSAGE value="Java now opens pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java now opens pdf" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -800,8 +780,14 @@
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/gui/GUI.java</url>
+          <line>168</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="28" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1073,38 +1059,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/CompilerRandTex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="77" column="150" selection-start-line="77" selection-start-column="108" selection-end-line="77" selection-end-column="150" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#CompilerRandTex#0;class#CompilerRandTex#0" />
-            <element signature="method#ini_R#0;class#CompilerRandTex#0" />
-            <element signature="method#ini_Tex#0;class#CompilerRandTex#0" />
-            <element signature="method#compileR#0;class#CompilerRandTex#0" />
-            <element signature="method#compileLatex#0;class#CompilerRandTex#0" />
-            <element signature="docComment;method#versionCompare#0;class#CompilerRandTex#0" />
-            <element signature="method#versionCompare#0;class#CompilerRandTex#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="90" column="145" selection-start-line="90" selection-start-column="145" selection-end-line="90" selection-end-column="145" />
-          <folding>
-            <element signature="e#4907#4908#0" expanded="true" />
-            <element signature="e#4940#4941#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="179" column="37" selection-start-line="179" selection-start-column="37" selection-end-line="179" selection-end-column="37" />
+        <state relative-caret-position="367">
+          <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
           <folding>
             <element signature="method#GUI#0;class#GUI#0" />
             <element signature="method#setLookAndFeel#0;class#GUI#0" />
@@ -1118,6 +1076,32 @@
             <element signature="method#end_optimization#0;class#GUI#0" />
             <element signature="e#6904#6905#0" expanded="true" />
             <element signature="e#6942#6943#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/CompilerRandTex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="77" lean-forward="true" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#compileR#0;class#CompilerRandTex#0" />
+            <element signature="method#compileLatex#0;class#CompilerRandTex#0" />
+            <element signature="method#compileEPS#0;class#CompilerRandTex#0" />
+            <element signature="docComment;method#versionCompare#0;class#CompilerRandTex#0" />
+            <element signature="method#versionCompare#0;class#CompilerRandTex#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="76" column="54" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
+          <folding>
+            <element signature="e#4907#4908#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -2,16 +2,13 @@ package utils;
 
 import gui.GUI;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Objects;
 
 public class CompilerRandTex {
 
     private static CompilerRandTex instance;
-    public static CompilerRandTex getInstance() {
+    public static CompilerRandTex getInstance() throws FileNotFoundException{
         if(instance==null)
             instance=new CompilerRandTex();
         return instance;
@@ -20,9 +17,12 @@ public class CompilerRandTex {
     private String rscript;
     private String miktex;
 
-    private CompilerRandTex(){
+    private CompilerRandTex() throws FileNotFoundException {
         ini_R();
         ini_Tex();
+        if(rscript==null || miktex==null){
+            throw new FileNotFoundException();
+        }
     }
 
     private void ini_R(){
