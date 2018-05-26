@@ -181,6 +181,7 @@ public class GUI {
         if(child instanceof RunScreen){
             ((RunScreen) child).unlock();
             close_screen(child);
+            child = null;
             if(results)
                 return 0 == JOptionPane.showOptionDialog(parent,"Show Results?","Optimization process has ended", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Yes","No"}, "Yes");
         }

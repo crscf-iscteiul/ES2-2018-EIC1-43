@@ -41,7 +41,7 @@ public class CompilerRandTex {
             this.rscript = "C:\\Program Files\\R\\"+rscript+"\\bin\\RScript.exe";
 
         } catch (NullPointerException e){
-            GUI.getInstance().show_error("R script is no installed");
+            GUI.getInstance().show_error("R script is not installed");
         }
     }
 
@@ -50,7 +50,7 @@ public class CompilerRandTex {
         if(new File("C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64").isDirectory()){
             this.miktex = "C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64";
         }else{
-            GUI.getInstance().show_error("MiKTeX 2.9 is no installed");
+            GUI.getInstance().show_error("MiKTeX 2.9 is not installed");
         }
     }
 
