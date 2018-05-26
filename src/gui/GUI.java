@@ -174,4 +174,8 @@ public class GUI {
             ((RunScreen) child).unlock();
         }
     }
+
+    public boolean isChild(JFrame f){
+        return f.equals(child);
+    }
 }

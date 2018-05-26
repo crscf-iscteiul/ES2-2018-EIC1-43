@@ -43,7 +43,6 @@ public class MainScreen extends javax.swing.JFrame {
                 updateProblemData();
             }
         });
-
     }
 
     /**
@@ -297,7 +296,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonRemoveActionPerformed
 
     private void ButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddActionPerformed
-        ((DefaultTableModel)TableVars.getModel()).addRow(new Object[]{"","","","",false,""});
+        ((DefaultTableModel)TableVars.getModel()).addRow(new Object[]{"",VariableType.getSelectedItem(),"","",false,""});
     }//GEN-LAST:event_ButtonAddActionPerformed
 
     private void MenuOpEditProblemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpEditProblemActionPerformed

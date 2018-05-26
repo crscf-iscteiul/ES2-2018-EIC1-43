@@ -23,7 +23,6 @@ public class DoubleProblemInternal extends AbstractDoubleProblem {
             lowerLimit.add(limits[0]);
             upperLimit.add(limits[1]);
         }
-
         //TODO Find how to exclude values
 
         setLowerLimit(lowerLimit);
@@ -41,12 +40,12 @@ public class DoubleProblemInternal extends AbstractDoubleProblem {
 
         fx[0] = 0.0;
         for (int var = 0; var < solution.getNumberOfVariables() - 1; var++) {
-            fx[0] += Math.abs(x[0]); // Example for testing
+            fx[0] += Math.abs(x[0]+Math.random()*10); // Example for testing
         }
 
         fx[1] = 0.0;
         for (int var = 0; var < solution.getNumberOfVariables(); var++) {
-            fx[1] += Math.abs(x[1]); // Example for testing
+            fx[1] += Math.abs(x[1]+Math.random()*10); // Example for testing
         }
 
         solution.setObjective(0, fx[0]);
