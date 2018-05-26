@@ -150,11 +150,19 @@ public class GUI {
             JOptionPane.showMessageDialog(parent, error, "Error", JOptionPane.ERROR_MESSAGE);
     }
 
-    public void show_message(String error){
+    public void show_message(String message){
         if(child!=null)
-            JOptionPane.showMessageDialog(child, error, "Error", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(child, message, "Error", JOptionPane.INFORMATION_MESSAGE);
         else
-            JOptionPane.showMessageDialog(parent, error, "Error", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(parent, message, "Error", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public void show_fatal_error(String error) {
+        if(child!=null)
+            JOptionPane.showMessageDialog(child, error, "Error", JOptionPane.ERROR_MESSAGE);
+        else
+            JOptionPane.showMessageDialog(parent, error, "Error", JOptionPane.ERROR_MESSAGE);
+        System.exit(1);
     }
 
     public void start_optimization(final List<String> algorithms){
@@ -178,4 +186,6 @@ public class GUI {
     public boolean isChild(JFrame f){
         return f.equals(child);
     }
+
+
 }

@@ -8,6 +8,7 @@ import solverandoptimizer.experiment.Double.DoubleExperimentExternal;
 import solverandoptimizer.experiment.Double.DoubleExperimentInternal;
 import solverandoptimizer.experiment.Integer.IntegerExperimentExternal;
 import solverandoptimizer.experiment.Integer.IntegerExperimentInternal;
+import utils.CompilerRandTex;
 import utils.Variable;
 
 import java.io.BufferedReader;
@@ -63,8 +64,17 @@ public class Solver {
                         new BinaryExperimentExternal(optimized_variables);
                     break;
             }
+            String type = variables[0].getType_toString();
+            if(!not_optimized_variables.isEmpty()) {
+                CompilerRandTex.getInstance().compileR(type + "ExperimentInternal");
+                CompilerRandTex.getInstance().compileLatex(type + "ExperimentInternal");
+            }
+            if(!optimized_variables.isEmpty()){
+                CompilerRandTex.getInstance().compileR(type + "ExperimentExternal");
+                CompilerRandTex.getInstance().compileLatex(type + "ExperimentExternal");
+            }
         } catch (IOException e) {
-            e.printStackTrace();
+            GUI.getInstance().show_fatal_error(e.getMessage());
         }
         GUI.getInstance().end_optimization();
     }

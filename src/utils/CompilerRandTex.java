@@ -48,13 +48,13 @@ public class CompilerRandTex {
     private void ini_Tex(){
         String rscript = null;
         if(new File("C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\pdflatex.exe").isFile()){
-            this.rscript = "C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\pdflatex.exe";
+            this.pdflatex = "C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\pdflatex.exe";
         }else{
             GUI.getInstance().show_error("MiKTeX 2.9 is no installed");
         }
     }
 
-    public void compileFile(String experiment) throws IOException {
+    public void compileR(String experiment) throws IOException {
         Process process = new ProcessBuilder(rscript, "HV.Boxplot.R").directory(new File("experimentBaseDirectory\\"+experiment+"\\R")).start();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -72,7 +72,6 @@ public class CompilerRandTex {
         String line;
         while ((line = br.readLine()) != null) {
             System.out.println(line);
-
         }
     }
 

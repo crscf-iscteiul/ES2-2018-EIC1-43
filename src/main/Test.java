@@ -27,7 +27,8 @@ public class Test {
 //            e.printStackTrace();
 //        }
         try {
-            CompilerRandTex.getInstance().compileFile("IntegerExperimentInternal");
+            CompilerRandTex.getInstance().compileR("IntegerExperimentInternal");
+            CompilerRandTex.getInstance().compileLatex("IntegerExperimentInternal");
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -29,8 +29,6 @@ public class Variable {
             return Variable.Type_Not_Defined;
     }
 
-
-
     private String name;
     private int type;
 
