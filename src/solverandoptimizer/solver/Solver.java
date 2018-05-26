@@ -68,10 +68,12 @@ public class Solver {
             if(!not_optimized_variables.isEmpty()) {
                 CompilerRandTex.getInstance().compileR(type + "ExperimentInternal");
                 CompilerRandTex.getInstance().compileLatex(type + "ExperimentInternal");
+                CompilerRandTex.getInstance().compileEPS(type + "ExperimentInternal");
             }
             if(!optimized_variables.isEmpty()){
                 CompilerRandTex.getInstance().compileR(type + "ExperimentExternal");
                 CompilerRandTex.getInstance().compileLatex(type + "ExperimentExternal");
+                CompilerRandTex.getInstance().compileEPS(type + "ExperimentExternal");
             }
         } catch (IOException e) {
             GUI.getInstance().show_fatal_error(e.getMessage());
