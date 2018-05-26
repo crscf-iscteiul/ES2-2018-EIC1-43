@@ -35,7 +35,6 @@ public class MainScreen extends javax.swing.JFrame {
             SendInfo.setEnabled(false);
         loadProblemData(SolverandOptimizer.getInstance().getProblem());
         if(TableVars.getModel().getRowCount()>0){
-            System.out.println((String) TableVars.getModel().getValueAt(0,1));
             VariableType.setSelectedIndex(Variable.StringToType((String) TableVars.getModel().getValueAt(0,1)));
         }
         TableVars.getModel().addTableModelListener(new TableModelListener() {
@@ -387,7 +386,6 @@ public class MainScreen extends javax.swing.JFrame {
                 model.removeRow(i);
 
         for(Variable v : problem.getVariables()){
-            System.out.println(v);
             model.addRow(new Object[]{v.getVariableName(), v.getType_toString(), v.getInterval(), v.getExclusions(), v.isOptimized()});
         }
         TableVars.setModel(model);

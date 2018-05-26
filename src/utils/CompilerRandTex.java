@@ -2,21 +2,30 @@ package utils;
 
 import gui.GUI;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Objects;
 
-public class CompilerRandLatex {
+public class CompilerRandTex {
 
-    private static CompilerRandLatex instance;
-    public static CompilerRandLatex getInstance() {
+    private static CompilerRandTex instance;
+    public static CompilerRandTex getInstance() {
         if(instance==null)
-            instance=new CompilerRandLatex();
+            instance=new CompilerRandTex();
         return instance;
     }
 
     private String rscript;
+    private String pdflatex;
 
-    private CompilerRandLatex(){
+    private CompilerRandTex(){
+        ini_R();
+        ini_Tex();
+    }
+
+    private void ini_R(){
         String rscript = null;
         try {
             File r_directory = new File("C:\\Program Files\\R");
@@ -36,18 +45,34 @@ public class CompilerRandLatex {
         }
     }
 
-    public void compileFile(String file) throws IOException {
-        Process process = new ProcessBuilder(rscript, "HV.Boxplot.R").directory(new File("experimentBaseDirectory\\IntegerExperimentInternal\\R")).start();
+    private void ini_Tex(){
+        String rscript = null;
+        if(new File("C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\pdflatex.exe").isFile()){
+            this.rscript = "C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\pdflatex.exe";
+        }else{
+            GUI.getInstance().show_error("MiKTeX 2.9 is no installed");
+        }
+    }
 
-        InputStream is = process.getInputStream();
-        InputStreamReader isr = new InputStreamReader(is);
-        BufferedReader br = new BufferedReader(isr);
+    public void compileFile(String experiment) throws IOException {
+        Process process = new ProcessBuilder(rscript, "HV.Boxplot.R").directory(new File("experimentBaseDirectory\\"+experiment+"\\R")).start();
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
         String line;
-
-//        System.out.printf("Output of running %s is:", Arrays.toString(args));
-
         while ((line = br.readLine()) != null) {
             System.out.println(line);
+        }
+    }
+
+
+    public void compileLatex(String experiment) throws IOException {
+        Process process = new ProcessBuilder(pdflatex,experiment+".tex").directory(new File("experimentBaseDirectory\\"+experiment+"\\latex\\")).start();
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+
         }
     }
 
@@ -82,18 +107,4 @@ public class CompilerRandLatex {
         // e.g. "1.2.3" = "1.2.3" or "1.2.3" < "1.2.3.4"
         return Integer.signum(vals1.length - vals2.length);
     }
-
-//    public void compileLatex() throws IOException {
-//        Process process = new ProcessBuilder("C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\pdflatex.exe","AntiSpamStudy.tex").directory(new File("experimentBaseDirectory\\AntiSpamStudy\\latex\\")).start();
-//        is = process.getInputStream();
-//        isr = new InputStreamReader(is);
-//        br = new BufferedReader(isr);
-//
-//        System.out.printf("Output of running %s is:", Arrays.toString(args));
-//
-//        while ((line = br.readLine()) != null) {
-//            System.out.println(line);
-//
-//        }
-//    }
 }

@@ -29,7 +29,7 @@ public class BinaryExperimentInternal {
 
         List<ExperimentAlgorithm<BinarySolution, List<BinarySolution>>> algorithmList = BinaryExperiment.configureAlgorithmList(problemList, maxEvaluations);
 
-        Experiment<BinarySolution, List<BinarySolution>> experiment = new ExperimentBuilder<BinarySolution, List<BinarySolution>>("ExperimentsBinary")
+        Experiment<BinarySolution, List<BinarySolution>> experiment = new ExperimentBuilder<BinarySolution, List<BinarySolution>>("BinaryExperimentInternal")
                         .setAlgorithmList(algorithmList)
                         .setProblemList(problemList)
                         .setExperimentBaseDirectory(experimentBaseDirectory)

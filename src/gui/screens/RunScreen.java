@@ -165,8 +165,10 @@ public class RunScreen extends javax.swing.JFrame {
             algorithms.add(JListRun.getModel().getElementAt(i));
         if(algorithms.isEmpty())
             JOptionPane.showMessageDialog(this, "No algorithms selected", "Run what?", JOptionPane.INFORMATION_MESSAGE);
-        else
+        else {
             Solver.getInstance().solve(SolverandOptimizer.getInstance().getProblem().getVariables(), algorithms);
+
+        }
     }//GEN-LAST:event_StartActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -197,9 +199,7 @@ public class RunScreen extends javax.swing.JFrame {
                 ((DefaultListModel<String>) JList.getModel()).addElement(s);
             ((DefaultListModel<String>) JListRun.getModel()).removeElement(JListRun.getSelectedValue());
         }
-    }
-
-    private void SetAlgorithmsForVarible(String type){
+    }    private void SetAlgorithmsForVarible(String type){
         ArrayList<String> deselected_algorithms = new ArrayList<>(Arrays.asList("AbYSS", "CellDE", "dMPOSO", "GDE3", "GWASFGA", "IBEA", "MOCell", "MOCH", "MOEAD", "MOMBI", "NSGA-II", "NSGA-III", "OMOPSO", "PAES", "PAES2", "RandomSearch", "rNSGA-II", "SMPSO", "SMSEMOA", "SPEA2", "WASFGA"));
         ArrayList<String> selected_algorithms = new ArrayList<>();
         switch (Variable.StringToType(type)){

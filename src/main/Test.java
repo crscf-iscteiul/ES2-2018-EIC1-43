@@ -1,6 +1,6 @@
 package main;
 
-import utils.CompilerRandLatex;
+import utils.CompilerRandTex;
 
 import java.io.IOException;
 
@@ -27,7 +27,7 @@ public class Test {
 //            e.printStackTrace();
 //        }
         try {
-            CompilerRandLatex.getInstance().compileFile("D:\\LEI\\3ºano\\2º Semestre\\Engenharia de Software II\\Workspace\\ES2-2018-EIC1-43\\experimentBaseDirectory\\IntegerExperimentInternal\\R\\HV.Boxplot.R");
+            CompilerRandTex.getInstance().compileFile("IntegerExperimentInternal");
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -2,7 +2,6 @@ package solverandoptimizer.problems;
 
 import org.uma.jmetal.problem.impl.AbstractDoubleProblem;
 import org.uma.jmetal.solution.DoubleSolution;
-import solverandoptimizer.SolverandOptimizer;
 import solverandoptimizer.solver.Solver;
 import utils.Variable;
 
@@ -14,7 +13,7 @@ public class DoubleProblemExternal extends AbstractDoubleProblem {
     public DoubleProblemExternal(List<Variable> variables) {
         setNumberOfVariables(variables.size());
         setNumberOfObjectives(2);
-        setName(SolverandOptimizer.getInstance().getProblem().getName()+" - Double Variables Internal");
+        setName("Double_Variables_External");
 
         List<Double> lowerLimit = new ArrayList<>(getNumberOfVariables()) ;
         List<Double> upperLimit = new ArrayList<>(getNumberOfVariables()) ;

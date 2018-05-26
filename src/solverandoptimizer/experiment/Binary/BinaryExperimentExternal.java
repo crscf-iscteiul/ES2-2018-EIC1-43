@@ -29,7 +29,7 @@ public class BinaryExperimentExternal {
 
         List<ExperimentAlgorithm<BinarySolution, List<BinarySolution>>> algorithmList = BinaryExperiment.configureAlgorithmList(problemList, maxEvaluations);
 
-        Experiment<BinarySolution, List<BinarySolution>> experiment = new ExperimentBuilder<BinarySolution, List<BinarySolution>>("MyProblemBinaryExternalViaJAR")
+        Experiment<BinarySolution, List<BinarySolution>> experiment = new ExperimentBuilder<BinarySolution, List<BinarySolution>>("BinaryExperimentExternal")
                 .setAlgorithmList(algorithmList)
                 .setProblemList(problemList)
                 .setExperimentBaseDirectory(experimentBaseDirectory)

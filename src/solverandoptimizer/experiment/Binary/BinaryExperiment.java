@@ -33,7 +33,7 @@ public class BinaryExperiment {
         for (int i = 0; i < problemList.size(); i++) {
             if (al.contains("NSGA-II")) {
                 Algorithm<List<BinarySolution>> algorithm = new NSGAIIBuilder<>(problemList.get(i).getProblem(), new SinglePointCrossover(1.0), new BitFlipMutation(1.0 / ((AbstractBinaryProblem) problemList.get(i).getProblem()).getNumberOfBits(0))).setMaxEvaluations(maxEvaluations).setPopulationSize(100).build();
-                algorithms.add(new ExperimentAlgorithm<BinarySolution, List<BinarySolution>>(algorithm, "NSGA-II", problemList.get(i).getTag()));
+                algorithms.add(new ExperimentAlgorithm<BinarySolution, List<BinarySolution>>(algorithm, "NSGAII", problemList.get(i).getTag()));
             }
             if (al.contains("SMSEMOA")) {
                 Algorithm<List<BinarySolution>> algorithm2 = new SMSEMOABuilder<>(problemList.get(i).getProblem(), new SinglePointCrossover(1.0), new BitFlipMutation(1.0 / ((AbstractBinaryProblem) problemList.get(i).getProblem()).getNumberOfBits(0))).setMaxEvaluations(maxEvaluations).build();

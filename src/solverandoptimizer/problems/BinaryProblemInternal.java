@@ -2,7 +2,6 @@ package solverandoptimizer.problems;
 
 import org.uma.jmetal.problem.impl.AbstractBinaryProblem;
 import org.uma.jmetal.solution.BinarySolution;
-import solverandoptimizer.SolverandOptimizer;
 import utils.Variable;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ public class BinaryProblemInternal extends AbstractBinaryProblem {
     public BinaryProblemInternal(List<Variable> variables){
         setNumberOfVariables(variables.size());
         setNumberOfObjectives(2);
-        setName(SolverandOptimizer.getInstance().getProblem().getName()+" - Binary Variables Internal");
+        setName("Binary_Variables_Internal");
 
         for(Variable v: variables)
             bits.add((int)(double)v.parseValues(true)[0]);
