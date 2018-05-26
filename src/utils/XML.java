@@ -212,6 +212,34 @@ public class XML {
         return adminInfo;
     }
 
+    public static String getInputPath(boolean isIn) {
+        String path = null;
+        try {
+            File config = new File(System.getProperty("user.dir") + "\\config.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(config);
+            doc.getDocumentElement().normalize();
+
+            XPathFactory xpathFactory = XPathFactory.newInstance();
+            XPath xpath = xpathFactory.newXPath();
+            XPathExpression expr = xpath.compile("/CONFIG/Paths/*");
+
+            NodeList nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+            if(isIn)
+                path = nl.item(0).getFirstChild().getNodeValue();
+            else
+                path = nl.item(1).getFirstChild().getNodeValue();
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Make sure configuration file is available.");
+        } catch (Exception e) {
+
+        }
+        return path;
+    }
+
     public static HashMap<String, String> load_project_history() {
         HashMap<String, String> adminInfo = new HashMap();
         System.out.println(System.getProperty("user.dir") + "\\project_history.xml");
