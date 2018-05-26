@@ -9,6 +9,7 @@ import gui.GUI;
 import solverandoptimizer.SolverandOptimizer;
 import utils.Problem;
 import utils.Variable;
+import utils.XML;
 
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
@@ -16,6 +17,8 @@ import javax.swing.event.TableModelListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -305,11 +308,11 @@ public class MainScreen extends javax.swing.JFrame {
 
     private void MenuOpSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpSaveActionPerformed
         if(SolverandOptimizer.getInstance().getProblem().isProblemValid()){
-            JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
+            JFileChooser path_chooser = new JFileChooser(XML.getInputPath(false));
             FileNameExtensionFilter filter = new FileNameExtensionFilter("XML File", "xml");
             path_chooser.setFileFilter(filter);
             path_chooser.setDialogTitle("Choose File Problem");
-            path_chooser.setSelectedFile(new File(System.getProperty("user.dir")+"\\"+SolverandOptimizer.getInstance().getProblem().getName()+".xml"));
+            path_chooser.setSelectedFile(new File(XML.getInputPath(false)+"\\"+SolverandOptimizer.getInstance().getProblem().getName()+" "+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+".xml"));
             int returnVal = path_chooser.showSaveDialog(this);
             if(returnVal == JFileChooser.APPROVE_OPTION) {
                 if(SolverandOptimizer.getInstance().saveProblem(path_chooser.getSelectedFile().getAbsolutePath()))
@@ -322,7 +325,7 @@ public class MainScreen extends javax.swing.JFrame {
         }//GEN-LAST:event_MenuOpSaveActionPerformed
 
     private void MenuOpLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpLoadActionPerformed
-        JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
+        JFileChooser path_chooser = new JFileChooser(XML.getInputPath(true));
         FileNameExtensionFilter filter = new FileNameExtensionFilter("XML File", "xml");
         path_chooser.setFileFilter(filter);
         path_chooser.setDialogTitle("Choose File Problem");
@@ -343,7 +346,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuOpFAQActionPerformed
 
     private void JarPathMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JarPathMouseClicked
-        JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
+        JFileChooser path_chooser = new JFileChooser(XML.getInputPath(true));
         FileNameExtensionFilter filter = new FileNameExtensionFilter("JAR File", "jar");
         path_chooser.setFileFilter(filter);
         path_chooser.setDialogTitle("Choose JAR File");

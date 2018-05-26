@@ -7,6 +7,7 @@ package gui.screens;
 
 import gui.GUI;
 import solverandoptimizer.SolverandOptimizer;
+import utils.XML;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -117,7 +118,7 @@ public class ProjectScreen extends javax.swing.JFrame {
             GUI.getInstance().next_screen(GUI.MainScreen);
         }
         else {
-            JFileChooser path_chooser = new JFileChooser(System.getProperty("user.dir"));
+            JFileChooser path_chooser = new JFileChooser(XML.getInputPath(true));
             FileNameExtensionFilter filter = new FileNameExtensionFilter("XML File", "xml");
             path_chooser.setFileFilter(filter);
             path_chooser.setDialogTitle("Choose File Problem");
