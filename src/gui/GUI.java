@@ -177,10 +177,13 @@ public class GUI {
         }
     }
 
-    public void end_optimization(){
+    public boolean end_optimization(){
         if(child instanceof RunScreen){
             ((RunScreen) child).unlock();
+            close_screen(child);
+            return 0 == JOptionPane.showOptionDialog(parent,"Show Results?","Optimization process has ended", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Yes","No"}, "Yes");
         }
+        return false;
     }
 
     public boolean isChild(JFrame f){

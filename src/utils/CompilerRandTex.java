@@ -64,7 +64,6 @@ public class CompilerRandTex {
         }
     }
 
-
     public void compileLatex(String experiment) throws IOException {
         Process process = new ProcessBuilder(miktex +"\\pdflatex.exe",experiment+".tex").directory(new File("experimentBaseDirectory\\"+experiment+"\\latex\\")).start();
 

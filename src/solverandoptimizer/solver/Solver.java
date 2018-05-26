@@ -11,7 +11,9 @@ import solverandoptimizer.experiment.Integer.IntegerExperimentInternal;
 import utils.CompilerRandTex;
 import utils.Variable;
 
+import java.awt.*;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -75,10 +77,31 @@ public class Solver {
                 CompilerRandTex.getInstance().compileLatex(type + "ExperimentExternal");
                 CompilerRandTex.getInstance().compileEPS(type + "ExperimentExternal");
             }
+
         } catch (IOException e) {
             GUI.getInstance().show_fatal_error(e.getMessage());
         }
-        GUI.getInstance().end_optimization();
+        if(GUI.getInstance().end_optimization()) {
+            String type = variables[0].getType_toString();
+            if (Desktop.isDesktopSupported()) {
+                try {
+                    if (!not_optimized_variables.isEmpty()) {
+                        File pdf = new File("experimentBaseDirectory\\" + type + "ExperimentInternal" + "\\R\\HV.Boxplot.pdf");
+                        Desktop.getDesktop().open(pdf);
+                        pdf = new File("experimentBaseDirectory\\" + type + "ExperimentInternal" + "\\latex\\"+ type + "ExperimentInternal.pdf");
+                        Desktop.getDesktop().open(pdf);
+                    }
+                    if (!optimized_variables.isEmpty()) {
+                        File pdf = new File("experimentBaseDirectory\\" + type + "ExperimentExternal" + "\\R\\HV.Boxplot.pdf");
+                        Desktop.getDesktop().open(pdf);
+                        pdf = new File("experimentBaseDirectory\\" + type + "ExperimentExternal" + "\\latex\\"+ type + "ExperimentExternal.pdf");
+                        Desktop.getDesktop().open(pdf);
+                    }
+                } catch (IOException e) {
+                    GUI.getInstance().show_error("No application registered for PDFs");
+                }
+            }
+        }
     }
 
     public String runExternalJar(String solutionString){
