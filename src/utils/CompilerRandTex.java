@@ -5,18 +5,38 @@ import gui.GUI;
 import java.io.*;
 import java.util.Objects;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CompilerRandTex.
+ */
 public class CompilerRandTex {
 
+    /** The instance. */
     private static CompilerRandTex instance;
+    
+    /**
+     * Gets the single instance of CompilerRandTex.
+     *
+     * @return single instance of CompilerRandTex
+     * @throws FileNotFoundException the file not found exception
+     */
     public static CompilerRandTex getInstance() throws FileNotFoundException{
         if(instance==null)
             instance=new CompilerRandTex();
         return instance;
     }
 
+    /** The rscript. */
     private String rscript;
+    
+    /** The miktex. */
     private String miktex;
 
+    /**
+     * Instantiates a new compiler rand tex.
+     *
+     * @throws FileNotFoundException the file not found exception
+     */
     private CompilerRandTex() throws FileNotFoundException {
         ini_R();
         ini_Tex();
@@ -25,6 +45,9 @@ public class CompilerRandTex {
         }
     }
 
+    /**
+     * Ini R.
+     */
     private void ini_R(){
         String rscript = null;
         try {
@@ -45,6 +68,9 @@ public class CompilerRandTex {
         }
     }
 
+    /**
+     * Ini tex.
+     */
     private void ini_Tex(){
         String rscript = null;
         if(new File("C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64").isDirectory()){
@@ -54,6 +80,12 @@ public class CompilerRandTex {
         }
     }
 
+    /**
+     * Compile R.
+     *
+     * @param experiment the experiment
+     * @throws IOException Signals that an I/O exception has occurred.
+     */
     public void compileR(String experiment) throws IOException {
         Process process = new ProcessBuilder(rscript, "HV.Boxplot.R").directory(new File("experimentBaseDirectory\\"+experiment+"\\R")).start();
 
@@ -64,6 +96,12 @@ public class CompilerRandTex {
         }
     }
 
+    /**
+     * Compile latex.
+     *
+     * @param experiment the experiment
+     * @throws IOException Signals that an I/O exception has occurred.
+     */
     public void compileLatex(String experiment) throws IOException {
         Process process = new ProcessBuilder(miktex +"\\pdflatex.exe",experiment+".tex").directory(new File("experimentBaseDirectory\\"+experiment+"\\latex\\")).start();
 
@@ -74,6 +112,12 @@ public class CompilerRandTex {
         }
     }
 
+    /**
+     * Compile EPS.
+     *
+     * @param experiment the experiment
+     * @throws IOException Signals that an I/O exception has occurred.
+     */
     public void compileEPS(String experiment) throws IOException{
         Process process = new ProcessBuilder(miktex +"\\epstopdf.exe","HV.Boxplot.eps").directory(new File("experimentBaseDirectory\\"+experiment+"\\R")).start();
 
@@ -86,17 +130,16 @@ public class CompilerRandTex {
 
     /**
      * Compares two version strings.
-     *
+     * 
      * Use this instead of String.compareTo() for a non-lexicographical
      * comparison that works for version strings. e.g. "1.10".compareTo("1.6").
-     *
-     * @note It does not work if "1.10" is supposed to be equal to "1.10.0".
      *
      * @param str1 a string of ordinal numbers separated by decimal points.
      * @param str2 a string of ordinal numbers separated by decimal points.
      * @return The result is a negative integer if str1 is _numerically_ less than str2.
      *         The result is a positive integer if str1 is _numerically_ greater than str2.
      *         The result is zero if the strings are _numerically_ equal.
+     * @note It does not work if "1.10" is supposed to be equal to "1.10.0".
      */
     public static int versionCompare(String str1, String str2) {
         String[] vals1 = str1.split("\\.");
