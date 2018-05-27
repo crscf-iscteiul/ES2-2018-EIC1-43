@@ -20,13 +20,27 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class XML.
+ */
 public class XML {
 
+    /** The vars. */
     public static Variable[] vars = {new Variable("a", 0, "0; 10", "2;3;4", false),
             new Variable("a", 1, "0.0; 10.2", "2.0;3.5;4.5", false),
             new Variable("a", 2, "4", "", false)};
+    
+    /** The p. */
     public static Problem p = new Problem("Test Problem", "Test problem relativo a criacao de xml", 3, "00:05:00", vars);
 
+    /**
+     * Save XML problem.
+     *
+     * @param file_path the file path
+     * @param p the p
+     * @throws Exception the exception
+     */
     public static void saveXMLProblem(String file_path, Problem p) throws Exception {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -120,6 +134,13 @@ public class XML {
         transformer.transform(source, result);
     }
 
+    /**
+     * Read XML problem.
+     *
+     * @param file_path the file path
+     * @return the problem
+     * @throws Exception the exception
+     */
     public static Problem readXMLProblem(String file_path) throws Exception {
         String p_description = "";
         String p_name = "";
@@ -183,6 +204,11 @@ public class XML {
         return new Problem(p_name, p_description, mVars, m_Time, vars_l);
     }
 
+    /**
+     * Load config.
+     *
+     * @return the hash map
+     */
     public static HashMap<String, String> load_config() {
         HashMap<String, String> adminInfo = new HashMap();
         System.out.println(System.getProperty("user.dir") + "\\config.xml");
@@ -212,6 +238,12 @@ public class XML {
         return adminInfo;
     }
 
+    /**
+     * Gets the input path.
+     *
+     * @param isIn the is in
+     * @return the input path
+     */
     public static String getInputPath(boolean isIn) {
         String path = null;
         try {
@@ -240,6 +272,11 @@ public class XML {
         return path;
     }
 
+    /**
+     * Load project history.
+     *
+     * @return the hash map
+     */
     public static HashMap<String, String> load_project_history() {
         HashMap<String, String> adminInfo = new HashMap();
         System.out.println(System.getProperty("user.dir") + "\\project_history.xml");
@@ -269,6 +306,11 @@ public class XML {
         return adminInfo;
     }
 
+    /**
+     * Save project history.
+     *
+     * @param projects the projects
+     */
     public static void save_project_history(HashMap<String, String> projects) {
 
     }
