@@ -7,6 +7,7 @@ package gui.screens;
 
 import gui.GUI;
 import solverandoptimizer.SolverandOptimizer;
+import utils.Mail;
 import utils.Variable;
 
 import javax.swing.*;
@@ -165,6 +166,12 @@ public class RunScreen extends javax.swing.JFrame {
         if(algorithms.isEmpty())
             JOptionPane.showMessageDialog(this, "No algorithms selected", "Run what?", JOptionPane.INFORMATION_MESSAGE);
         else {
+            new Thread() {
+                @Override
+                public void run() {
+                    Mail.getInstance().sendProblemToUser(SolverandOptimizer.getInstance().getUser().getMail(), SolverandOptimizer.getInstance().getProblem());
+                }
+            }.start();
             GUI.getInstance().start_optimization(algorithms);
         }
     }//GEN-LAST:event_StartActionPerformed

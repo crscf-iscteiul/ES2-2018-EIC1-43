@@ -312,7 +312,7 @@ public class MainScreen extends javax.swing.JFrame {
             FileNameExtensionFilter filter = new FileNameExtensionFilter("XML File", "xml");
             path_chooser.setFileFilter(filter);
             path_chooser.setDialogTitle("Choose File Problem");
-            path_chooser.setSelectedFile(new File(XML.getInputPath(false)+"\\"+SolverandOptimizer.getInstance().getProblem().getName()+" "+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+".xml"));
+            path_chooser.setSelectedFile(new File(XML.getInputPath(false)+"\\"+SolverandOptimizer.getInstance().getProblem().getName()+" "+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()).replace(":","-")+".xml"));
             int returnVal = path_chooser.showSaveDialog(this);
             if(returnVal == JFileChooser.APPROVE_OPTION) {
                 if(SolverandOptimizer.getInstance().saveProblem(path_chooser.getSelectedFile().getAbsolutePath()))

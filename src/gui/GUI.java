@@ -3,6 +3,7 @@ package gui;
 import gui.screens.*;
 import solverandoptimizer.SolverandOptimizer;
 import solverandoptimizer.solver.Solver;
+import utils.Mail;
 
 import javax.swing.*;
 import java.util.List;
@@ -178,6 +179,12 @@ public class GUI {
 
     public boolean end_optimization(boolean results){
         if(child instanceof RunScreen){
+            new Thread() {
+                @Override
+                public void run() {
+                    Mail.getInstance().sendMail(SolverandOptimizer.getInstance().getUser().getMail(), "Optimization Process Finished", "You process was successfully completed.");
+                }
+            }.start();
             ((RunScreen) child).unlock();
             close_screen(child);
             child = null;
