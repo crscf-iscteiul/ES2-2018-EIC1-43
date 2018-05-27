@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <CONFIG>
-	<Administrator Name="Bruno Gama" email="bmosg@iscte-iul.pt"/>
 	<Administrator Name="Carlos Rafael" email="crscf@iscte-iul.pt"/>
-	<Administrator Name="Humaira Rachid" email="hzrdr1@iscte-iul.pt"/>
 	<Administrator Name="André Sousa" email="afssa11111@iscte-iul.pt"/>
 	<Paths>
 		<jMetalPath>C:\</jMetalPath>

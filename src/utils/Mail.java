@@ -4,9 +4,10 @@ import gui.GUI;
 import solverandoptimizer.SolverandOptimizer;
 
 import javax.mail.*;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+import javax.mail.internet.*;
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Properties;
 
@@ -52,6 +53,46 @@ public class Mail {
         } catch (MessagingException e) {
             GUI.getInstance().show_error("Could not send this mail");
             return false;
+        }
+        return true;
+    }
+
+    public boolean sendProblemToUser(String to, Problem problem) {
+        HashMap<String, String> adminInfo = SolverandOptimizer.getInstance().load_config();
+        String text = "Muito obrigado por utilizar esta plataforma de optimização. Será informado por email quando o processo estiver terminado.";
+        try{
+            Message message = new MimeMessage(session);
+            MimeBodyPart msg = new MimeBodyPart();
+
+            message.setFrom(new InternetAddress(username));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+            for(int i = 0; i < adminInfo.size(); i++) {
+                message.addRecipient(Message.RecipientType.CC, new InternetAddress(adminInfo.values().toArray()[i].toString()));
+            }
+            message.setSubject("Optimização em Curso: " + problem.getName() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+            msg.setContent(text, "text/html; charset=utf-8");
+
+            MimeBodyPart attch = new MimeBodyPart();
+            XML.saveXMLProblem(System.getProperty("user.dir") + "\\" + problem.getName()+" "+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()).replace(":","-")+".xml", problem);
+            File att = new File(System.getProperty("user.dir") + "\\" + problem.getName()+" "+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()).replace(":","-")+".xml");
+            attch.attachFile(att);
+
+            Multipart content = new MimeMultipart();
+            content.addBodyPart(msg);
+            content.addBodyPart(attch);
+            message.setContent(content);
+
+            Transport.send(message);
+            att.delete();
+
+        } catch (AddressException e) {
+            GUI.getInstance().show_error("Could not send to this address");
+            return false;
+        } catch (MessagingException e) {
+            GUI.getInstance().show_error("Could not send this mail");
+            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return true;
     }
