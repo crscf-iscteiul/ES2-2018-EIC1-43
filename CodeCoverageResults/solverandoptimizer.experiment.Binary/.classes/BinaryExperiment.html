@@ -1,0 +1,152 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: BinaryExperiment</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">solverandoptimizer.experiment.Binary</a> ]
+</div>
+
+<h1>Coverage Summary for Class: BinaryExperiment (solverandoptimizer.experiment.Binary)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">BinaryExperiment</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 26)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package solverandoptimizer.experiment.Binary;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.uma.jmetal.algorithm.Algorithm;
+<i>4</i>&nbsp;import org.uma.jmetal.algorithm.multiobjective.mocell.MOCellBuilder;
+<i>5</i>&nbsp;import org.uma.jmetal.algorithm.multiobjective.mochc.MOCHCBuilder;
+<i>6</i>&nbsp;import org.uma.jmetal.algorithm.multiobjective.nsgaii.NSGAIIBuilder;
+<i>7</i>&nbsp;import org.uma.jmetal.algorithm.multiobjective.paes.PAESBuilder;
+<i>8</i>&nbsp;import org.uma.jmetal.algorithm.multiobjective.randomsearch.RandomSearchBuilder;
+<i>9</i>&nbsp;import org.uma.jmetal.algorithm.multiobjective.smsemoa.SMSEMOABuilder;
+<i>10</i>&nbsp;import org.uma.jmetal.algorithm.multiobjective.spea2.SPEA2Builder;
+<i>11</i>&nbsp;import org.uma.jmetal.operator.impl.crossover.HUXCrossover;
+<i>12</i>&nbsp;import org.uma.jmetal.operator.impl.crossover.SinglePointCrossover;
+<i>13</i>&nbsp;import org.uma.jmetal.operator.impl.mutation.BitFlipMutation;
+<i>14</i>&nbsp;import org.uma.jmetal.operator.impl.selection.RandomSelection;
+<i>15</i>&nbsp;import org.uma.jmetal.operator.impl.selection.RankingAndCrowdingSelection;
+<i>16</i>&nbsp;import org.uma.jmetal.problem.BinaryProblem;
+<i>17</i>&nbsp;import org.uma.jmetal.problem.impl.AbstractBinaryProblem;
+<i>18</i>&nbsp;import org.uma.jmetal.solution.BinarySolution;
+<i>19</i>&nbsp;import org.uma.jmetal.util.evaluator.impl.SequentialSolutionListEvaluator;
+<i>20</i>&nbsp;import org.uma.jmetal.util.experiment.util.ExperimentAlgorithm;
+<i>21</i>&nbsp;import org.uma.jmetal.util.experiment.util.ExperimentProblem;
+<i>22</i>&nbsp;import solverandoptimizer.solver.Solver;
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;import java.util.ArrayList;
+<i>25</i>&nbsp;import java.util.List;
+<i>26</i>&nbsp;
+<b class="nc"><i>27</i>&nbsp;public class BinaryExperiment {</b>
+<i>28</i>&nbsp;
+<i>29</i>&nbsp;    public static List&lt;ExperimentAlgorithm&lt;BinarySolution, List&lt;BinarySolution&gt;&gt;&gt; configureAlgorithmList(List&lt;ExperimentProblem&lt;BinarySolution&gt;&gt; problemList, int maxEvaluations) {
+<b class="nc"><i>30</i>&nbsp;        List&lt;ExperimentAlgorithm&lt;BinarySolution, List&lt;BinarySolution&gt;&gt;&gt; algorithms = new ArrayList&lt;&gt;();</b>
+<b class="nc"><i>31</i>&nbsp;        List&lt;String&gt; al = Solver.getInstance().getAlgorithms();</b>
+<i>32</i>&nbsp;
+<b class="nc"><i>33</i>&nbsp;        for (int i = 0; i &lt; problemList.size(); i++) {</b>
+<b class="nc"><i>34</i>&nbsp;            if (al.contains(&quot;NSGA-II&quot;)) {</b>
+<b class="nc"><i>35</i>&nbsp;                Algorithm&lt;List&lt;BinarySolution&gt;&gt; algorithm = new NSGAIIBuilder&lt;&gt;(problemList.get(i).getProblem(), new SinglePointCrossover(1.0), new BitFlipMutation(1.0 / ((AbstractBinaryProblem) problemList.get(i).getProblem()).getNumberOfBits(0))).setMaxEvaluations(maxEvaluations).setPopulationSize(100).build();</b>
+<b class="nc"><i>36</i>&nbsp;                algorithms.add(new ExperimentAlgorithm&lt;BinarySolution, List&lt;BinarySolution&gt;&gt;(algorithm, &quot;NSGAII&quot;, problemList.get(i).getTag()));</b>
+<i>37</i>&nbsp;            }
+<b class="nc"><i>38</i>&nbsp;            if (al.contains(&quot;SMSEMOA&quot;)) {</b>
+<b class="nc"><i>39</i>&nbsp;                Algorithm&lt;List&lt;BinarySolution&gt;&gt; algorithm2 = new SMSEMOABuilder&lt;&gt;(problemList.get(i).getProblem(), new SinglePointCrossover(1.0), new BitFlipMutation(1.0 / ((AbstractBinaryProblem) problemList.get(i).getProblem()).getNumberOfBits(0))).setMaxEvaluations(maxEvaluations).build();</b>
+<b class="nc"><i>40</i>&nbsp;                algorithms.add(new ExperimentAlgorithm&lt;BinarySolution, List&lt;BinarySolution&gt;&gt;(algorithm2, &quot;SMSEMOA&quot;, problemList.get(i).getTag()));</b>
+<i>41</i>&nbsp;            }
+<b class="nc"><i>42</i>&nbsp;            if (al.contains(&quot;MOCell&quot;)) {</b>
+<b class="nc"><i>43</i>&nbsp;                Algorithm&lt;List&lt;BinarySolution&gt;&gt; algorithm3 = new MOCellBuilder&lt;&gt;(problemList.get(i).getProblem(), new SinglePointCrossover(1.0), new BitFlipMutation(1.0 / ((AbstractBinaryProblem) problemList.get(i).getProblem()).getNumberOfBits(0))).setMaxEvaluations(maxEvaluations).build();</b>
+<b class="nc"><i>44</i>&nbsp;                algorithms.add(new ExperimentAlgorithm&lt;BinarySolution, List&lt;BinarySolution&gt;&gt;(algorithm3, &quot;MOCell&quot;, problemList.get(i).getTag()));</b>
+<i>45</i>&nbsp;            }
+<b class="nc"><i>46</i>&nbsp;            if (al.contains(&quot;MOCH&quot;)) {</b>
+<b class="nc"><i>47</i>&nbsp;                Algorithm&lt;List&lt;BinarySolution&gt;&gt; algorithm4 = new MOCHCBuilder((BinaryProblem) problemList.get(i).getProblem()).setMaxEvaluations(maxEvaluations).setCrossover(new HUXCrossover(1.0)).setNewGenerationSelection(new RankingAndCrowdingSelection&lt;BinarySolution&gt;(100)).setCataclysmicMutation(new BitFlipMutation(0.35)).setParentSelection(new RandomSelection&lt;BinarySolution&gt;()).setEvaluator(new SequentialSolutionListEvaluator&lt;BinarySolution&gt;()).build();</b>
+<b class="nc"><i>48</i>&nbsp;                algorithms.add(new ExperimentAlgorithm&lt;BinarySolution, List&lt;BinarySolution&gt;&gt;(algorithm4, &quot;MOCH&quot;, problemList.get(i).getTag()));</b>
+<i>49</i>&nbsp;            }
+<b class="nc"><i>50</i>&nbsp;            if (al.contains(&quot;PAES&quot;)) {</b>
+<b class="nc"><i>51</i>&nbsp;                Algorithm&lt;List&lt;BinarySolution&gt;&gt; algorithm5 = new PAESBuilder&lt;&gt;(problemList.get(i).getProblem()).setMaxEvaluations(maxEvaluations).setArchiveSize(100).setBiSections(2).setMutationOperator(new BitFlipMutation(1.0 / ((AbstractBinaryProblem) problemList.get(i).getProblem()).getNumberOfBits(0))).build();</b>
+<b class="nc"><i>52</i>&nbsp;                algorithms.add(new ExperimentAlgorithm&lt;BinarySolution, List&lt;BinarySolution&gt;&gt;(algorithm5, &quot;PAES&quot;, problemList.get(i).getTag()));</b>
+<i>53</i>&nbsp;            }
+<b class="nc"><i>54</i>&nbsp;            if (al.contains(&quot;RandomSearch&quot;)) {</b>
+<b class="nc"><i>55</i>&nbsp;                Algorithm&lt;List&lt;BinarySolution&gt;&gt; algorithm6 = new RandomSearchBuilder&lt;&gt;(problemList.get(i).getProblem()).setMaxEvaluations(maxEvaluations).build();</b>
+<b class="nc"><i>56</i>&nbsp;                algorithms.add(new ExperimentAlgorithm&lt;BinarySolution, List&lt;BinarySolution&gt;&gt;(algorithm6, &quot;RandomSearch&quot;, problemList.get(i).getTag()));</b>
+<i>57</i>&nbsp;            }
+<b class="nc"><i>58</i>&nbsp;            if(al.contains(&quot;SPEA2&quot;)) {</b>
+<b class="nc"><i>59</i>&nbsp;                Algorithm&lt;List&lt;BinarySolution&gt;&gt; algorithm7 = new SPEA2Builder&lt;&gt;(problemList.get(i).getProblem(), new SinglePointCrossover(1.0), new BitFlipMutation(1.0 / ((AbstractBinaryProblem) problemList.get(i).getProblem()).getNumberOfBits(0))).setMaxIterations(maxEvaluations).build();</b>
+<b class="nc"><i>60</i>&nbsp;                algorithms.add(new ExperimentAlgorithm&lt;BinarySolution, List&lt;BinarySolution&gt;&gt;(algorithm7, &quot;SPEA2&quot;, problemList.get(i).getTag()));</b>
+<i>61</i>&nbsp;            }
+<i>62</i>&nbsp;        }
+<b class="nc"><i>63</i>&nbsp;        return algorithms;</b>
+<i>64</i>&nbsp;
+<i>65</i>&nbsp;
+<i>66</i>&nbsp;
+<i>67</i>&nbsp;
+<i>68</i>&nbsp;    }
+<i>69</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-05-27 02:34</div>
+</div>
+</body>
+</html>

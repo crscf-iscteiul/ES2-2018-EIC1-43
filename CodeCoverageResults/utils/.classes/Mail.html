@@ -1,0 +1,240 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Mail</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">utils</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Mail (utils)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Mail</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (4/ 6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    64.2%
+  </span>
+  <span class="absValue">
+    (43/ 67)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">Mail$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    75%
+  </span>
+  <span class="absValue">
+    (6/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    65.2%
+  </span>
+  <span class="absValue">
+    (45/ 69)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package utils;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import gui.GUI;
+<i>4</i>&nbsp;import solverandoptimizer.SolverandOptimizer;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;import javax.mail.*;
+<i>7</i>&nbsp;import javax.mail.internet.*;
+<i>8</i>&nbsp;import java.io.File;
+<i>9</i>&nbsp;import java.text.SimpleDateFormat;
+<i>10</i>&nbsp;import java.util.Date;
+<i>11</i>&nbsp;import java.util.HashMap;
+<i>12</i>&nbsp;import java.util.Properties;
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;public class Mail {
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;    private static Mail instance;
+<i>17</i>&nbsp;    public static Mail getInstance() {
+<b class="fc"><i>18</i>&nbsp;        if (instance == null)</b>
+<b class="fc"><i>19</i>&nbsp;            instance = new Mail();</b>
+<b class="fc"><i>20</i>&nbsp;        return instance;</b>
+<i>21</i>&nbsp;    }
+<i>22</i>&nbsp;
+<b class="fc"><i>23</i>&nbsp;    private final String username = &quot;problemsolverandoptimizer@gmail.com&quot;;</b>
+<b class="fc"><i>24</i>&nbsp;    private final String password = &quot;jukojuko69&quot;;</b>
+<i>25</i>&nbsp;    private Session session;
+<i>26</i>&nbsp;
+<b class="fc"><i>27</i>&nbsp;    private Mail(){</b>
+<b class="fc"><i>28</i>&nbsp;        Properties props = new Properties();</b>
+<b class="fc"><i>29</i>&nbsp;        props.put(&quot;mail.smtp.starttls.enable&quot;, &quot;true&quot;);</b>
+<b class="fc"><i>30</i>&nbsp;        props.put(&quot;mail.smtp.auth&quot;, &quot;true&quot;);</b>
+<b class="fc"><i>31</i>&nbsp;        props.put(&quot;mail.smtp.host&quot;, &quot;smtp.gmail.com&quot;);</b>
+<b class="fc"><i>32</i>&nbsp;        props.put(&quot;mail.smtp.port&quot;, &quot;587&quot;);</b>
+<i>33</i>&nbsp;
+<b class="fc"><i>34</i>&nbsp;        session = Session.getInstance(props, new javax.mail.Authenticator() {</b>
+<i>35</i>&nbsp;            protected PasswordAuthentication getPasswordAuthentication() {
+<b class="fc"><i>36</i>&nbsp;                return new PasswordAuthentication(username, password);</b>
+<i>37</i>&nbsp;            }
+<i>38</i>&nbsp;        });
+<b class="fc"><i>39</i>&nbsp;    }</b>
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;    public boolean sendMail(String to, String subject, String text){
+<i>42</i>&nbsp;        try{
+<b class="fc"><i>43</i>&nbsp;            Message message = new MimeMessage(session);</b>
+<b class="fc"><i>44</i>&nbsp;            message.setFrom(new InternetAddress(username));</b>
+<b class="fc"><i>45</i>&nbsp;            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));</b>
+<b class="fc"><i>46</i>&nbsp;            message.setSubject(subject);</b>
+<b class="fc"><i>47</i>&nbsp;            message.setContent(text, &quot;text/html; charset=utf-8&quot;);</b>
+<i>48</i>&nbsp;
+<b class="fc"><i>49</i>&nbsp;            Transport.send(message);</b>
+<b class="nc"><i>50</i>&nbsp;        } catch (AddressException e) {</b>
+<b class="nc"><i>51</i>&nbsp;            GUI.getInstance().show_error(&quot;Could not send to this address&quot;);</b>
+<b class="nc"><i>52</i>&nbsp;            return false;</b>
+<b class="nc"><i>53</i>&nbsp;        } catch (MessagingException e) {</b>
+<b class="nc"><i>54</i>&nbsp;            GUI.getInstance().show_error(&quot;Could not send this mail&quot;);</b>
+<b class="nc"><i>55</i>&nbsp;            return false;</b>
+<b class="fc"><i>56</i>&nbsp;        }</b>
+<b class="fc"><i>57</i>&nbsp;        return true;</b>
+<i>58</i>&nbsp;    }
+<i>59</i>&nbsp;
+<i>60</i>&nbsp;    public boolean sendProblemToUser(String to, Problem problem) {
+<b class="fc"><i>61</i>&nbsp;        HashMap&lt;String, String&gt; adminInfo = SolverandOptimizer.getInstance().load_config();</b>
+<b class="fc"><i>62</i>&nbsp;        String text = &quot;Muito obrigado por utilizar esta plataforma de optimização. Será informado por email quando o processo estiver terminado.&quot;;</b>
+<i>63</i>&nbsp;        try{
+<b class="fc"><i>64</i>&nbsp;            Message message = new MimeMessage(session);</b>
+<b class="fc"><i>65</i>&nbsp;            MimeBodyPart msg = new MimeBodyPart();</b>
+<i>66</i>&nbsp;
+<b class="fc"><i>67</i>&nbsp;            message.setFrom(new InternetAddress(username));</b>
+<b class="fc"><i>68</i>&nbsp;            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));</b>
+<b class="fc"><i>69</i>&nbsp;            for(int i = 0; i &lt; adminInfo.size(); i++) {</b>
+<b class="fc"><i>70</i>&nbsp;                message.addRecipient(Message.RecipientType.CC, new InternetAddress(adminInfo.values().toArray()[i].toString()));</b>
+<i>71</i>&nbsp;            }
+<b class="fc"><i>72</i>&nbsp;            message.setSubject(&quot;Optimização em Curso: &quot; + problem.getName() + new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;).format(new Date()));</b>
+<b class="fc"><i>73</i>&nbsp;            msg.setContent(text, &quot;text/html; charset=utf-8&quot;);</b>
+<i>74</i>&nbsp;
+<b class="fc"><i>75</i>&nbsp;            MimeBodyPart attch = new MimeBodyPart();</b>
+<b class="fc"><i>76</i>&nbsp;            XML.saveXMLProblem(System.getProperty(&quot;user.dir&quot;) + &quot;\\&quot; + problem.getName()+&quot; &quot;+new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;).format(new Date()).replace(&quot;:&quot;,&quot;-&quot;)+&quot;.xml&quot;, problem);</b>
+<b class="fc"><i>77</i>&nbsp;            File att = new File(System.getProperty(&quot;user.dir&quot;) + &quot;\\&quot; + problem.getName()+&quot; &quot;+new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;).format(new Date()).replace(&quot;:&quot;,&quot;-&quot;)+&quot;.xml&quot;);</b>
+<b class="fc"><i>78</i>&nbsp;            attch.attachFile(att);</b>
+<i>79</i>&nbsp;
+<b class="fc"><i>80</i>&nbsp;            Multipart content = new MimeMultipart();</b>
+<b class="fc"><i>81</i>&nbsp;            content.addBodyPart(msg);</b>
+<b class="fc"><i>82</i>&nbsp;            content.addBodyPart(attch);</b>
+<b class="fc"><i>83</i>&nbsp;            message.setContent(content);</b>
+<i>84</i>&nbsp;
+<b class="fc"><i>85</i>&nbsp;            Transport.send(message);</b>
+<b class="fc"><i>86</i>&nbsp;            att.delete();</b>
+<i>87</i>&nbsp;
+<b class="nc"><i>88</i>&nbsp;        } catch (AddressException e) {</b>
+<b class="nc"><i>89</i>&nbsp;            GUI.getInstance().show_error(&quot;Could not send to this address&quot;);</b>
+<b class="nc"><i>90</i>&nbsp;            return false;</b>
+<b class="nc"><i>91</i>&nbsp;        } catch (MessagingException e) {</b>
+<b class="nc"><i>92</i>&nbsp;            GUI.getInstance().show_error(&quot;Could not send this mail&quot;);</b>
+<b class="nc"><i>93</i>&nbsp;            return false;</b>
+<b class="nc"><i>94</i>&nbsp;        } catch (Exception e) {</b>
+<b class="nc"><i>95</i>&nbsp;            e.printStackTrace();</b>
+<b class="fc"><i>96</i>&nbsp;        }</b>
+<b class="fc"><i>97</i>&nbsp;        return true;</b>
+<i>98</i>&nbsp;    }
+<i>99</i>&nbsp;
+<i>100</i>&nbsp;    public boolean sendIssuetoAdmin(String from, String subject, String text){
+<b class="nc"><i>101</i>&nbsp;        text = text.replaceAll(&quot;\n&quot;,&quot;&lt;br&gt;&quot;);</b>
+<i>102</i>&nbsp;
+<b class="nc"><i>103</i>&nbsp;        String html =&quot;&lt;body&gt;&quot;</b>
+<i>104</i>&nbsp;                    +&quot;&lt;p&gt;&lt;font size=\&quot;6\&quot;&gt;Problem Solver and Optimizer&lt;/font&gt;&lt;/p&gt;&quot;
+<i>105</i>&nbsp;                    +&quot;&lt;p&gt;This user &lt;b&gt;&quot;+from+&quot;&lt;/b&gt; said:&lt;/p&gt;&quot;
+<i>106</i>&nbsp;                    +&quot;&lt;p&gt;&lt;i&gt;&quot;+text+&quot;&lt;/i&gt;&lt;/p&gt;&quot;
+<i>107</i>&nbsp;                    +&quot;&lt;p&gt;Please respond to user as soon as possible&lt;/p&gt;&quot;
+<i>108</i>&nbsp;                    +&quot;&lt;/body&gt;&quot;;
+<i>109</i>&nbsp;
+<b class="nc"><i>110</i>&nbsp;        HashMap&lt;String, String&gt; adminInfo = SolverandOptimizer.getInstance().load_config();</b>
+<b class="nc"><i>111</i>&nbsp;        for(int i = 0; i &lt; adminInfo.size()-1; i++) {</b>
+<b class="nc"><i>112</i>&nbsp;            sendMail(adminInfo.values().toArray()[i].toString(), &quot;User Problem - &quot;+subject, html);</b>
+<i>113</i>&nbsp;        }
+<i>114</i>&nbsp;
+<b class="nc"><i>115</i>&nbsp;        return sendMail(&quot;afssa11111@iscte-iul.pt&quot;, &quot;User Problem - &quot;+subject, html);</b>
+<i>116</i>&nbsp;    }
+<i>117</i>&nbsp;
+<i>118</i>&nbsp;    public boolean sendConfirmationtoUser(String user, String user_subject,String text){
+<b class="nc"><i>119</i>&nbsp;        String subject = &quot;Problem Solver and Optimizer - Mail sent confirmation&quot;;</b>
+<b class="nc"><i>120</i>&nbsp;        text = text.replaceAll(&quot;\n&quot;,&quot;&lt;br&gt;&quot;);</b>
+<i>121</i>&nbsp;
+<b class="nc"><i>122</i>&nbsp;        String html =&quot;&lt;body&gt;&quot;</b>
+<i>123</i>&nbsp;                    +&quot;&lt;p&gt;&lt;font size=\&quot;6\&quot;&gt;Problem Solver and Optimizer&lt;/font&gt;&lt;/p&gt;&quot;
+<i>124</i>&nbsp;                    +&quot;&lt;p&gt;Your message:&lt;/p&gt;&quot;
+<i>125</i>&nbsp;                    +&quot;&lt;p&gt;&lt;i&gt;&lt;b&gt;&quot;+user_subject+&quot;&lt;/b&gt;&lt;br&gt;&quot;+text+&quot;&lt;/i&gt;&lt;/p&gt;&quot;
+<i>126</i>&nbsp;                    +&quot;&lt;p&gt;We have received your mail and are going to respond as fast as possible&lt;br&gt;Thank you for your understanding&lt;/p&gt;&quot;
+<i>127</i>&nbsp;                    +&quot;&lt;/body&gt;&quot;;
+<i>128</i>&nbsp;
+<b class="nc"><i>129</i>&nbsp;        return sendMail(user, subject, html);</b>
+<i>130</i>&nbsp;    }
+<i>131</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-05-27 02:34</div>
+</div>
+</body>
+</html>

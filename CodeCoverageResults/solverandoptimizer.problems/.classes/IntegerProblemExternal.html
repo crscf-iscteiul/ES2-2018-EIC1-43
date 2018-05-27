@@ -1,0 +1,131 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: IntegerProblemExternal</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">solverandoptimizer.problems</a> ]
+</div>
+
+<h1>Coverage Summary for Class: IntegerProblemExternal (solverandoptimizer.problems)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">IntegerProblemExternal</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (22/ 22)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package solverandoptimizer.problems;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.uma.jmetal.problem.impl.AbstractIntegerProblem;
+<i>4</i>&nbsp;import org.uma.jmetal.solution.IntegerSolution;
+<i>5</i>&nbsp;import solverandoptimizer.solver.Solver;
+<i>6</i>&nbsp;import utils.Variable;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;import java.util.ArrayList;
+<i>9</i>&nbsp;import java.util.List;
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;public class IntegerProblemExternal extends AbstractIntegerProblem {
+<i>12</i>&nbsp;
+<b class="fc"><i>13</i>&nbsp;    public IntegerProblemExternal(List&lt;Variable&gt; variables) {</b>
+<b class="fc"><i>14</i>&nbsp;        setNumberOfVariables(variables.size());</b>
+<b class="fc"><i>15</i>&nbsp;        setNumberOfObjectives(2);</b>
+<b class="fc"><i>16</i>&nbsp;        setName(&quot;Integer_Variables_External&quot;);</b>
+<i>17</i>&nbsp;
+<b class="fc"><i>18</i>&nbsp;        List&lt;Integer&gt; lowerLimit = new ArrayList&lt;&gt;(variables.size());</b>
+<b class="fc"><i>19</i>&nbsp;        List&lt;Integer&gt; upperLimit = new ArrayList&lt;&gt;(variables.size());</b>
+<i>20</i>&nbsp;
+<b class="fc"><i>21</i>&nbsp;        for (Variable v: variables) {</b>
+<i>22</i>&nbsp;            //TODO check if the limits even exist
+<b class="fc"><i>23</i>&nbsp;            Double[] limits = v.parseValues(true);</b>
+<i>24</i>&nbsp;
+<b class="fc"><i>25</i>&nbsp;            lowerLimit.add((int)(double)limits[0]);</b>
+<b class="fc"><i>26</i>&nbsp;            upperLimit.add((int)(double)limits[1]);</b>
+<b class="fc"><i>27</i>&nbsp;        }</b>
+<i>28</i>&nbsp;
+<i>29</i>&nbsp;        //TODO Find how to exclude values
+<i>30</i>&nbsp;
+<b class="fc"><i>31</i>&nbsp;        setLowerLimit(lowerLimit);</b>
+<b class="fc"><i>32</i>&nbsp;        setUpperLimit(upperLimit);</b>
+<b class="fc"><i>33</i>&nbsp;    }</b>
+<i>34</i>&nbsp;
+<i>35</i>&nbsp;    @Override
+<i>36</i>&nbsp;    public void evaluate(IntegerSolution solution) {
+<b class="fc"><i>37</i>&nbsp;        String solutionString = &quot;&quot;;</b>
+<b class="fc"><i>38</i>&nbsp;        for (int i = 0; i &lt; solution.getNumberOfVariables(); i++) {</b>
+<b class="fc"><i>39</i>&nbsp;            solutionString = solutionString + &quot; &quot; + solution.getVariableValue(i);</b>
+<i>40</i>&nbsp;        }
+<b class="fc"><i>41</i>&nbsp;        String evaluationResultString = Solver.getInstance().runExternalJar(solutionString);</b>
+<b class="fc"><i>42</i>&nbsp;        String[] individualEvaluationCriteria = evaluationResultString.split(&quot;\\s+&quot;);</b>
+<i>43</i>&nbsp;        // It is assumed that all evaluated criteria are returned in the same result string
+<b class="fc"><i>44</i>&nbsp;        for (int i = 0; i &lt; solution.getNumberOfObjectives(); i++) {</b>
+<b class="fc"><i>45</i>&nbsp;            solution.setObjective(i, Integer.parseInt(individualEvaluationCriteria[i]));</b>
+<i>46</i>&nbsp;        }
+<b class="fc"><i>47</i>&nbsp;    }</b>
+<i>48</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-05-27 02:34</div>
+</div>
+</body>
+</html>
