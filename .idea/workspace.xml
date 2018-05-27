@@ -1,153 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ES2-2018-EIC1-43:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dcdab30-5ebb-44d4-9aa2-14a8ed7b5181" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/doc/allclasses-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/allclasses-noframe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/constant-values.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/deprecated-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/GUI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/class-use/GUI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/AboutScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/FAQScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/MailScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/MainScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/ProblemScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/ProjectScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/RunScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/StartScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/class-use/AboutScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/class-use/FAQScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/class-use/MailScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/class-use/MainScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/class-use/ProblemScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/class-use/ProjectScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/class-use/RunScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/class-use/StartScreen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/gui/screens/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/help-doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-16.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-17.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-18.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-19.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-20.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-21.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index-files/index-9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/main/Main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/main/Test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/main/class-use/Main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/main/class-use/Test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/main/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/main/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/main/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/main/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/overview-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/overview-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/overview-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/package-list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/package-list.copy1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/serialized-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/SolverandOptimizer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/class-use/SolverandOptimizer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/BinaryExperiment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/BinaryExperimentExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/BinaryExperimentInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/class-use/BinaryExperiment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/class-use/BinaryExperimentExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/class-use/BinaryExperimentInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Binary/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/DoubleExperiment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/DoubleExperimentExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/DoubleExperimentInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/class-use/DoubleExperiment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/class-use/DoubleExperimentExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/class-use/DoubleExperimentInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Double/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/IntegerExperiment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/IntegerExperimentExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/IntegerExperimentInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/class-use/IntegerExperiment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/class-use/IntegerExperimentExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/class-use/IntegerExperimentInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/experiment/Integer/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/BinaryProblemExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/BinaryProblemInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/DoubleProblemExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/DoubleProblemInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/IntegerProblemExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/IntegerProblemInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/class-use/BinaryProblemExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/class-use/BinaryProblemInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/class-use/DoubleProblemExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/class-use/DoubleProblemInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/class-use/IntegerProblemExternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/class-use/IntegerProblemInternal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/problems/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/solver/Solver.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/solver/class-use/Solver.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/solver/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/solver/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/solver/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/solverandoptimizer/solver/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/CompilerRandTex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/Mail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/Problem.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/UserSession.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/Variable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/XML.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/class-use/CompilerRandTex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/class-use/Mail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/class-use/Problem.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/class-use/UserSession.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/class-use/Variable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/class-use/XML.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/utils/package-use.html" afterDir="false" />
+    <list default="true" id="8dcdab30-5ebb-44d4-9aa2-14a8ed7b5181" name="Default" comment="Code Smells">
+      <change afterPath="$PROJECT_DIR$/ES2-2018-EIC1-43.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/CompilerRandTex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CompilerRandTex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/XML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/XML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/screens/RunScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/RunScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -158,10 +21,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ES2_2018_EIC1_43$All_in_ES2_2018_EIC1_43.ic" NAME="All in ES2-2018-EIC1-43 Coverage Results" MODIFIED="1527384867314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ES2_2018_EIC1_43$Main.ic" NAME="Main Coverage Results" MODIFIED="1527384594920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utils.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/ES2_2018_EIC1_43$All_in_ES2_2018_EIC1_43.ic" NAME="All in ES2-2018-EIC1-43 Coverage Results" MODIFIED="1527384867314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -179,44 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="XML.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/XML.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2502">
-              <caret line="264" column="43" selection-start-line="264" selection-start-column="43" selection-end-line="264" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Variable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/Variable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SolverandOptimizer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/SolverandOptimizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
-              <folding>
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1049#1050#0" expanded="true" />
-                <element signature="method#saveProblem#0;class#SolverandOptimizer#0" />
-                <element signature="method#loadProblem#0;class#SolverandOptimizer#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RunScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1091">
-              <caret line="238" column="46" selection-start-line="238" selection-start-column="46" selection-end-line="238" selection-end-column="46" />
+            <state relative-caret-position="673">
+              <caret line="175" column="61" lean-forward="true" selection-start-line="175" selection-start-column="61" selection-end-line="175" selection-end-column="61" />
               <folding>
                 <element signature="method#formWindowClosing#0;class#RunScreen#0" />
                 <element signature="method#SelectAlgorithm#0;class#RunScreen#0" />
@@ -228,64 +58,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mail.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/utils/Mail.java">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="968">
-              <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Problem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/Problem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserSession.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/UserSession.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompilerRandTex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/CompilerRandTex.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
+            <state relative-caret-position="495">
+              <caret line="179" column="53" lean-forward="true" selection-start-line="179" selection-start-column="53" selection-end-line="179" selection-end-column="53" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#compileR#0;class#CompilerRandTex#0" />
-                <element signature="method#compileLatex#0;class#CompilerRandTex#0" />
-                <element signature="method#compileEPS#0;class#CompilerRandTex#0" />
-                <element signature="docComment;method#versionCompare#0;class#CompilerRandTex#0" />
-                <element signature="method#versionCompare#0;class#CompilerRandTex#0" />
+                <element signature="method#GUI#0;class#GUI#0" />
+                <element signature="method#next_screen#0;class#GUI#0" />
+                <element signature="method#child_screen#0;class#GUI#0" />
+                <element signature="method#close_screen#0;class#GUI#0" />
+                <element signature="method#show_error#0;class#GUI#0" />
+                <element signature="method#show_message#0;class#GUI#0" />
+                <element signature="method#show_fatal_error#0;class#GUI#0" />
+                <element signature="method#start_optimization#0;class#GUI#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/screens/MailScreen.java">
+      <file leaf-file-name="ProjectScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/screens/ProjectScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FAQScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/screens/FAQScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+            <state relative-caret-position="197">
+              <caret line="120" column="81" selection-start-line="120" selection-start-column="81" selection-end-line="120" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -359,19 +155,19 @@
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Binary/BinaryExperiment.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Binary/BinaryExperimentExternal.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/experiment/Binary/BinaryExperimentInternal.java" />
-        <option value="$PROJECT_DIR$/src/gui/screens/RunScreen.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/problems/DoubleProblemInternal.java" />
         <option value="$PROJECT_DIR$/src/gui/screens/ProblemScreen.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemInternal.java" />
         <option value="$PROJECT_DIR$/src/solverandoptimizer/solver/Solver.java" />
         <option value="$PROJECT_DIR$/src/utils/CompilerRandTex.java" />
-        <option value="$PROJECT_DIR$/src/gui/GUI.java" />
         <option value="$PROJECT_DIR$/src/main/Test.java" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/src/gui/screens/MainScreen.java" />
         <option value="$PROJECT_DIR$/src/gui/screens/ProjectScreen.java" />
         <option value="$PROJECT_DIR$/src/utils/Variable.java" />
         <option value="$PROJECT_DIR$/src/utils/XML.java" />
+        <option value="$PROJECT_DIR$/src/gui/screens/RunScreen.java" />
+        <option value="$PROJECT_DIR$/src/gui/GUI.java" />
       </list>
     </option>
   </component>
@@ -395,6 +191,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -402,12 +200,28 @@
               <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
               <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ES2-2018-EIC1-43" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ES2-2018-EIC1-43" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -425,14 +239,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\LEI\3ºano\2º Semestre\Engenharia de Software II\Workspace\ES2-2018-EIC1-43" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="graph" />
       <recent name="solverandoptimizer.experiment" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\LEI\3ºano\2º Semestre\Engenharia de Software II\Workspace\ES2-2018-EIC1-43" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\LEI\3ºano\2º Semestre\Engenharia de Software II\Workspace\ES2-2018-EIC1-43" />
     </key>
   </component>
@@ -568,6 +382,7 @@
       <workItem from="1527337056057" duration="22708000" />
       <workItem from="1527383596423" duration="2232000" />
       <workItem from="1527410988997" duration="1721000" />
+      <workItem from="1527413123115" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Eclipse Link">
       <created>1526672026864</created>
@@ -899,7 +714,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106888000" />
+    <option name="totallyTimeSpent" value="107189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -912,9 +727,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32897604" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -926,7 +743,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25260416" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -935,7 +752,6 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" id="Mongo Explorer" order="7" weight="0.32995737" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32897604" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -946,32 +762,32 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32897604" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Mongo Explorer" order="7" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="right" id="Mongo Explorer" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info id="Capture Tool" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32897604" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
     </layout-to-restore>
@@ -1149,25 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-          <folding>
-            <element signature="method#GUI#0;class#GUI#0" />
-            <element signature="method#next_screen#0;class#GUI#0" />
-            <element signature="method#child_screen#0;class#GUI#0" />
-            <element signature="method#close_screen#0;class#GUI#0" />
-            <element signature="method#show_error#0;class#GUI#0" />
-            <element signature="method#show_message#0;class#GUI#0" />
-            <element signature="method#show_fatal_error#0;class#GUI#0" />
-            <element signature="method#start_optimization#0;class#GUI#0" />
-            <element signature="e#6904#6905#0" expanded="true" />
-            <element signature="e#6942#6943#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/problems/IntegerProblemInternal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1216,24 +1013,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/ProjectScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="120" column="81" selection-start-line="120" selection-start-column="81" selection-end-line="120" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/screens/StartScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="139" column="110" selection-start-line="139" selection-start-column="110" selection-end-line="139" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/MailScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1244,16 +1027,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/FAQScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/solverandoptimizer/SolverandOptimizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
+        <state relative-caret-position="697">
           <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
           <folding>
             <element signature="e#1009#1010#0" expanded="true" />
@@ -1269,32 +1045,24 @@
         <state relative-caret-position="-51" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/CompilerRandTex.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/Variable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#compileR#0;class#CompilerRandTex#0" />
-            <element signature="method#compileLatex#0;class#CompilerRandTex#0" />
-            <element signature="method#compileEPS#0;class#CompilerRandTex#0" />
-            <element signature="docComment;method#versionCompare#0;class#CompilerRandTex#0" />
-            <element signature="method#versionCompare#0;class#CompilerRandTex#0" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/XML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1091">
-          <caret line="238" column="46" selection-start-line="238" selection-start-column="46" selection-end-line="238" selection-end-column="46" />
-          <folding>
-            <element signature="method#formWindowClosing#0;class#RunScreen#0" />
-            <element signature="method#SelectAlgorithm#0;class#RunScreen#0" />
-            <element signature="method#DeselectAlgorithm#0;class#RunScreen#0" />
-            <element signature="method#SetAlgorithmsForVarible#0;class#RunScreen#0" />
-            <element signature="method#open#0;class#RunScreen#0" />
-          </folding>
+        <state relative-caret-position="4182">
+          <caret line="264" column="43" selection-start-line="264" selection-start-column="43" selection-end-line="264" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1312,24 +1080,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Variable.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/CompilerRandTex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="826">
+          <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#compileR#0;class#CompilerRandTex#0" />
+            <element signature="method#compileLatex#0;class#CompilerRandTex#0" />
+            <element signature="method#compileEPS#0;class#CompilerRandTex#0" />
+            <element signature="docComment;method#versionCompare#0;class#CompilerRandTex#0" />
+            <element signature="method#versionCompare#0;class#CompilerRandTex#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/XML.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/MailScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2502">
-          <caret line="264" column="43" selection-start-line="264" selection-start-column="43" selection-end-line="264" selection-end-column="43" />
+        <state relative-caret-position="153">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Mail.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/FAQScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+        <state relative-caret-position="527">
+          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/ProjectScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="120" column="81" selection-start-line="120" selection-start-column="81" selection-end-line="120" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/screens/RunScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="175" column="61" lean-forward="true" selection-start-line="175" selection-start-column="61" selection-end-line="175" selection-end-column="61" />
+          <folding>
+            <element signature="method#formWindowClosing#0;class#RunScreen#0" />
+            <element signature="method#SelectAlgorithm#0;class#RunScreen#0" />
+            <element signature="method#DeselectAlgorithm#0;class#RunScreen#0" />
+            <element signature="method#SetAlgorithmsForVarible#0;class#RunScreen#0" />
+            <element signature="method#open#0;class#RunScreen#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="179" column="53" lean-forward="true" selection-start-line="179" selection-start-column="53" selection-end-line="179" selection-end-column="53" />
+          <folding>
+            <element signature="method#GUI#0;class#GUI#0" />
+            <element signature="method#next_screen#0;class#GUI#0" />
+            <element signature="method#child_screen#0;class#GUI#0" />
+            <element signature="method#close_screen#0;class#GUI#0" />
+            <element signature="method#show_error#0;class#GUI#0" />
+            <element signature="method#show_message#0;class#GUI#0" />
+            <element signature="method#show_fatal_error#0;class#GUI#0" />
+            <element signature="method#start_optimization#0;class#GUI#0" />
+          </folding>
         </state>
       </provider>
     </entry>

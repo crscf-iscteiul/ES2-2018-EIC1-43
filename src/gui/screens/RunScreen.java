@@ -169,7 +169,8 @@ public class RunScreen extends javax.swing.JFrame {
             new Thread() {
                 @Override
                 public void run() {
-                    Mail.getInstance().sendProblemToUser(SolverandOptimizer.getInstance().getUser().getMail(), SolverandOptimizer.getInstance().getProblem());
+                    if(SolverandOptimizer.getInstance().getUser() != null)
+                        Mail.getInstance().sendProblemToUser(SolverandOptimizer.getInstance().getUser().getMail(), SolverandOptimizer.getInstance().getProblem());
                 }
             }.start();
             GUI.getInstance().start_optimization(algorithms);

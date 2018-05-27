@@ -182,7 +182,8 @@ public class GUI {
             new Thread() {
                 @Override
                 public void run() {
-                    Mail.getInstance().sendMail(SolverandOptimizer.getInstance().getUser().getMail(), "Optimization Process Finished", "You process was successfully completed.");
+                    if(SolverandOptimizer.getInstance().getUser() != null)
+                        Mail.getInstance().sendMail(SolverandOptimizer.getInstance().getUser().getMail(), "Optimization Process Finished", "You process was successfully completed.");
                 }
             }.start();
             ((RunScreen) child).unlock();
