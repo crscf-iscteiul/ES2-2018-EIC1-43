@@ -4,9 +4,9 @@ Grupo: 43
 
 Elementos:
 
-- 54431; Bruno Gama; SCRUM Master
-- 68640; Rafael Fernandes; Developer
-- 68674; André Sousa; Developer
-- 68610; Humaira Rachid; Quality Manager
+- 54431; Bruno Gama;
+- 68640; Rafael Fernandes;
+- 68674; André Sousa;
+- 68610; Humaira Rachid;
 
-Link youtube: https://www.youtube.com/watch?v=C6pvIxAEFgw
+Link youtube: 
