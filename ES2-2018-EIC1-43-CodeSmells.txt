@@ -1,0 +1,121 @@
+Long Method:
+	gui.screens.MainScreen	private void initComponents() 	layout	B1	0/28
+	gui.screens.AboutScreen	private void initComponents() 	layout	B1	0/26
+	gui.screens.MailScreen	private void initComponents() 	layout	B1	0/20
+	gui.screens.ProjectScreen	private void initComponents() 	layout	B1	0/17
+	gui.screens.StartScreen	private void initComponents() 	layout	B1	0/17
+	gui.screens.MainScreen	private void initComponents() 	ButtonAdd	B1	0/13
+	gui.screens.ProblemScreen	private void initComponents() 	ButtonDone	B1	0/12
+	gui.screens.ProblemScreen	private void ButtonDoneActionPerformed(java.awt.event.ActionEvent) 	currentProblem	B2	0/12
+	gui.screens.ProblemScreen	private void ButtonDoneActionPerformed(java.awt.event.ActionEvent) 	currentProblem	B5	0/4
+	gui.screens.ProjectScreen	private void initComponents() 	ButtonFAQ	B1	0/11
+	gui.screens.RunScreen	private void SetAlgorithmsForVarible(java.lang.String) 	selected_algorithms	B1	0/11
+	solverandoptimizer.problems.DoubleProblemInternal	public void evaluate(org.uma.jmetal.solution.DoubleSolution) 	fx	B1	0/10
+	solverandoptimizer.problems.DoubleProblemInternal	public void evaluate(org.uma.jmetal.solution.DoubleSolution) 	fx	B2	0/8
+	solverandoptimizer.problems.DoubleProblemInternal	public void evaluate(org.uma.jmetal.solution.DoubleSolution) 	fx	B4	0/6
+	solverandoptimizer.problems.IntegerProblemInternal	public void evaluate(org.uma.jmetal.solution.IntegerSolution) 	fx	B1	0/10
+	solverandoptimizer.problems.IntegerProblemInternal	public void evaluate(org.uma.jmetal.solution.IntegerSolution) 	fx	B2	0/8
+	solverandoptimizer.problems.IntegerProblemInternal	public void evaluate(org.uma.jmetal.solution.IntegerSolution) 	fx	B4	0/6
+	gui.screens.MailScreen	private void initComponents() 	ButtonSend	B1	0/9
+	gui.screens.MainScreen	private void initComponents() 	JarPath	B1	0/8
+	gui.screens.ProjectScreen	private void initComponents() 	ButtonLoad	B1	0/8
+	gui.screens.StartScreen	private void initComponents() 	Continue	B1	0/8
+	gui.screens.StartScreen	private void initComponents() 	Mail	B1	0/8
+	gui.screens.MainScreen	public void updateProblemData() 	variables	B1	0/8
+	gui.screens.MainScreen	public void updateProblemData() 	variables	B2	0/7
+	gui.screens.MainScreen	public void updateProblemData() 	variables	B3	0/6
+	utils.CompilerRandTex	private void ini_R() 	rscript	B1	0/8
+	utils.CompilerRandTex	private void ini_R() 	rscript	B2	0/6
+	utils.CompilerRandTex	private void ini_R() 	rscript	B3	0/5
+	gui.screens.ProblemScreen	private void initComponents() 	Panel	B1	0/7
+	gui.screens.ProblemScreen	private void initComponents() 	PanelLayout	B1	0/7
+	gui.screens.ProblemScreen	private void initComponents() 	ScrollPane	B1	0/6
+	gui.screens.RunScreen	private void initComponents() 	jScrollPane2	B1	0/6
+	gui.screens.FAQScreen	private void initComponents() 	layout	B1	0/5
+	gui.screens.MailScreen	private void initComponents() 	ScrollPane	B1	0/5
+	gui.screens.MainScreen	private void initComponents() 	ButtonRemove	B1	0/5
+	gui.screens.StartScreen	private void initComponents() 	UserName	B1	0/5
+	gui.screens.AboutScreen	private void initComponents() 	ButtonOK	B1	0/4
+	gui.screens.MainScreen	private void initComponents() 	ScrollPane	B1	0/4
+	gui.screens.MainScreen	private void initComponents() 	Start	B1	0/4
+	gui.screens.ProjectScreen	private void initComponents() 	ButtonNew	B1	0/4
+	gui.screens.ProjectScreen	private void initComponents() 	ScrollPane	B1	0/4
+	utils.Variable	public java.lang.Double[] parseValues(boolean) 	work_string	B1	0/4
+	gui.screens.AboutScreen	private void initComponents() 	LabelTitle	B1	0/3
+	gui.screens.MailScreen	private void initComponents() 	Text	B1	0/3
+	gui.screens.MainScreen	public void loadProblemData(utils.Problem) 	TableVars	B4	0/3
+	gui.screens.ProblemScreen	private void initComponents() 	Description	B1	0/3
+	solverandoptimizer.problems.BinaryProblemExternal	public void evaluate(org.uma.jmetal.solution.BinarySolution) 	solutionString	B1	0/3
+	solverandoptimizer.problems.DoubleProblemExternal	public void evaluate(org.uma.jmetal.solution.DoubleSolution) 	solutionString	B1	0/3
+	solverandoptimizer.problems.DoubleProblemExternal	public void evaluate(org.uma.jmetal.solution.DoubleSolution) 	solutionString	B2	0/2
+	solverandoptimizer.problems.DoubleProblemInternal	public void evaluate(org.uma.jmetal.solution.DoubleSolution) 	x	B1	0/3
+	solverandoptimizer.problems.DoubleProblemInternal	public void evaluate(org.uma.jmetal.solution.DoubleSolution) 	x	B2	0/2
+	solverandoptimizer.problems.IntegerProblemExternal	public void evaluate(org.uma.jmetal.solution.IntegerSolution) 	solutionString	B1	0/3
+	solverandoptimizer.problems.IntegerProblemExternal	public void evaluate(org.uma.jmetal.solution.IntegerSolution) 	solutionString	B2	0/2
+	solverandoptimizer.problems.IntegerProblemInternal	public void evaluate(org.uma.jmetal.solution.IntegerSolution) 	x	B1	0/3
+	solverandoptimizer.problems.IntegerProblemInternal	public void evaluate(org.uma.jmetal.solution.IntegerSolution) 	x	B2	0/2
+	gui.screens.AboutScreen	private void initComponents() 	jLabel1	B1	0/2
+	gui.screens.AboutScreen	private void initComponents() 	jLabel2	B1	0/2
+	gui.screens.AboutScreen	private void initComponents() 	jLabel3	B1	0/2
+	gui.screens.AboutScreen	private void initComponents() 	jLabel4	B1	0/2
+	gui.screens.AboutScreen	private void initComponents() 	jLabel5	B1	0/2
+	gui.screens.AboutScreen	private void initComponents() 	jLabel6	B1	0/2
+	gui.screens.AboutScreen	private void initComponents() 	jLabel7	B1	0/2
+	gui.screens.AboutScreen	private void initComponents() 	jLabel8	B1	0/2
+	gui.screens.FAQScreen	private void initComponents() 	jScrollPane1	B1	0/2
+	gui.screens.MailScreen	private void initComponents() 	jLabel1	B1	0/2
+	gui.screens.MailScreen	private void initComponents() 	jLabel2	B1	0/2
+	gui.screens.MailScreen	private void initComponents() 	jLabel3	B1	0/2
+	gui.screens.MailScreen	private void initComponents() 	jLabel4	B1	0/2
+	gui.screens.MainScreen	private void initComponents() 	ComboBoxTypes	B1	0/2
+	gui.screens.MainScreen	private void initComponents() 	SendInfo	B1	0/2
+	gui.screens.MainScreen	private void initComponents() 	TableVars	B1	0/2
+	gui.screens.MainScreen	private void initComponents() 	jLabel1	B1	0/2
+	gui.screens.ProblemScreen	private void initComponents() 	LabelTime	B1	0/2
+	gui.screens.ProblemScreen	private void initComponents() 	LabelVars	B1	0/2
+	gui.screens.ProblemScreen	private void initComponents() 	MaxTime	B1	0/2
+	gui.screens.ProblemScreen	private void initComponents() 	MaxVars	B1	0/2
+	gui.screens.StartScreen	private void initComponents() 	LabelMail	B1	0/2
+	gui.screens.StartScreen	private void initComponents() 	LabelName	B1	0/2
+	gui.screens.StartScreen	private void initComponents() 	Remember	B1	0/2
+	utils.Mail	public boolean sendIssuetoAdmin(java.lang.String, java.lang.String, java.lang.String) 	adminInfo	B2	0/2
+	utils.Mail	public boolean sendProblemToUser(java.lang.String, utils.Problem) 	adminInfo	B2	0/2
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	vars_l	B2	1/22
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	vars_l	B13	0/19
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	vars_l	B14	0/17
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	vars_l	B15	0/16
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	vars_l	B16	0/14
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	vars_l	B18	0/3
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	mVars	B2	1/3
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	mVars	B11	0/2
+	gui.screens.ProblemScreen	private void ButtonDoneActionPerformed(java.awt.event.ActionEvent) 	variables	B2	1/8
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	m_Time	B2	1/3
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	m_Time	B9	0/2
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	p_type	B2	1/3
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	p_type	B7	0/2
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	p_description	B2	1/3
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	p_description	B5	0/2
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	p_name	B2	1/3
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	p_name	B3	0/2
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	varExc	B16	3/6
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	varExc	B18	0/2
+	utils.CompilerRandTex	public static int versionCompare(java.lang.String, java.lang.String) 	i	B1	2/5
+	utils.CompilerRandTex	public static int versionCompare(java.lang.String, java.lang.String) 	i	B2	0/2
+	utils.XML	public static utils.Problem readXMLProblem(java.lang.String) throws java.lang.Exception	varInt	B16	3/6
+	gui.screens.ProjectScreen	private void ButtonLoadActionPerformed(java.awt.event.ActionEvent) 	path_chooser	B3	3/5
+	solverandoptimizer.problems.BinaryProblemInternal	public void evaluate(org.uma.jmetal.solution.BinarySolution) 	counterOnes	B1	3/6
+	solverandoptimizer.problems.BinaryProblemInternal	public void evaluate(org.uma.jmetal.solution.BinarySolution) 	counterZeroes	B1	3/6
+	gui.GUI	public void child_screen(int) 	child	B1	11/22
+	gui.screens.MainScreen	private void JarPathMouseClicked(java.awt.event.MouseEvent) 	path_chooser	B1	3/5
+	gui.screens.MainScreen	private void MenuOpLoadActionPerformed(java.awt.event.ActionEvent) 	path_chooser	B1	3/5
+
+Type Checking:
+	utils.Variable::public static java.lang.String TypeToString(int) 
+
+God Class:
+	gui.screens.MainScreen	[gui.screens.MainScreen::javax.swing.JTable TableVars, gui.screens.MainScreen::javax.swing.JComboBox<java.lang.String> VariableType, gui.screens.MainScreen::ButtonAddActionPerformed(java.awt.event.ActionEvent):void, gui.screens.MainScreen::VariableTypeActionPerformed(java.awt.event.ActionEvent):void, gui.screens.MainScreen::updateProblemData():void, gui.screens.MainScreen::ButtonRemoveActionPerformed(java.awt.event.ActionEvent):void]
+	utils.CompilerRandTex	[utils.CompilerRandTex::java.lang.String rscript, utils.CompilerRandTex::ini_R():void, utils.CompilerRandTex::compileR(java.lang.String):void]
+	utils.CompilerRandTex	[utils.CompilerRandTex::java.lang.String miktex, utils.CompilerRandTex::compileLatex(java.lang.String):void, utils.CompilerRandTex::compileEPS(java.lang.String):void, utils.CompilerRandTex::ini_Tex():void]
+
+Feture Envy:
+	Não foram detetados

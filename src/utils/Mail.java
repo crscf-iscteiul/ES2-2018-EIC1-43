@@ -11,38 +11,19 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Properties;
 
-// TODO: Auto-generated Javadoc
-/**
- * The Class Mail.
- */
 public class Mail {
 
-    /** The instance. */
     private static Mail instance;
-    
-    /**
-     * Gets the single instance of Mail.
-     *
-     * @return single instance of Mail
-     */
     public static Mail getInstance() {
         if (instance == null)
             instance = new Mail();
         return instance;
     }
 
-    /** The username. */
     private final String username = "problemsolverandoptimizer@gmail.com";
-    
-    /** The password. */
     private final String password = "jukojuko69";
-    
-    /** The session. */
     private Session session;
 
-    /**
-     * Instantiates a new mail.
-     */
     private Mail(){
         Properties props = new Properties();
         props.put("mail.smtp.starttls.enable", "true");
@@ -57,14 +38,6 @@ public class Mail {
         });
     }
 
-    /**
-     * Send mail.
-     *
-     * @param to the to
-     * @param subject the subject
-     * @param text the text
-     * @return true, if successful
-     */
     public boolean sendMail(String to, String subject, String text){
         try{
             Message message = new MimeMessage(session);
@@ -84,13 +57,6 @@ public class Mail {
         return true;
     }
 
-    /**
-     * Send problem to user.
-     *
-     * @param to the to
-     * @param problem the problem
-     * @return true, if successful
-     */
     public boolean sendProblemToUser(String to, Problem problem) {
         HashMap<String, String> adminInfo = SolverandOptimizer.getInstance().load_config();
         String text = "Muito obrigado por utilizar esta plataforma de optimização. Será informado por email quando o processo estiver terminado.";
@@ -131,14 +97,6 @@ public class Mail {
         return true;
     }
 
-    /**
-     * Send issueto admin.
-     *
-     * @param from the from
-     * @param subject the subject
-     * @param text the text
-     * @return true, if successful
-     */
     public boolean sendIssuetoAdmin(String from, String subject, String text){
         text = text.replaceAll("\n","<br>");
 
@@ -157,14 +115,6 @@ public class Mail {
         return sendMail("afssa11111@iscte-iul.pt", "User Problem - "+subject, html);
     }
 
-    /**
-     * Send confirmationto user.
-     *
-     * @param user the user
-     * @param user_subject the user subject
-     * @param text the text
-     * @return true, if successful
-     */
     public boolean sendConfirmationtoUser(String user, String user_subject,String text){
         String subject = "Problem Solver and Optimizer - Mail sent confirmation";
         text = text.replaceAll("\n","<br>");
