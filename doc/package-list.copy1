@@ -1,0 +1,10 @@
+gui
+gui.screens
+main
+solverandoptimizer
+solverandoptimizer.experiment.Binary
+solverandoptimizer.experiment.Double
+solverandoptimizer.experiment.Integer
+solverandoptimizer.problems
+solverandoptimizer.solver
+utils

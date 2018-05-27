@@ -1,29 +1,12 @@
 package utils;
 
-// TODO: Auto-generated Javadoc
-/**
- * The Class Variable.
- */
 public class Variable {
 
-    /** The Constant Type_Integer. */
     public static final int Type_Integer = 0;
-    
-    /** The Constant Type_Double. */
     public static final int Type_Double = 1;
-    
-    /** The Constant Type_Binary. */
     public static final int Type_Binary = 2;
-    
-    /** The Constant Type_Not_Defined. */
     public static final int Type_Not_Defined = 3;
 
-    /**
-     * Type to string.
-     *
-     * @param t the t
-     * @return the string
-     */
     public static String TypeToString(int t){
         if(t==Variable.Type_Integer)
             return "Integer";
@@ -35,12 +18,6 @@ public class Variable {
             return "";
     }
 
-    /**
-     * String to type.
-     *
-     * @param t the t
-     * @return the int
-     */
     public static int StringToType(String t){
         if(t.equals("Integer"))
             return Variable.Type_Integer;
@@ -52,30 +29,12 @@ public class Variable {
             return Variable.Type_Not_Defined;
     }
 
-    /** The name. */
     private String name;
-    
-    /** The type. */
     private int type;
-
-    /** The interval. */
     private String interval;
-    
-    /** The exclusions. */
     private String exclusions;
-
-    /** The optimized. */
     private boolean optimized;
 
-    /**
-     * Instantiates a new variable.
-     *
-     * @param name the name
-     * @param type the type
-     * @param interval the interval
-     * @param exclusions the exclusions
-     * @param optimized the optimized
-     */
     public Variable(String name, int type, String interval, String exclusions, boolean optimized) {
         this.name = name;
         this.type=type;
@@ -84,15 +43,6 @@ public class Variable {
         this.optimized=optimized;
     }
 
-    /**
-     * Instantiates a new variable.
-     *
-     * @param name the name
-     * @param type the type
-     * @param interval the interval
-     * @param exclusions the exclusions
-     * @param optimized the optimized
-     */
     public Variable(String name, String type, String interval, String exclusions, boolean optimized) {
         this.name = name;
         this.type = StringToType(type);
@@ -101,53 +51,22 @@ public class Variable {
         this.optimized=optimized;
     }
 
-    /**
-     * Gets the variable name.
-     *
-     * @return the variable name
-     */
     public String getVariableName() {
         return name;
     }
 
-    /**
-     * Gets the type.
-     *
-     * @return the type
-     */
     public int getType(){
         return type;
     }
 
-    /**
-     * Gets the type to string.
-     *
-     * @return the type to string
-     */
     public String getType_toString(){
         return TypeToString(this.type);
     }
 
-    /**
-     * Gets the interval.
-     *
-     * @return the interval
-     */
     public String getInterval() { return this.interval; }
 
-    /**
-     * Gets the exclusions.
-     *
-     * @return the exclusions
-     */
     public String getExclusions() { return this.exclusions; }
 
-    /**
-     * Parses the values.
-     *
-     * @param isInterval the is interval
-     * @return the double[]
-     */
     public Double[] parseValues(boolean isInterval) {
         String work_string;
         if(isInterval)
@@ -172,11 +91,6 @@ public class Variable {
         return array;
     }
 
-    /**
-     * Checks if is optimized.
-     *
-     * @return true, if is optimized
-     */
     public boolean isOptimized(){
         return optimized;
     }
